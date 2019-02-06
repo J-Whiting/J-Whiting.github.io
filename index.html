@@ -16,11 +16,132 @@
 		<link href="css/font.css" rel="stylesheet" />
 		<!-- Elevation CSS -->
 		<link href="css/elevation.css" rel="stylesheet" />
+		<!-- Header CSS -->
+		<link href="css/header.css" rel="stylesheet" />
+		<!-- Main CSS -->
+		<link href="css/main.css" rel="stylesheet" />
+		<!-- Card CSS -->
+		<link href="css/card.css" rel="stylesheet" />
+		<!-- Map CSS -->
+		<link href="css/map.css" rel="stylesheet" />
+		<!-- Footer CSS -->
+		<link href="css/footer.css" rel="stylesheet" />
+		<!-- Main Javascript -->
+		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	
 	<body>
-		<h1>환영해요 Sarah!</h1>
+		<header id="header" class="elevation-4dp">
+			<div id="headerLeft" class="left">
+				<img id="headerIcon" class="icon" src="image/logo/Logo.svg" alt="Logo" />
+				<h1 id="headerTitle" class="title" onclick="pageScroll('home')">Joshua Whiting</h1>
+			</div>
+			<nav id="headerNavigation" class="navigation">
+				<ul>
+					<li class="nav-item" onclick="pageScroll('projects')">
+						<p>PROJECTS</p>
+						<div class="nav-indicator"></div>
+					</li>
+					<li class="nav-item" onclick="pageScroll('hobbies')">
+						<p>HOBBIES</p>
+						<div class="nav-indicator"></div>
+					</li>
+					<li class="nav-item" onclick="pageScroll('photos')">
+						<p>PHOTOS</p>
+						<div class="nav-indicator"></div>
+					</li>
+					<li class="nav-item" onclick="pageScroll('contact')">
+						<p>CONTACT</p>
+						<div class="nav-indicator"></div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	
+		<div class="main">
 		
-		<p>I think I may have figured out this website mumbo jumbo</p>
+			<div id="home" class="sheet">
+	
+				<img src="image/home/background.jpg" alt="Home" class="sheet-background" />
+				
+				<div class="profile">
+					<img src="image/home/profile.jpg" alt="Profile" />
+					<h1>Joshua Whiting</h1>
+					<h3>Software Developer</h3>
+				</div>
+				
+			</div><!-- sheet -->
+	
+			<div id="projects" class="sheet">
+	
+				<img src="image/background/Projects.jpg" alt="Projects" class="sheet-background" />
+	
+				<!-- <div class="sheet-nav nav-right elevation-8dp">
+				
+					<p class="display3">Projects</p>
+	
+		
+		
+				</div> --><!-- sheet-nav -->
+			</div><!-- sheet -->
+			
+			<div id="hobbies" class="sheet">
+	
+				<img src="image/background/Hobbies.jpg" alt="Hobbies" class="sheet-background" />
+				
+			</div><!-- sheet -->
+			
+			<div id="photos" class="sheet">
+
+				<img src="image/background/Photos.jpg" alt="Photos" class="sheet-background" />
+				
+			</div><!-- sheet -->
+	
+			<div id="contact" class="sheet">
+
+				<img src="image/background/Contact.jpg" alt="Contact" class="sheet-background" />
+				
+			</div><!-- sheet -->
+	
+		</div><!-- main -->
+	
+		<footer id="footer">
+	
+			<div class="left" itemscope itemtype="http://schema.org/WebSite">
+			
+				<a href="" class="logo" itemprop="image">
+					<img src="image/logo/Logo.svg" alt="Logo" />
+				</a><!-- company-logo -->
+				
+				<a href="" class="company-name footer" itemprop="name">
+					<span>Joined&nbsp;Up!<br />Web&nbsp;Design</span>
+				</a><!-- company-logo -->
+				
+			</div><!-- left -->
+	
+			<div class="right">
+	
+				<div class="social-link" itemscope itemtype="http://schema.org/WebSite">
+					<a href="http://www.facebook.com/sharer.php?u=http://www.your-domain.com/your-page.html" target="_blank" itemprop="image">
+						<img src="image/social/facebook.svg" alt="Facebook" />
+					</a>
+				</div><!-- social-link -->
+	
+				<div class="social-link" itemscope itemtype="http://schema.org/WebSite">
+					<a href="https://twitter.com/share?url=http://www.your-domain.com/your-page.html&amp;text=Bradfield%20Rovers&amp;hashtags=bradfieldrovers" target="_blank" itemprop="image">
+						<img src="image/social/twitter.svg" alt="Twitter" />
+					</a>
+				</div><!-- social-link -->
+	
+				<div class="social-link" itemscope itemtype="http://schema.org/WebSite">
+					<a href="https://plus.google.com/share?url=http://www.your-domain.com/your-page.html" target="_blank" itemprop="image">
+						<img src="image/social/google.svg" alt="Google+" />
+					</a>
+				</div><!-- social-link -->
+	
+			</div><!-- right -->
+	
+		</footer>
+	
 	</body>
 </html>

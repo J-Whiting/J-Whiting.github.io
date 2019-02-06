@@ -1,0 +1,51 @@
+/*--------------------------------//
+//                                //
+//             Footer             //
+//                                //
+//--------------------------------*/
+footer {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	flex-direction: row;            /* default value; can be omitted */
+	flex-wrap: nowrap;              /* default value; can be omitted */
+	justify-content: space-between; /* switched from default (flex-start, see below) */
+	
+	background-color: var(--color-A900);
+	box-sizing: border-box;
+	padding: 1em;
+	width: 100%;
+}
+
+footer .company-logo img,
+footer .company-name {
+	vertical-align: top;
+	display: inline-block;
+}
+
+footer .right .social-link {
+	display: inline-block;
+	padding: 0em 0.3em;
+}
+
+footer .social-link:hover {
+	transform: scale(1.1, 1.1);
+}
+
+footer img {
+	height: 3em;
+	width: 3em;
+}
+
+@media (max-width: 26em) {
+	footer {
+		flex-direction: column-reverse;
+		text-align: center;
+	}
+	
+	footer .td {
+		text-align: left;
+	}
+}

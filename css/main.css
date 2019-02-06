@@ -1,0 +1,70 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.main {
+	-webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.sheet {
+	position: relative;
+    height: 841px;
+    overflow: hidden;
+	z-index: 0;
+	background-color: black;
+}
+
+.sheet:first-child {
+	margin-top: 72px;
+}
+
+.sheet-background {
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	
+	top: 0;
+	left: 0;
+	
+	/* Blur */
+	filter: blur(3px);
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+}
+
+.profile {
+    position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-filter: drop-shadow(0em 0em 1em rgba(0,0,0,0.5));
+    filter: drop-shadow(0em 0em 1em rgba(0,0,0,0.5));
+	z-index: 2;
+	left: 50%;
+	top: calc(50% - 72px); /* The Header bar is 72px. */
+}
+
+.profile img {
+    width: 300px;
+    height: 300px;
+    border-radius: 250px;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10000;
+}

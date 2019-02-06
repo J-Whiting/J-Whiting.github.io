@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64"
+   height="64"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="twitter.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="3.6875"
+     inkscape:cx="-13.966102"
+     inkscape:cy="32"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <circle
+     class="style-scope iron-icon"
+     style="fill:#2daae1;fill-opacity:1;stroke-width:5.28652954"
+     id="path3686"
+     cx="32"
+     cy="32"
+     r="29.5" />
+  <g
+     class="style-scope iron-icon"
+     id="g4"
+     transform="matrix(0.58333328,0,0,0.58333327,13.333333,13.33334)"
+     style="fill:#ffffff">
+    <path
+       d="m 64,12 c -2.4,1.2 -4.8,1.6 -7.6,2 C 59.2,12.4 61.2,10 62,6.8 59.6,8.4 56.8,9.2 53.6,10 51.2,7.6 47.6,6 44,6 37.2,6 31.2,12 31.2,19.2 c 0,1.2 0,2 0.4,2.8 C 20.8,21.6 10.8,16.4 4.4,8.4 c -1.2,2 -1.6,4 -1.6,6.8 0,4.4 2.4,8.4 6,10.8 -2,0 -4,-0.8 -6,-1.6 0,0 0,0 0,0 0,6.4 4.4,11.6 10.4,12.8 -1.2,0.4 -2.4,0.4 -3.6,0.4 -0.8,0 -1.6,0 -2.4,-0.4 1.6,5.2 6.4,9.2 12.4,9.2 C 15.2,50 9.6,52 3.2,52 2,52 1.2,52 0,52 c 6,3.6 12.8,6 20,6 24,0 37.2,-20 37.2,-37.2 0,-0.4 0,-1.2 0,-1.6 2.8,-2 5.2,-4.4 6.8,-7.2 z"
+       class="style-scope iron-icon"
+       id="path2"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+  </g>
+</svg>
