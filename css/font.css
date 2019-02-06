@@ -6,7 +6,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	color: var(--color-text1);
+	color: var(--color-background-text);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
@@ -106,33 +106,4 @@ h6.subtitle2 {
 
 	text-decoration: none;
 	text-transform: uppercase;
-}
-
-.tab {
-	font-size: 0.875em;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 3.43;
-	white-space: normal;
-	opacity: 0.87;
-	text-transform: uppercase;
-}
-
-.footer {
-	font-size: 1em;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 1.5;
-	white-space: normal;
-	opacity: 0.87;
-	color: var(--color-text2);
-}
-
-/* Link Fonts */
-a:link ,
-a:visited,
-a:hover ,
-a:active {
-	/*color: var(--color-text1);*/
-	text-decoration: none;
 }

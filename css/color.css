@@ -5,62 +5,28 @@
 //--------------------------------*/
 body {
 	/*
-		Blue
+		Primary Color
 	*/
-	
-	--color-50:		#E3F2FD;
-	--color-100:	#BBDEFB;
-	--color-200: 	#90CAF9;
-	--color-300: 	#64B5F6;
-	--color-400: 	#42A5F5;
-	--color-500: 	#2196F3;
-	--color-600: 	#1E88E5;
-	--color-700: 	#1976D2;
-	--color-800: 	#1565C0;
-	--color-900: 	#0D47A1;
+	--color-primary: #6200EE;
+	--color-primary-text: #FFF;
+	--color-primary-dark: #3700B3;
+	--color-primary-dark--text: #FFF;
+	--color-primary-light: #BB86FC;
+	--color-primary-light-text: #000;
 	
 	/*
-		Accent Red
+		Secondary Color
 	*/
-	
-	--color-A50:	#FFEBEE;
-	--color-A100:	#FFCDD2;
-	--color-A200: 	#EF9A9A;
-	--color-A300: 	#E57373;
-	--color-A400: 	#EF5350;
-	--color-A500: 	#F44336;
-	--color-A600: 	#E53935;
-	--color-A700: 	#D32F2F;
-	--color-A800: 	#C62828;
-	--color-A900: 	#B71C1C;
+	--color-seconday: #03DAC6;
+	--color-secondary-text: #000;
 	
 	/*
-		Accent Yellow
+		Background
 	*/
-	--color-B50:	#FFFDE7;
-	--color-B100:	#FFF9C4;
-	--color-B200: 	#FFF59D;
-	--color-B300: 	#FFF176;
-	--color-B400: 	#FFEE58;
-	--color-B500: 	#FFEB3B;
-	--color-B600: 	#FDD835;
-	--color-B700: 	#FBC02D;
-	--color-B800: 	#F9A825;
-	--color-B900: 	#F57F17;
-	
-	/*
-		Light
-	*/
-	--color-light:	#FFF;
-	
-	/*
-		Dark
-	*/
-	--color-dark:	#000;
-	
-	/*
-		Text Color
-	*/
-	--color-text1: #000;
-	--color-text2: #FFF;
+	--color-background: #FFF;
+	--color-background-text: #000;
+	--color-surface: #FFF;
+	--color-surface-text: #000;
+	--color-error: #B00020;
+	--color-error-text: #FFF;
 }

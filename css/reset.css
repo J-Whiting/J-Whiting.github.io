@@ -60,15 +60,15 @@ a {
 
 /* change colours to suit your needs */
 ins {
- background-color:#ff9;
- color:#000;
+ background-color:var(--color-primary);
+ color:var(--color-primary-text);
  text-decoration:none;
 }
 
 /* change colours to suit your needs */
 mark {
- background-color:#ff9;
- color:#000; 
+ background-color:var(--color-primary);
+ color:var(--color-primary-text);
  font-style:italic;
  font-weight:bold;
 }
@@ -92,11 +92,19 @@ hr {
  display:block;
  height:1px;
  border:0; 
- border-top:1px solid #cccccc;
+ border-top:1px solid var(--color-primary);
  margin:1em 0;
  padding:0;
 }
 
 input, select {
  vertical-align:middle;
+}
+
+/* Link Fonts */
+a:link ,
+a:visited,
+a:hover ,
+a:active {
+	text-decoration: none;
 }

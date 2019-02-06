@@ -4,7 +4,7 @@
 //                                //
 //--------------------------------*/
 .card {
-	background-color: #FFF;
+	background-color: var(--color-background);
 	border-radius: 0.25em;
 	padding: 1em;
 }
