@@ -33,8 +33,6 @@ header .icon {
 }
 
 header .title {
-	display: inline;
-	font-size: 1.25em;
 	text-transform: uppercase;
 }
 
