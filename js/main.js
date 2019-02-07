@@ -15,8 +15,9 @@ document.addEventListener('DOMContentLoaded', function(event){
 		
 		// Get the height of the header.
 		var vHeader = document.getElementsByTagName('header')[0];
-		var vHeaderHeight = vHeight.clientHeight;
+		var vHeaderHeight = vHeader.clientHeight;
 		
+		// Get the sheet height.
 		var vSheetHeight = vBrowserHeight - vHeaderHeight;
 		
 		var vNavID = Math.floor((vScroll) / vSheetHeight);
