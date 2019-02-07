@@ -15,6 +15,14 @@
 	top: 50%;
 }
 
+.card.right {
+	left: 100%;
+}
+
+.card.left {
+	left: 0%;
+}
+
 .card .header {
 	display: flex;
 }
