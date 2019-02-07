@@ -44,7 +44,8 @@
 }
 
 .card .media {
-    width: 688px;
+    /*width: 688px;*/
+	height: 50vh;
     display: block;
 }
 
