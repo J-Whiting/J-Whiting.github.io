@@ -9,20 +9,17 @@ document.addEventListener('DOMContentLoaded', function(event){
 		var doc = document.documentElement;
 		var vScroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 		
-		// Each section is 942px high, and the header is 48px high.
-		//var vNavID = Math.floor((vScroll) / 942);
-		
-		// Each section is 841px high, and the header is 72px high.
-		
-		// Debug
+		// Get the height of the browser.
 		var g = document.getElementsByTagName('body')[0];
-		var y = window.innerHeight || doc.clientHeight || g.clientHeight;
-		alert(window.innerHeight);
-		alert(doc.clientHeight);
-		alert(g.clientHeight);
-		// Debug
+		var vBrowserHeight = window.innerHeight || doc.clientHeight || g.clientHeight;
 		
-		var vNavID = Math.floor((vScroll) / 841);
+		// Get the height of the header.
+		var vHeader = document.getElementsByTagName('header')[0];
+		var vHeaderHeight = vHeight.clientHeight;
+		
+		var vSheetHeight = vBrowserHeight - vHeaderHeight;
+		
+		var vNavID = Math.floor((vScroll) / vSheetHeight);
 		vNavID--;
 		
 		// Only update the classes if they change.
