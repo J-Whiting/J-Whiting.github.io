@@ -15,8 +15,13 @@
 	top: 50%;
 }
 
+.card:hover {
+	background-color: gray;
+}
+
 .card .header {
 	display: flex;
+	cursor: pointer;
 }
 
 .card .thumbnail {
@@ -45,11 +50,24 @@
 
 .card .media {
     /*width: 688px;*/
-	height: 50vh;
+	height: 0;
     display: block;
+	transition: height .1s cubic-bezier(.4,0,.2,1);
 }
 
 .card img:last-child {
 	border-bottom-left-radius: 0.25em;
 	border-bottom-right-radius: 0.25em;
+}
+
+.card.selected {
+	cursor: default;
+}
+
+.card.selected:hover {
+	background-color: none;
+}
+
+.card.selected .media {
+	height: 50vh;
 }
