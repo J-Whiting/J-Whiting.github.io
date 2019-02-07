@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', function(event){
 		//var vNavID = Math.floor((vScroll) / 942);
 		
 		// Each section is 841px high, and the header is 72px high.
+		
+		// Debug
+		var g = document.getElementsByTagName('body')[0];
+		var y = window.innerHeight || doc.clientHeight || g.clientHeight;
+		alert(window.innerHeight);
+		alert(doc.clientHeight);
+		alert(g.clientHeight);
+		// Debug
+		
 		var vNavID = Math.floor((vScroll) / 841);
 		vNavID--;
 		
