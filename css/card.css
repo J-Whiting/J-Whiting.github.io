@@ -48,7 +48,7 @@
     display: block;
 }
 
-.card:last-child {
+.card img:last-child {
 	border-bottom-left-radius: 0.25em;
 	border-bottom-right-radius: 0.25em;
 }
