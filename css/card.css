@@ -10,11 +10,11 @@
 	/* padding: 1em; */
 }
 
-.profile .header {
+.card .header {
 	display: flex;
 }
 
-.profile .thumbnail {
+.card .thumbnail {
     width: 2.5em;
     height: 2.5em;
     border-radius: 100em;
@@ -24,21 +24,21 @@
 	padding: 1em;
 }
 
-.profile .header-text {
+.card .header-text {
 	padding-top: 0.5em;
 }
 
-.profile .header-title {
+.card .header-title {
 	font-weight: bold;
 	line-height: 2.125rem;
 }
 
-.profile .header-subtitle {
+.card .header-subtitle {
 	font-weight: bold;
 	opacity: 0.4;
 }
 
-.profile .media {
+.card .media {
     width: 688px;
     display: block;
 	border-bottom-left-radius: 0.25em;
