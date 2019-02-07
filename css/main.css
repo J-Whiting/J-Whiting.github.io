@@ -54,7 +54,7 @@ body {
     filter: drop-shadow(0em 0em 1em rgba(0,0,0,0.5));
 	z-index: 2;
 	left: 50%;
-	top: calc(50% - 4.5em;); /* The Header bar is 4.5em;. */
+	top: calc(50% - 4.5em); /* The Header bar is 4.5em;. */
 }
 
 .profile img {
