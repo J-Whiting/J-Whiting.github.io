@@ -24,6 +24,10 @@
 	padding: 1em;
 }
 
+.profile .header-text {
+	padding-top: 0.5em;
+}
+
 .profile .header-title {
 	font-weight: bold;
 	line-height: 2.125rem;
@@ -35,8 +39,7 @@
 }
 
 .profile .media {
-    width: 344px;
-    height: 194px;
+    width: 688px;
     display: block;
 	border-bottom-left-radius: 0.25em;
 	border-bottom-right-radius: 0.25em;
