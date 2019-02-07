@@ -12,7 +12,7 @@
 	position: absolute;
 	transform: translate(-50%, -50%);
 	left: 50%;
-	top: calc(50% - 4.5em); /* The Header bar is 4.5em;. */
+	top: 50%;
 }
 
 .card .header {
