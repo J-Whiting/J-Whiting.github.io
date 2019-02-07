@@ -46,6 +46,13 @@
 .card .media {
     width: 688px;
     display: block;
+}
+
+.card:last-child {
 	border-bottom-left-radius: 0.25em;
 	border-bottom-right-radius: 0.25em;
+}
+
+.card .description {
+	padding: 1em;
 }
