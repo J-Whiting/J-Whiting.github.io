@@ -8,6 +8,11 @@
 	background-color: var(--color-background);
 	border-radius: 0.25em;
 	/* padding: 1em; */
+	
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: calc(50% - 4.5em); /* The Header bar is 4.5em;. */
 }
 
 .card .header {
