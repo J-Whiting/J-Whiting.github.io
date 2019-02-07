@@ -10,21 +10,34 @@
 	/* padding: 1em; */
 }
 
+.profile .header {
+	display: flex;
+}
+
 .profile .thumbnail {
-    width: 40px;
-    height: 40px;
-    border-radius: 250px;
-    -webkit-border-radius: 250px;
-    -moz-border-radius: 250px;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100em;
+    -webkit-border-radius: 100em;
+    -moz-border-radius: 100em;
     display: block;
 	padding: 1em;
 }
 
+.profile .header-title {
+	font-weight: bold;
+	line-height: 2.125rem;
+}
+
+.profile .header-subtitle {
+	font-weight: bold;
+	opacity: 0.4;
+}
+
 .profile .media {
-    width: 300px;
-    height: 300px;
+    width: 344px;
+    height: 194px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 10000;
+	border-bottom-left-radius: 0.25em;
+	border-bottom-right-radius: 0.25em;
 }
