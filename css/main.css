@@ -50,21 +50,6 @@ body {
 .profile {
     position: absolute;
 	transform: translate(-50%, -50%);
-	-webkit-filter: drop-shadow(0em 0em 1em rgba(0,0,0,0.5));
-    filter: drop-shadow(0em 0em 1em rgba(0,0,0,0.5));
-	z-index: 2;
 	left: 50%;
 	top: calc(50% - 4.5em); /* The Header bar is 4.5em;. */
-}
-
-.profile img {
-    width: 300px;
-    height: 300px;
-    border-radius: 250px;
-    -webkit-border-radius: 250px;
-    -moz-border-radius: 250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 10000;
 }
