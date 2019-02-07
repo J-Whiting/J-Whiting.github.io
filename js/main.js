@@ -78,7 +78,7 @@ function selectCard(el) {
 	// Remove selected class from the card-list.
 	var p = el.parentNode;
 	for (var i = 0; i < p.length; i++) {
-		el.classList.remove("selected");
+		p[i].classList.remove("selected");
 	}
 	
 	// Add selected class.
