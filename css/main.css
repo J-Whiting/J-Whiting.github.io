@@ -21,7 +21,7 @@ body {
 
 .sheet {
 	position: relative;
-    height: 836px;
+    height: 100vh;
     overflow: hidden;
 	z-index: 0;
 	background-color: black;
