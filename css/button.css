@@ -4,5 +4,17 @@
 //                                //
 //--------------------------------*/
 .text-button {
-	
+	color: var(--color-primary);
+	cursor: pointer;
+	min-width: 4em;
+	display: inline-block;
+}
+
+.text-button span {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.text-button:hover {
+	background-color: rgba(0,0,0,0.3)
 }
