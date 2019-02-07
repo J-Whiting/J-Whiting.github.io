@@ -19,7 +19,11 @@
 }
 
 .card:hover {
-	background-color: var(--color-background);
+	background-color: var(--color-primary-light);
+}
+
+.card:last-child {
+	margin-bottom: 0;
 }
 
 .card .header {
@@ -51,10 +55,18 @@
 }
 
 .card .media {
-    /*width: 688px;*/
-	height: 0;
+    width: 50vw;
     display: block;
-	transition: height .1s cubic-bezier(.4,0,.2,1);
+	
+	-webkit-object-fit: cover;
+	-o-object-fit: cover;
+	-ms-object-fit: cover;
+	object-fit: cover;
+	
+	-webkit-transition: height 1s ease;
+	-o-transition: height 1s ease;
+	-ms-transition: height 1s ease;
+	transition: height 1s ease;
 }
 
 .card img:last-child {
@@ -67,7 +79,7 @@
 }
 
 .card.selected:hover {
-	background-color: none;
+	background-color: var(--color-background);
 }
 
 .card.selected .media {

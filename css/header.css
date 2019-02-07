@@ -52,7 +52,7 @@ header .nav-item {
 	opacity: 0.7;
 	display: inline-block;
 	position: relative;
-	transition: color .1s cubic-bezier(.4,0,.2,1);
+	transition: color .25s ease;
 	text-transform: uppercase;
 }
 
@@ -73,7 +73,7 @@ header .nav-indicator {
 	position: absolute;
 	transform: scaleY(0);
 	transform-origin: bottom;
-	transition: transform 235ms cubic-bezier(.4,0,.2,1);
+	transition: transform .25s ease;
 }
 
 header .selected .nav-indicator {
