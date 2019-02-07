@@ -76,9 +76,11 @@ function cardMouseOut(el) {
 
 function selectCard(el) {
 	// Remove selected class from the card-list.
-	var p = el.parentNode;
-	for (var i = 0; i < p.length; i++) {
-		p[i].classList.remove("selected");
+	var vEls = el.parentNode.childNodes;
+	for (var i = 0; i < vEls.length; i++) {
+		if (vEls[i].nodeType == 1) {
+			vEls[i].classList.remove("selected");
+		}
 	}
 	
 	// Add selected class.
