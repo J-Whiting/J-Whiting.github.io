@@ -1,0 +1,54 @@
+/*--------------------------------//
+//                                //
+//             Button             //
+//                                //
+//--------------------------------*/
+.text-button {
+	color: var(--color-primary);
+	box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+}
+
+.text-button .button-ripple {
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    pointer-events: none;
+    border-radius: inherit;
+	overflow: hidden;
+}
+
+.text-button .button-overlay {
+	opacity: 0;
+    transition: opacity .2s cubic-bezier(.35,0,.25,1),background-color .2s cubic-bezier(.35,0,.25,1);
+}
+
+.text-button:hover .button-overlay {
+	opacity: .04;
+}
+
+.text-button:hover {
+	background-color: rgba(0,0,0,0.3)
+}
+
