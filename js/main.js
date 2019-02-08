@@ -63,13 +63,15 @@ function pageScroll(id) {
 // Functions to apply hover to cards.
 //
 function cardMouseOver(el) {
-	el.classList.remove("elevation-2dp");
-	el.classList.add("elevation-8dp");
+	if (!el.classList.contains("selected")) {
+		el.classList.add("elevation-8dp");
+	}
 }
 
 function cardMouseOut(el) {
-	el.classList.remove("elevation-8dp");
-	el.classList.add("elevation-2dp");
+	if (!el.classList.contains("selected")) {
+		el.classList.remove("elevation-8dp");
+	}
 }
 
 
