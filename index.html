@@ -7,6 +7,13 @@
 		<meta name="author" content="Joshua Whiting" />
 		<meta name="description" content="Personal website for Joshua Whiting" />
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<!-- Let browser know website is optimized for mobile -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		
+		<!-- Import Google Icon Font -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- Import Material Components CSS -->
+		<link href="https://unpkg.com/material-components-web/dist/material-components-web.min.css" rel="stylesheet">
 		
 		<!-- CSS Reset -->
 		<link href="css/reset.css" rel="stylesheet" />
@@ -75,9 +82,15 @@
 						</div><!-- header -->
 						<img src="image/home/media.jpg" alt="Joshua Whiting" class="media" />
 						<h6 class="subtitle2">Hire me.</h6>
-						<a href="Joshua Whiting CV.pdf" target="_blank" class="button text-button">
-							<span>View CV</span>
-						</a><!-- text-button -->
+						<!--<a href="Joshua Whiting CV.pdf" target="_blank" class="button text-button">
+							<span class="button-wrapper">View CV</span>
+							<div class="button-ripple"></div>
+							<div class="button-overlay"></div>
+						</a>--><!-- text-button -->
+						
+						<button class="mdc-button">
+							<span class="mdc-button__label">View CV</span>
+						</button>
 					</div><!-- card -->
 				</div><!-- card-list -->
 				
@@ -166,6 +179,10 @@
 			</section><!-- sheet -->
 	
 		</div><!-- main -->
-	
+		
+		<!-- Import Material Components JS -->
+		<script src="https://unpkg.com/material-components-web/dist/material-components-web.min.js"></script>
+		<!-- Material Components JS -->
+		<script type="text/javascript" src="js/material.js"></script>
 	</body>
 </html>
