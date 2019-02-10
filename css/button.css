@@ -23,7 +23,7 @@
     margin: 0;
     min-width: 4em;
     line-height: 2.25em;
-    padding: 0 .5em;
+    padding: 0 1em;
 	margin: .5em;
     border-radius: 0.25em;
     overflow: visible;
@@ -48,4 +48,16 @@
 
 .text-button:active::before {
 	opacity: 0.4;
+}
+
+.button > * {
+	display: block;
+}
+
+.button span {
+	padding-bottom: 0.25rem;
+}
+
+.button .material-icons {
+	padding-top: 0.75rem;
 }

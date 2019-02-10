@@ -16,12 +16,16 @@
 		<link href="css/color.css" rel="stylesheet" />
 		<!-- Google Web Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+		<!-- Google Material Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!-- Font CSS -->
 		<link href="css/font.css" rel="stylesheet" />
 		<!-- Elevation CSS -->
 		<link href="css/elevation.css" rel="stylesheet" />
 		<!-- Header CSS -->
 		<link href="css/header.css" rel="stylesheet" />
+		<!-- Footer CSS -->
+		<link href="css/footer.css" rel="stylesheet" />
 		<!-- Main CSS -->
 		<link href="css/main.css" rel="stylesheet" />
 		<!-- Button CSS -->
@@ -38,24 +42,23 @@
 		<header id="header" class="elevation-4dp">
 			<div id="headerLeft" class="left"  onclick="pageScroll('home')">
 				<img id="headerIcon" class="icon" src="image/logo/Logo.svg" alt="Logo" />
-				<h5 id="headerTitle" class="title">Joshua Whiting</h5>
+				<span id="headerTitle" class="title h5">Joshua Whiting</span>
 			</div>
 			<nav id="headerNavigation" class="navigation">
 				<ul>
 					<li class="nav-item" onclick="pageScroll('education')">
-						<p>Education</p>
+						<i class="material-icons">school</i>
+						<span class="nav-label h6">Education</span>
 						<div class="nav-indicator"></div>
 					</li>
 					<li class="nav-item" onclick="pageScroll('experience')">
-						<p>Experience</p>
+						<i class="material-icons">work</i>
+						<span class="nav-label h6">Experience</span>
 						<div class="nav-indicator"></div>
 					</li>
 					<li class="nav-item" onclick="pageScroll('hobbies')">
-						<p>HOBBIES</p>
-						<div class="nav-indicator"></div>
-					</li>
-					<li class="nav-item" onclick="pageScroll('contact')">
-						<p>CONTACT</p>
+						<i class="material-icons">mood</i>
+						<span class="nav-label h6">HOBBIES</span>
 						<div class="nav-indicator"></div>
 					</li>
 				</ul>
@@ -73,15 +76,36 @@
 						<div class="header">
 							<img src="image/home/thumbnail.jpg" alt="Joshua Whiting Thumbnail" class="thumbnail" />
 							<div class="header-text">
-								<h6 class="header-title">Joshua Whiting</h6>
-								<h6 class="header-subtitle subtitle2">Software Developer</h6>
+								<span class="header-title h6">Joshua Whiting</span>
+								<br />
+								<span class="header-subtitle subtitle2">Software Developer</span>
 							</div><!-- header-text -->
 						</div><!-- header -->
 						<img src="image/home/media.jpg" alt="Joshua Whiting" class="media" />
-						<h6 class="subtitle2">Hire me.</h6>
-						<a href="Joshua Whiting CV.pdf" target="_blank" class="button text-button">
+						<span class="subtitle2">Hire me.</span>
+						<br />
+						<!--<a href="Joshua Whiting CV.pdf" target="_blank" class="button text-button">
 							<span class="button-label">View CV</span>
-						</a><!-- text-button -->
+						</a>--><!-- text-button -->
+						
+						<div class="buttons">
+							<a href="Joshua Whiting CV.pdf" target="_blank" class="button text-button">
+								<i class="material-icons">open_in_new</i>
+								<span class="h6">CV</span>
+							</a>
+							<a href="" class="button text-button">
+								<i class="material-icons">phone</i>
+								<span class="h6">Call</span>
+							</a>
+							<a href="" class="button text-button">
+								<i class="material-icons">email</i>
+								<span class="h6">Email</span>
+							</a>
+							<a href="https://www.linkedin.com/in/j-whiting/" target="_blank" class="button text-button">
+								<i class="material-icons">person_add</i>
+								<span class="h6">LinkedIn</span>
+							</a>
+						</div>
 					</div><!-- card -->
 				</div><!-- card-list -->
 				
@@ -96,8 +120,9 @@
 						<div class="header">
 							<img src="image/education/hull thumbnail.jpg" alt="Hull Thumbnail" class="thumbnail" />
 							<div class="header-text">
-								<h6 class="header-title">University of Hull</h6>
-								<h6 class="header-subtitle subtitle2">Master of Research in Computer Science</h6>
+								<span class="header-title h6">University of Hull</span>
+								<br />
+								<span class="header-subtitle subtitle2">Master of Research in Computer Science</span>
 							</div><!-- header-text -->
 						</div><!-- header -->
 						<img src="image/education/hull media.jpg" alt="Hull Media" class="media" />
@@ -107,8 +132,9 @@
 						<div class="header">
 							<img src="image/education/nottingham thumbnail.jpg" alt="Nottingham Thumbnail" class="thumbnail" />
 							<div class="header-text">
-								<h6 class="header-title">University of Nottingham</h6>
-								<h6 class="header-subtitle subtitle2">First Class Bachelor of Science with Honours in Mathematics (Applied Mathematics)</h6>
+								<span class="header-title h6">University of Nottingham</span>
+								<br />
+								<span class="header-subtitle subtitle2">First Class Bachelor of Science with Honours in Mathematics (Applied Mathematics)</span>
 							</div><!-- header-text -->
 						</div><!-- header -->
 						<img src="image/education/nottingham media.jpg" alt="Nottingham Media" class="media" />
@@ -131,8 +157,9 @@
 						<div class="header">
 							<img src="image/hobbies/sport thumbnail.jpg" alt="Sport Thumbnail" class="thumbnail" />
 							<div class="header-text">
-								<h6 class="header-title">Sports</h6>
-								<h6 class="header-subtitle subtitle2">Regularly play football, squash, badminton and table tennis.</h6>
+								<span class="header-title h6">Sports</span>
+								<br />
+								<span class="header-subtitle subtitle2">Regularly play football, squash, badminton and table tennis.</span>
 							</div><!-- header-text -->
 						</div><!-- header -->
 						<img src="image/hobbies/sport media.jpg" alt="Sport Media" class="media" />
@@ -142,8 +169,9 @@
 						<div class="header">
 							<img src="image/hobbies/language thumbnail.jpg" alt="Language Thumbnail" class="thumbnail" />
 							<div class="header-text">
-								<h6 class="header-title">Languages</h6>
-								<h6 class="header-subtitle subtitle2">Currently learning Korean.</h6>
+								<span class="header-title h6">Languages</span>
+								<br />
+								<span class="header-subtitle subtitle2">Currently learning Korean.</span>
 							</div><!-- header-text -->
 						</div><!-- header -->
 						<img src="image/hobbies/language media.jpg" alt="Language Media" class="media" />
@@ -153,19 +181,14 @@
 						<div class="header">
 							<img src="image/hobbies/music thumbnail.jpg" alt="Music Thumbnail" class="thumbnail" />
 							<div class="header-text">
-								<h6 class="header-title">Music</h6>
-								<h6 class="header-subtitle subtitle2">Play the guitar, bass guitar and drums.</h6>
+								<span class="header-title h6">Music</span>
+								<br />
+								<span class="header-subtitle subtitle2">Play the guitar, bass guitar and drums.</span>
 							</div><!-- header-text -->
 						</div><!-- header -->
 						<img src="image/hobbies/music media.jpg" alt="Music Media" class="media" />
 					</div><!-- card -->
 				</div><!-- card-list -->
-				
-			</section><!-- sheet -->
-	
-			<section id="contact" class="sheet">
-
-				<img src="image/background/Contact.jpg" alt="Contact Background" class="sheet-background" />
 				
 			</section><!-- sheet -->
 	

@@ -74,3 +74,11 @@
 .card.selected .media {
 	height: 50vh;
 }
+
+.card .buttons {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+}
