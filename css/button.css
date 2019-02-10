@@ -21,34 +21,31 @@
     vertical-align: baseline;
     text-align: center;
     margin: 0;
-    min-width: 64px;
-    line-height: 36px;
-    padding: 0 16px;
-    border-radius: 4px;
+    min-width: 4em;
+    line-height: 2.25em;
+    padding: 0 .5em;
+	margin: .5em;
+    border-radius: 0.25em;
     overflow: visible;
 }
 
-.text-button .button-ripple {
-	top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    pointer-events: none;
-    border-radius: inherit;
-	overflow: hidden;
-}
-
-.text-button .button-overlay {
+.text-button::before {
+	background-color: var(--color-primary);
 	opacity: 0;
-    transition: opacity .2s cubic-bezier(.35,0,.25,1),background-color .2s cubic-bezier(.35,0,.25,1);
+    transition: opacity .2s ease;
+	border-radius: 0.25em;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
 }
 
-.text-button:hover .button-overlay {
-	opacity: .04;
+.text-button:hover::before {
+	opacity: 0.2;
 }
 
-.text-button:hover {
-	background-color: rgba(0,0,0,0.3)
+.text-button:active::before {
+	opacity: 0.4;
 }
-
