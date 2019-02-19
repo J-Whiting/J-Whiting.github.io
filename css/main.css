@@ -21,7 +21,7 @@ body {
 	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-.main {
+main {
 	-webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
