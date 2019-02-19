@@ -3,8 +3,12 @@ self.addEventListener('install', function(e) {
 		caches.open('jw').then(function(cache) {
 			return cache.addAll([
 				'offline.html',
+				'manifest.json',
 				'css/font.css',
-				'https://fonts.googleapis.com/css?family=Roboto'
+				/* Roboto */
+				'https://fonts.googleapis.com/css?family=Roboto',
+				'https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2',
+				'images/logo/logo-192.png'
 			]);
 		})
 	);
