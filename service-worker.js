@@ -1,4 +1,4 @@
-const version = "1.0";
+const version = "1.01";
 const cacheName = "jw-${version}";
 
 self.addEventListener("install", e => {
@@ -19,6 +19,7 @@ self.addEventListener("install", e => {
 				"/css/reset.css",
 				"https://fonts.googleapis.com/css?family=Roboto",
 				"https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2",
+				"https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2",
 				"https://fonts.googleapis.com/icon?family=Material+Icons",
 				"https://fonts.gstatic.com/s/materialicons/v43/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2",
 				"images/education/background.jpg",
