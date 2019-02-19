@@ -8,7 +8,7 @@
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
-	font-display: auto;
+	font-display: swap;
 	src: local('Roboto'),
 		 local('Roboto-Regular'),
 		 url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
