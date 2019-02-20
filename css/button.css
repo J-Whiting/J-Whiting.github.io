@@ -4,6 +4,7 @@
 //                                //
 //--------------------------------*/
 .text-button {
+	color: #6200EE;
 	color: var(--color-primary);
 	box-sizing: border-box;
     position: relative;
