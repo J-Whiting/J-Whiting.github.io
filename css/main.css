@@ -48,9 +48,12 @@ main {
 	left: 0;
 	
 	/* Blur */
+	filter: url(blur.svg#blur);
+
 	filter: blur(3px);
 	-webkit-filter: blur(3px);
 	-moz-filter: blur(3px);
 	-o-filter: blur(3px);
 	-ms-filter: blur(3px);
+
 }
