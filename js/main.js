@@ -51,12 +51,25 @@ function pageScroll(id) {
 	
 	// Get the desired scroll position
 	var desiredScrollPosition = vEl.offsetTop - vHeader.offsetHeight;
+	console.log(vEl.offsetTop);
+	console.log(vHeader.offsetHeight);
+	console.log(desiredScrollPosition);
+
+	var isIE = !!document.documentMode;
+	console.log("IE: " + isIE);
+	var isEdge = !!/Edge\//.test(navigator.userAgent);
+	console.log("Edge: " + isEdge);
 
 	// Scroll.
-	window.scrollTo({
-	    top: desiredScrollPosition,
-	    behavior: "smooth"
-	});
+	if (isIE || isEdge) {
+		window.scroll(0, desiredScrollPosition);
+	}
+	else {
+		window.scrollTo({
+			top: desiredScrollPosition,
+			behavior: "smooth"
+		});
+	}
 }
 
 //
