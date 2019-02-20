@@ -53,7 +53,7 @@
 }
 
 .card .media {
-	height: 0;
+	height: 0.0001vh;
     width: 50vw;
     display: block;
 	object-fit: cover;
