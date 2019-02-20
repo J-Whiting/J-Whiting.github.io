@@ -29,9 +29,9 @@
 .card .thumbnail {
     width: 2.5em;
     height: 2.5em;
-    border-radius: 100em;
-    -webkit-border-radius: 100em;
-    -moz-border-radius: 100em;
+    border-radius: 100em !important;
+    -webkit-border-radius: 100em !important;
+    -moz-border-radius: 100em !important;
     display: block;
 	padding: 1em;
 }
