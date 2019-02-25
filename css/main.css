@@ -39,15 +39,35 @@ main {
 	margin-top: 4.5em; /* The header bar is 4.5em. */
 }
 
-.sheet-background {
+.sheet-background, .sheet-background::after {
 	height: auto;
 	min-height: 100%;
 	width: 100%;
+	position: absolute;
 	
 	top: 0;
 	left: 0;
+}
 
-	opacity: 0.5;
+.sheet-background {
+	object-fit: cover;
+	
+	/* Use this if filter is supported. */
+	filter: blur(3px);
+	transform: scale(1.05);
+}
+
+.sheet-background img {
+	width: 100%;
+}
+
+.sheet-background::after {
+	content: "";
+	
+	/* If filter is supported, this has opacity 0 and so is hidden.
+	   If filter is not supported this will put a 0.5 opacity layer over the image. */
+	background: rgba(0,0,0, 0.5);
+	filter: opacity(0);
 }
 
 @media only screen and (max-device-width: 480px) {
