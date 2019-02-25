@@ -49,3 +49,13 @@ main {
 
 	opacity: 0.5;
 }
+
+@media only screen and (max-device-width: 480px) {
+	.sheet {
+		height: calc(100vh - 9em); /* The header bar is 9em. */
+	}
+
+	.sheet:first-child {
+		margin-top: 9em; /* The header bar is 9em. */
+	}
+}

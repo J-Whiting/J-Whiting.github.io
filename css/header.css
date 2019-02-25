@@ -14,7 +14,6 @@ header {
 	justify-content: space-between;
 	display: flex;
 	display: -ms-flexbox;
-	height: 4.5em;
 }
 
 header .left {
@@ -29,16 +28,11 @@ header .left {
 
 header .icon {
 	height: 3em;
-	display: block;
 	margin-right: 1em;
 }
 
 header .title {
 	text-transform: uppercase;
-}
-
-header .navigation {
-	margin-left: auto;
 }
 
 header .navigation ul {
@@ -57,6 +51,7 @@ header .nav-item {
 	transition: color .25s ease;
 	text-transform: uppercase;
 	min-width: 5.5em;
+	flex-grow: 1;
 }
 
 header .nav-item > * {
@@ -94,4 +89,11 @@ header .nav-item.selected {
 
 header .selected .nav-indicator {
 	transform: scaleY(1);
+}
+
+@media only screen and (max-device-width: 480px) {
+	header {
+		flex-flow: column wrap;
+		-webkit-flex-flow: column wrap;
+	}
 }

@@ -63,3 +63,9 @@
 .button .material-icons {
 	padding-top: 0.75rem;
 }
+
+@media only screen and (max-device-width: 480px) {
+	.text-button {
+		margin: 0;
+	}
+}
