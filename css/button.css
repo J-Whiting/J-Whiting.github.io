@@ -42,6 +42,10 @@
 	top: 0;
 	left: 0;
 	content: "";
+
+	/* Added to prevent buttons moving when hovered. */
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .text-button:hover::before {
