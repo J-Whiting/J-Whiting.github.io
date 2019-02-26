@@ -9,11 +9,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="icon" type="images/png" href="images/logo/logo-192.png" />
 		<link rel="canonical" href="https://j-whiting.github.io/" />
-		
+
 		<!-- Progressive Web App -->
 		<meta name="theme-color" content="#6200EE" />
 		<link rel="manifest" href="manifest.json" />
-		
+
 		<script type="application/ld+json">
 			{
 				"@context": "http://schema.org/",
@@ -22,7 +22,7 @@
 				"familyName":"Whiting"
 			}
 		</script>
-		
+
 		<!-- CSS Reset -->
 		<link href="css/reset.css" rel="stylesheet" />
 		<!-- Color CSS -->
@@ -40,10 +40,10 @@
 		<!-- Card CSS -->
 		<link href="css/card.css" rel="stylesheet" />
 	</head>
-	
+
 	<body>
 		<header id="header" class="elevation-4dp">
-			<div id="headerLeft" class="left"  onclick="pageScroll('home')">
+			<div id="headerLeft" class="left" onclick="pageScroll('home')">
 				<img id="headerIcon" class="icon" src="images/logo/logo-192.svg" alt="Logo" />
 				<span id="headerTitle" class="title h5">Joshua Whiting</span>
 			</div>
@@ -67,16 +67,16 @@
 				</ul>
 			</nav>
 		</header>
-	
+
 		<main role="main">
-		
+
 			<div id="home" class="sheet">
-				
+
 				<picture class="sheet-background">
 					<source srcset="images/home/background-2000.webp" type="image/webp">
 					<img src="images/home/background-2000.jpg" alt="Home Background" />
 				</picture>
-				
+
 				<div class="card-list">
 					<div class="card elevation-1dp selected">
 						<div class="header">
@@ -100,7 +100,7 @@
 						<div class="footer">
 							<span class="subtitle2">Hire me.</span>
 							<br />
-							
+
 							<div class="buttons">
 								<a href="Joshua-Whiting-CV.pdf" target="_blank" class="button text-button">
 									<i class="material-icons">&#xe89e;</i>
@@ -122,16 +122,16 @@
 						</div><!-- footer -->
 					</div><!-- card -->
 				</div><!-- card-list -->
-				
+
 			</div><!-- sheet -->
-	
+
 			<div id="education" class="sheet">
-		
+
 				<picture class="sheet-background">
 					<source srcset="images/education/background-2000.webp" type="image/webp">
 					<img src="images/education/background-2000.jpg" alt="Education Background" />
 				</picture>
-	
+
 				<div id="education-card-list" class="card-list">
 					<div class="card elevation-1dp selected" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
 						<div class="header">
@@ -151,7 +151,7 @@
 							<img src="images/education/hull-media-1500.jpg" alt="Hull Media" class="media" />
 						</picture>
 					</div><!-- card -->
-					
+
 					<div class="card elevation-1dp" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
 						<div class="header">
 							<picture>
@@ -172,23 +172,23 @@
 					</div><!-- card -->
 				</div><!-- card-list -->
 			</div><!-- sheet -->
-			
+
 			<div id="experience" class="sheet">
-		
+
 				<picture class="sheet-background">
 					<source srcset="images/experience/background-2000.webp" type="image/webp">
 					<img src="images/experience/background-2000.jpg" alt="Experience Background" />
 				</picture>
-				
+
 			</div><!-- sheet -->
-			
+
 			<div id="hobbies" class="sheet">
-		
+
 				<picture class="sheet-background">
 					<source srcset="images/hobbies/background-2000.webp" type="image/webp">
 					<img src="images/hobbies/background-2000.jpg" alt="Hobbies Background" />
 				</picture>
-				
+
 				<div id="hobby-card-list" class="card-list">
 					<div class="card elevation-1dp selected" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
 						<div class="header">
@@ -208,7 +208,7 @@
 							<img src="images/hobbies/sport-media-1500.jpg" alt="Sport Media" class="media" />
 						</picture>
 					</div><!-- card -->
-					
+
 					<div class="card elevation-1dp" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
 						<div class="header">
 							<picture>
@@ -227,7 +227,7 @@
 							<img src="images/hobbies/language-media-1500.jpg" alt="Language Media" class="media" />
 						</picture>
 					</div><!-- card -->
-					
+
 					<div class="card elevation-1dp" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
 						<div class="header">
 							<picture>
@@ -247,11 +247,11 @@
 						</picture>
 					</div><!-- card -->
 				</div><!-- card-list -->
-				
+
 			</div><!-- sheet -->
-	
+
 		</main><!-- main -->
-		
+
 		<!-- Main Javascript -->
 		<script src="js/main.js"></script>
 		<script>
@@ -259,7 +259,7 @@
 				navigator.serviceWorker.register('service-worker.js').then(function() {
 					console.log("Service Worker Registered");
 				});
-				
+
 				navigator.serviceWorker.ready.then(function(registration) {
 					console.log('Service Worker Ready');
 				});

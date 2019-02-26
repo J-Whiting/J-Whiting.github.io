@@ -30,12 +30,12 @@
 }
 
 .card .thumbnail {
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 100em !important;
-    -webkit-border-radius: 100em !important;
-    -moz-border-radius: 100em !important;
-    display: block;
+	width: 2.5em;
+	height: 2.5em;
+	border-radius: 100em !important;
+	-webkit-border-radius: 100em !important;
+	-moz-border-radius: 100em !important;
+	display: block;
 	margin: 1em 1em 1em 0;
 }
 
@@ -55,10 +55,10 @@
 
 .card .media {
 	height: 0.0001vh;
-    width: 50vw;
-    display: block;
+	width: 50vw;
+	display: block;
 	object-fit: cover;
-	
+
 	-webkit-transition: height .5s ease;
 	-o-transition: height .5s ease;
 	-ms-transition: height .5s ease;
