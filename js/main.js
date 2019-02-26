@@ -4,30 +4,30 @@ document.addEventListener('DOMContentLoaded', function(event){
 	//
 	vNavItems = document.getElementById("headerNavigation").children[0].children;
 	vActiveID = 0;
-	
+
 	window.onscroll = function() {
 		var doc = document.documentElement;
 		var vScroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-		
+
 		// Get the height of the browser.
 		var g = document.getElementsByTagName('body')[0];
 		var vBrowserHeight = window.innerHeight || doc.clientHeight || g.clientHeight;
-		
+
 		// Get the height of the header.
 		var vHeader = document.getElementsByTagName('header')[0];
 		var vHeaderHeight = vHeader.clientHeight;
-		
+
 		// Get the sheet height.
 		var vSheetHeight = vBrowserHeight - vHeaderHeight;
-		
+
 		var vNavID = Math.floor((vScroll) / vSheetHeight);
 		vNavID--;
-		
+
 		// Only update the classes if they change.
 		if (vNavID != vActiveID) {
 			var vNavItem;
 			for (var i = 0; i < vNavItems.length; i++) {
-				
+
 				vNavItem = vNavItems[i];
 				if (i == vNavID) {
 					vNavItem.classList.add("selected");
@@ -36,19 +36,19 @@ document.addEventListener('DOMContentLoaded', function(event){
 					vNavItem.classList.remove("selected");
 				}
 			}
-			
+
 			// Update the active tab id.
 			vActiveID = vNavID;
 		}
 	};
-	
-	
+
+
 });
 
 function pageScroll(id) {
 	var vEl = document.getElementById(id);
 	var vHeader = document.getElementById("header");
-	
+
 	// Get the desired scroll position
 	var desiredScrollPosition = vEl.offsetTop - vHeader.offsetHeight;
 	console.log(vEl.offsetTop);
@@ -77,6 +77,7 @@ function pageScroll(id) {
 //
 function cardMouseOver(el) {
 	if (!el.classList.contains("selected")) {
+		el.classList.remove("elevation-1dp");
 		el.classList.add("elevation-8dp");
 	}
 }
@@ -84,10 +85,9 @@ function cardMouseOver(el) {
 function cardMouseOut(el) {
 	if (!el.classList.contains("selected")) {
 		el.classList.remove("elevation-8dp");
+		el.classList.add("elevation-1dp");
 	}
 }
-
-
 
 function selectCard(el) {
 	// Remove selected class from the card-list.
@@ -95,9 +95,13 @@ function selectCard(el) {
 	for (var i = 0; i < vEls.length; i++) {
 		if (vEls[i].nodeType == 1) {
 			vEls[i].classList.remove("selected");
+			vEls[i].classList.remove("elevation-8dp");
+			vEls[i].classList.add("elevation-1dp");
 		}
 	}
-	
+
 	// Add selected class.
+	el.classList.remove("elevation-1dp");
 	el.classList.add("selected");
+	el.classList.add("elevation-8dp");
 }
