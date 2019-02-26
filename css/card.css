@@ -93,6 +93,12 @@
 	justify-content: center;
 }
 
+@media only screen and (max-device-width: 1000px) {
+	.card .media {
+		width: 70vw;
+	}
+}
+
 @media only screen and (max-device-width: 480px) {
 	.card .media {
 		width: 90vw;
