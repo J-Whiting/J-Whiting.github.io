@@ -39,16 +39,14 @@ main {
 }
 
 .sheet-background {
-	height: auto;
-	min-height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	object-fit: cover;
-
 	/* If filter is not supported this will put a 0.5 opacity layer over the image. */
 	opacity: 0.5;
+}
+
+.sheet-background img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 
 /* If filter is supported it applies the filter and removes the opacity. */
