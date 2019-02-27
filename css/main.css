@@ -38,20 +38,18 @@ main {
 	margin-top: 4.5em; /* The header bar is 4.5em. */
 }
 
-.sheet-background {
-	/* If filter is not supported this will put a 0.5 opacity layer over the image. */
-	opacity: 0.5;
-}
-
 .sheet-background img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+
+	/* If filter is not supported this will put a 0.5 opacity layer over the image. */
+	opacity: 0.5;
 }
 
 /* If filter is supported it applies the filter and removes the opacity. */
 @supports (filter: blur(3px)) {
-	.sheet-background {
+	.sheet-background img {
 		opacity: 1;
 		filter: blur(3px);
 		transform: scale(1.05);
