@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 	// Updating selected nav tab based on scroll position.
 	//
 	vNavItems = document.getElementById("headerNavigation").children[0].children;
-	vActiveID = 0;
+	vActiveID = -1;
 
 	window.onscroll = function() {
 		var doc = document.documentElement;
@@ -19,8 +19,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 
 		// Get the sheet height.
 		var vSheetHeight = vBrowserHeight - vHeaderHeight;
-
-		var vNavID = Math.floor((vScroll) / vSheetHeight);
+		var vNavID = Math.floor(vScroll / vSheetHeight);
 		vNavID--;
 
 		// Only update the classes if they change.
