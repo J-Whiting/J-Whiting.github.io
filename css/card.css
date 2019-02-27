@@ -13,7 +13,6 @@
 .card {
 	color: #000;
 	color: var(--color-background-text);
-	border-radius: 0.25em;
 	cursor: pointer;
 	margin-bottom: 1em;
 }
@@ -27,6 +26,7 @@
 	background-color: #FFF;
 	background-color: var(--color-background);
 	padding: 0 1em;
+	border-radius: 0.25em;
 }
 
 .card .thumbnail {
@@ -74,6 +74,11 @@
 	cursor: default;
 }
 
+.card.selected .header {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
 .card.selected .media {
 	height: 50vh;
 }
@@ -81,11 +86,11 @@
 .card .footer {
 	background-color: #FFF;
 	background-color: var(--color-background);
+	border-bottom-left-radius: 0.25em;
+	border-bottom-right-radius: 0.25em;
 }
 
 .card .buttons {
-	background-color: #FFF;
-	background-color: var(--color-background);
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
