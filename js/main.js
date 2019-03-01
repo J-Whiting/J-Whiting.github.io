@@ -40,8 +40,6 @@ document.addEventListener('DOMContentLoaded', function(event){
 			vActiveID = vNavID;
 		}
 	};
-
-
 });
 
 function pageScroll(id) {
@@ -50,9 +48,6 @@ function pageScroll(id) {
 
 	// Get the desired scroll position
 	var desiredScrollPosition = vEl.offsetTop - vHeader.offsetHeight;
-	console.log(vEl.offsetTop);
-	console.log(vHeader.offsetHeight);
-	console.log(desiredScrollPosition);
 
 	var isIE = !!document.documentMode;
 	console.log("IE: " + isIE);
