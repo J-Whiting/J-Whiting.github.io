@@ -44,7 +44,10 @@
 	<body>
 		<header id="header" class="elevation-4dp">
 			<div id="headerLeft" class="left" onclick="pageScroll('home')">
-				<img id="headerIcon" class="icon" src="images/logo/logo-192.svg" alt="Logo" />
+				<picture id="headerIcon" class="icon">
+					<source srcset="images/logo/logo-192.svg" type="image/svg+xml">
+					<img src="images/logo/logo-192.png" alt="Logo" />
+				</picture>
 				<span id="headerTitle" class="title h5">Joshua Whiting</span>
 			</div>
 			<nav id="headerNavigation" class="navigation">
