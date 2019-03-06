@@ -29,7 +29,7 @@
 	border-radius: 0.25em;
 }
 
-.card .thumbnail {
+.card .thumbnail img {
 	width: 2.5em;
 	height: 2.5em;
 	border-radius: 100em !important;
@@ -53,7 +53,7 @@
 	opacity: 0.65;
 }
 
-.card .media {
+.card .media img {
 	height: 0.0001vh;
 	width: 50vw;
 	display: block;
@@ -79,7 +79,7 @@
 	border-bottom-right-radius: 0;
 }
 
-.card.selected .media {
+.card.selected .media img {
 	height: 50vh;
 }
 
@@ -99,17 +99,17 @@
 }
 
 @media only screen and (max-device-width: 1000px) {
-	.card .media {
+	.card .media img {
 		width: 70vw;
 	}
 }
 
 @media only screen and (max-device-width: 480px) {
-	.card .media {
+	.card .media img {
 		width: 90vw;
 	}
 
-	.card.selected .media {
+	.card.selected .media img {
 		height: 40vh;
 	}
 }
