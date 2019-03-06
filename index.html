@@ -48,7 +48,7 @@
 					<source srcset="images/logo/logo-192.svg" type="image/svg+xml">
 					<img src="images/logo/logo-192.png" alt="Logo" />
 				</picture>
-				<span id="headerTitle" class="title h5">Joshua Whiting</span>
+				<h1 id="headerTitle" class="title h5">Joshua Whiting</h1>
 			</div>
 			<nav id="headerNavigation" class="navigation">
 				<ul>
@@ -56,24 +56,24 @@
 						<span class="material-icons">&#xe80c;</span>
 						<span class="nav-label h6">Education</span>
 						<div class="nav-indicator"></div>
-					</li>
+					</li><!-- nav-item -->
 					<li class="nav-item" onclick="pageScroll('experience')">
 						<span class="material-icons">&#xe8f9;</span>
 						<span class="nav-label h6">Experience</span>
 						<div class="nav-indicator"></div>
-					</li>
+					</li><!-- nav-item -->
 					<li class="nav-item" onclick="pageScroll('hobbies')">
 						<span class="material-icons">&#xe7f2;</span>
 						<span class="nav-label h6">HOBBIES</span>
 						<div class="nav-indicator"></div>
-					</li>
+					</li><!-- nav-item -->
 				</ul>
-			</nav>
+			</nav><!-- navigation -->
 		</header>
 
-		<main role="main">
+		<main>
 
-			<div id="home" class="sheet">
+			<section id="home" class="sheet">
 
 				<picture class="sheet-background">
 					<source srcset="images/home/background-600.webp" type="image/webp" media="(max-width: 600px)">
@@ -87,7 +87,7 @@
 					<source srcset="images/home/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/home/background-2400.webp" type="image/webp">
 					<img src="images/home/background-2400.jpg" alt="Home Background" />
-				</picture>
+				</picture><!-- sheet-background -->
 
 				<div class="card-list">
 					<div class="card elevation-8dp selected">
@@ -97,7 +97,7 @@
 								<img src="images/home/thumbnail-40.jpg" alt="Joshua Whiting Thumbnail" class="thumbnail" />
 							</picture>
 							<div class="header-text">
-								<span class="header-title h6">Joshua Whiting</span>
+								<h2 class="header-title h6">Joshua Whiting</h2>
 								<br />
 								<span class="header-subtitle subtitle2">Software Developer</span>
 							</div><!-- header-text -->
@@ -117,27 +117,27 @@
 								<a href="Joshua-Whiting-CV.pdf" target="_blank" class="button text-button">
 									<span class="material-icons">&#xe89e;</span>
 									<span class="h6">CV</span>
-								</a>
+								</a><!-- button -->
 								<a href="tel:+44-7915-107162" class="button text-button">
 									<span class="material-icons">&#xe0cd;</span>
 									<span class="h6">Call</span>
-								</a>
+								</a><!-- button -->
 								<a href="mailto:joshuawhiting1990@gmail.com" class="button text-button">
 									<span class="material-icons">&#xe0be;</span>
 									<span class="h6">Email</span>
-								</a>
+								</a><!-- button -->
 								<a href="https://www.linkedin.com/in/j-whiting/" target="_blank" rel="noopener noreferrer" class="button text-button">
 									<span class="material-icons">&#xe7fe;</span>
 									<span class="h6">LinkedIn</span>
-								</a>
-							</div>
+								</a><!-- button -->
+							</div><!-- buttons -->
 						</div><!-- footer -->
 					</div><!-- card -->
 				</div><!-- card-list -->
 
-			</div><!-- sheet -->
+			</section><!-- sheet -->
 
-			<div id="education" class="sheet">
+			<section id="education" class="sheet">
 
 				<picture class="sheet-background">
 					<source srcset="images/education/background-600.webp" type="image/webp" media="(max-width: 600px)">
@@ -151,7 +151,7 @@
 					<source srcset="images/education/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/education/background-2400.webp" type="image/webp">
 					<img src="images/education/background-2400.jpg" alt="Education Background" />
-				</picture>
+				</picture><!-- sheet-background -->
 
 				<div id="education-card-list" class="card-list">
 					<div class="card elevation-8dp selected" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
@@ -161,7 +161,7 @@
 								<img src="images/education/hull-thumbnail-40.jpg" alt="Hull Thumbnail" class="thumbnail" />
 							</picture>
 							<div class="header-text">
-								<span class="header-title h6">University of Hull</span>
+								<h2 class="header-title h6">University of Hull</h2>
 								<br />
 								<span class="header-subtitle subtitle2">Master of Research in Computer Science</span>
 							</div><!-- header-text -->
@@ -180,7 +180,7 @@
 								<img src="images/education/nottingham-thumbnail-40.jpg" alt="Nottingham Thumbnail" class="thumbnail" />
 							</picture>
 							<div class="header-text">
-								<span class="header-title h6">University of Nottingham</span>
+								<h2 class="header-title h6">University of Nottingham</h2>
 								<br />
 								<span class="header-subtitle subtitle2">First Class Bachelor of Science with Honours in Mathematics</span>
 							</div><!-- header-text -->
@@ -192,9 +192,9 @@
 						</picture>
 					</div><!-- card -->
 				</div><!-- card-list -->
-			</div><!-- sheet -->
+			</section><!-- sheet -->
 
-			<div id="experience" class="sheet">
+			<section id="experience" class="sheet">
 
 				<picture class="sheet-background">
 					<source srcset="images/experience/background-600.webp" type="image/webp" media="(max-width: 600px)">
@@ -208,11 +208,11 @@
 					<source srcset="images/experience/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/experience/background-2400.webp" type="image/webp">
 					<img src="images/experience/background-2400.jpg" alt="Experience Background" />
-				</picture>
+				</picture><!-- sheet-background -->
 
-			</div><!-- sheet -->
+			</section><!-- sheet -->
 
-			<div id="hobbies" class="sheet">
+			<section id="hobbies" class="sheet">
 
 				<picture class="sheet-background">
 					<source srcset="images/hobbies/background-600.webp" type="image/webp" media="(max-width: 600px)">
@@ -226,7 +226,7 @@
 					<source srcset="images/hobbies/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/hobbies/background-2400.webp" type="image/webp">
 					<img src="images/hobbies/background-2400.jpg" alt="Hobbies Background" />
-				</picture>
+				</picture><!-- sheet-background -->
 
 				<div id="hobby-card-list" class="card-list">
 					<div class="card elevation-8dp selected" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
@@ -236,7 +236,7 @@
 								<img src="images/hobbies/sport-thumbnail-40.jpg" alt="Sport Thumbnail" class="thumbnail" />
 							</picture>
 							<div class="header-text">
-								<span class="header-title h6">Sports</span>
+								<h2 class="header-title h6">Sports</h2>
 								<br />
 								<span class="header-subtitle subtitle2">Regularly play football, squash, badminton and table tennis.</span>
 							</div><!-- header-text -->
@@ -255,7 +255,7 @@
 								<img src="images/hobbies/language-thumbnail-40.jpg" alt="Language Thumbnail" class="thumbnail" />
 							</picture>
 							<div class="header-text">
-								<span class="header-title h6">Languages</span>
+								<h2 class="header-title h6">Languages</h2>
 								<br />
 								<span class="header-subtitle subtitle2">Currently learning Korean.</span>
 							</div><!-- header-text -->
@@ -274,7 +274,7 @@
 								<img src="images/hobbies/music-thumbnail-40.jpg" alt="Music Thumbnail" class="thumbnail" />
 							</picture>
 							<div class="header-text">
-								<span class="header-title h6">Music</span>
+								<h2 class="header-title h6">Music</h2>
 								<br />
 								<span class="header-subtitle subtitle2">Play the guitar, bass guitar and drums.</span>
 							</div><!-- header-text -->
@@ -287,7 +287,7 @@
 					</div><!-- card -->
 				</div><!-- card-list -->
 
-			</div><!-- sheet -->
+			</section><!-- sheet -->
 
 		</main><!-- main -->
 
