@@ -1,2 +1,2 @@
-# J-Whiting.github.io
+# JoshuaBee.github.io
 Personal Website
