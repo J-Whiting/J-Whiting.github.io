@@ -3,7 +3,7 @@
 //             Button             //
 //                                //
 //--------------------------------*/
-.text-button {
+.button {
 	color: #6200EE;
 	color: var(--color-primary);
 	box-sizing: border-box;
@@ -30,7 +30,7 @@
 	overflow: visible;
 }
 
-.text-button::before {
+.button::before {
 	background-color: #6200EE;
 	background-color: var(--color-primary);
 	opacity: 0;
@@ -48,11 +48,11 @@
 	backface-visibility: hidden;
 }
 
-.text-button:hover::before {
+.button:hover::before {
 	opacity: 0.2;
 }
 
-.text-button:active::before {
+.button:active::before {
 	opacity: 0.4;
 }
 
@@ -60,11 +60,11 @@
 	display: block;
 }
 
-.button span {
+.icon-text-button span {
 	padding-bottom: 0.25rem;
 }
 
-.button .material-icons {
+.icon-text-button .material-icons {
 	padding-top: 0.75rem;
 }
 

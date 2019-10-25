@@ -4,8 +4,20 @@ document.addEventListener('DOMContentLoaded', function(event){
 	//
 	vNavItems = document.getElementById("headerNavigation").children[0].children;
 	vActiveID = -1;
-
+	
+	vSnackbarOpen = true;
+	document.getElementById("install-close").addEventListener('click', event => {
+		vSnackbarOpen = false;
+		document.getElementById("install-snackbar").style.bottom = '-5em';
+	});
+	
 	window.onscroll = function() {
+		// Open snackbar upon scroll
+		if (vSnackbarOpen) {
+			// Update UI notify the user they can add to home screen
+			document.getElementById("install-snackbar").style.bottom = '1em';
+		}
+		
 		var doc = document.documentElement;
 		var vScroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 
@@ -53,7 +65,7 @@ window.addEventListener('beforeinstallprompt', event => {
 	deferredPrompt = event;
 
 	// Attach the install prompt to a user gesture
-	document.getElementById("install-button").addEventListener('click', event => {
+	document.getElementById("install-action").addEventListener('click', event => {
 
 		// Show the prompt
 		deferredPrompt.prompt();
@@ -69,9 +81,6 @@ window.addEventListener('beforeinstallprompt', event => {
 			deferredPrompt = null;
 		});
 	});
-
-	// Update UI notify the user they can add to home screen
-	document.getElementById("install-banner").style.display = 'flex';
 });
 
 function pageScroll(id) {

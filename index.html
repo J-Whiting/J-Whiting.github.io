@@ -58,6 +58,8 @@
 		<link href="css/button.css" rel="stylesheet" />
 		<!-- Card CSS -->
 		<link href="css/card.css" rel="stylesheet" />
+		<!-- Snackbar CSS -->
+		<link href="css/snackbar.css" rel="stylesheet" />
 	</head>
 
 	<body>
@@ -91,10 +93,6 @@
 		</header>
 
 		<main>
-		
-			<section id="install-banner" class="banner">
-				<button id="install-button">Install app</button>
-			</section>
 
 			<section id="home" class="sheet">
 
@@ -135,19 +133,19 @@
 							<span class="subtitle2"></span>
 
 							<div class="buttons">
-								<a href="Joshua-Bee-CV.pdf" target="_blank" class="button text-button">
+								<a href="Joshua-Bee-CV.pdf" target="_blank" class="button icon-text-button">
 									<span class="material-icons">&#xe89e;</span>
 									<span class="h6">CV</span>
 								</a><!-- button -->
-								<a href="tel:+44-7915-107162" class="button text-button">
+								<a href="tel:+44-7915-107162" class="button icon-text-button">
 									<span class="material-icons">&#xe0cd;</span>
 									<span class="h6">Call</span>
 								</a><!-- button -->
-								<a href="mailto:joshuaregular@gmail.com" class="button text-button">
+								<a href="mailto:joshuaregular@gmail.com" class="button icon-text-button">
 									<span class="material-icons">&#xe0be;</span>
 									<span class="h6">Email</span>
 								</a><!-- button -->
-								<a href="https://www.linkedin.com/in/joshua-bee/" target="_blank" rel="noopener noreferrer" class="button text-button">
+								<a href="https://www.linkedin.com/in/joshua-bee/" target="_blank" rel="noopener noreferrer" class="button icon-text-button">
 									<span class="material-icons">&#xe7fe;</span>
 									<span class="h6">LinkedIn</span>
 								</a><!-- button -->
@@ -340,6 +338,16 @@
 					</div><!-- card -->
 				</div><!-- card-list -->
 			</section><!-- sheet -->
+			
+			<div id="install-snackbar" class="snackbar elevation-6dp">
+				<span class="snackbar-text">Install Progressive Web App</span>
+				<div id="install-action" class="button text-button">
+					<span class="h6">Install</span>
+				</div><!-- button -->
+				<div id="install-close" class="button text-button">
+					<span class="material-icons h6">&#xe5cd;</span>
+				</div><!-- button -->
+			</div><!-- snackbar -->
 
 		</main><!-- main -->
 
