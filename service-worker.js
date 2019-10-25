@@ -1,7 +1,8 @@
-const version = "1.06";
+const version = "1.07";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
+	console.log('Service worker installing...');
 	e.waitUntil(
 		caches.open(cacheName).then(cache => {
 			return cache.addAll([
@@ -150,10 +151,12 @@ self.addEventListener("install", e => {
 });
 
 self.addEventListener("activate", event => {
+	console.log('Service worker activating...');
 	event.waitUntil(self.clients.claim());
 });
 
 self.addEventListener("fetch", event => {
+	console.log('Service worker fetching:', event.request.url);
 	event.respondWith(
 		caches.open(cacheName)
 		.then(cache => cache.match(event.request, {ignoreSearch: true}))

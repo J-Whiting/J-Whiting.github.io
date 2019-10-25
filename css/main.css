@@ -26,6 +26,13 @@ main {
 	flex: 1;
 }
 
+.banner {
+  align-content: center;
+  display: none;
+  justify-content: center;
+  width: 100%;
+}
+
 .sheet {
 	position: relative;
 	height: calc(100vh - 4.5em); /* The header bar is 4.5em. */
