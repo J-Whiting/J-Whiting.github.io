@@ -1,5 +1,5 @@
 {
-  "short_name": "JB",
+  "short_name": "Joshua Bee",
   "name": "Joshua Bee",
   "description": "Personal website for Joshua Bee",
   "icons": [
@@ -14,7 +14,7 @@
 	  "sizes": "512x512"
 	}
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#6200EE",
   "theme_color": "#6200EE"
