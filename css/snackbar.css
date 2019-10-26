@@ -11,8 +11,7 @@
 	min-width: 21.5em;
 	min-height: 3em;
 	
-	background-color: #000000;
-	/*opacity: 0.8;*/
+	background-color: #000;
 	color: #FFF;
 	
 	align-content: center;
@@ -26,14 +25,31 @@
 }
 
 .snackbar-text {
-	padding-left: 1em;
+	padding: 0 1em;
 	margin-right: auto;
 }
 
-.snackbar-action {
-	
+.snackbar-actions {
+	display: flex;
+	margin-right: 0.5em;
+}
+
+.snackbar-actions .button {
+	color: #03DAC6;
+	color: var(--color-secondary);
+}
+
+.snackbar-actions .button::before {
+	background-color: #03DAC6;
+	background-color: var(--color-secondary);
 }
 
 .snackbar-close {
-	
+	padding: 0;
+	border-radius: 25em;
+	min-width: 2.25em;
+}
+
+.snackbar-close::before {
+	border-radius: 25em;
 }

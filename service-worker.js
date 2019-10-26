@@ -1,4 +1,4 @@
-const version = "1.07";
+const version = "1.08";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -48,6 +48,7 @@ self.addEventListener("install", e => {
 				"/css/header.css",
 				"/css/main.css",
 				"/css/reset.css",
+				"/css/snackbar.css",
 				"https://fonts.googleapis.com/css?family=Roboto",
 				"https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2",
 				"https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2",
