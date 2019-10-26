@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', function(event){
 	}
 	
 	window.onscroll = function() {
+		console.log("vInstalled: ", vInstalled);
+		console.log("vStandalone: ", vStandalone);
+		console.log("vSnackbarOpen: ", vSnackbarOpen);
+		
 		// Open snackbar upon scroll
 		if (!vInstalled && !vStandalone && vSnackbarOpen) {
 			// Update UI notify the user they can add to home screen
