@@ -94,6 +94,12 @@ window.addEventListener('beforeinstallprompt', event => {
 	});
 });
 
+// When the app is installed it should remove the install snackbar
+window.addEventListener('appinstalled', (evt) => {
+	console.log('a2hs installed');
+	document.getElementById("install-snackbar").style.bottom = '-5em';
+});
+
 function pageScroll(id) {
 	var vEl = document.getElementById(id);
 	var vHeader = document.getElementById("header");
