@@ -21,10 +21,6 @@ document.addEventListener('DOMContentLoaded', function(event){
 	}
 	
 	window.onscroll = function() {
-		console.log("vInstalled: ", vInstalled);
-		console.log("vStandalone: ", vStandalone);
-		console.log("vSnackbarOpen: ", vSnackbarOpen);
-		
 		// Open snackbar upon scroll
 		if (!vInstalled && !vStandalone && vSnackbarOpen) {
 			// Update UI notify the user they can add to home screen
@@ -101,6 +97,8 @@ window.addEventListener('beforeinstallprompt', event => {
 // When the app is installed it should remove the install snackbar
 window.addEventListener('appinstalled', (evt) => {
 	console.log('a2hs installed');
+	vInstalled = true;
+	vStandalone = true;
 	document.getElementById("install-snackbar").style.bottom = '-5em';
 });
 
