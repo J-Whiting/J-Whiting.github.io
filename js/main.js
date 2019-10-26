@@ -1,3 +1,8 @@
+let vDeferredPrompt;
+let vSnackbarOpen = true;
+let vInstalled = true;
+let vStandalone = false;
+
 document.addEventListener('DOMContentLoaded', function(event){
 	//
 	// Updating selected nav tab based on scroll position.
@@ -5,15 +10,19 @@ document.addEventListener('DOMContentLoaded', function(event){
 	vNavItems = document.getElementById("headerNavigation").children[0].children;
 	vActiveID = -1;
 	
-	vSnackbarOpen = true;
 	document.getElementById("install-close").addEventListener('click', event => {
 		vSnackbarOpen = false;
 		document.getElementById("install-snackbar").style.bottom = '-5em';
 	});
 	
+	if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+		console.log('display-mode is standalone');
+		vStandalone = true;
+	}
+	
 	window.onscroll = function() {
 		// Open snackbar upon scroll
-		if (vSnackbarOpen) {
+		if (!vInstalled && !vStandalone && vSnackbarOpen) {
 			// Update UI notify the user they can add to home screen
 			document.getElementById("install-snackbar").style.bottom = '1em';
 		}
@@ -55,30 +64,32 @@ document.addEventListener('DOMContentLoaded', function(event){
 });
 
 // https://developers.google.com/web/ilt/pwa/lab-offline-quickstart#52_activating_the_install_prompt
-let deferredPrompt;
 window.addEventListener('beforeinstallprompt', event => {
+	
+	// The application is not installed
+	vInstalled = false;
 
 	// Prevent Chrome 67 and earlier from automatically showing the prompt
 	event.preventDefault();
 
 	// Stash the event so it can be triggered later.
-	deferredPrompt = event;
+	vDeferredPrompt = event;
 
 	// Attach the install prompt to a user gesture
 	document.getElementById("install-action").addEventListener('click', event => {
 
 		// Show the prompt
-		deferredPrompt.prompt();
+		vDeferredPrompt.prompt();
 
 		// Wait for the user to respond to the prompt
-		deferredPrompt.userChoice.then((choiceResult) => {
+		vDeferredPrompt.userChoice.then((choiceResult) => {
 			if (choiceResult.outcome === 'accepted') {
 				console.log('User accepted the A2HS prompt');
 			}
 			else {
 				console.log('User dismissed the A2HS prompt');
 			}
-			deferredPrompt = null;
+			vDeferredPrompt = null;
 		});
 	});
 });
