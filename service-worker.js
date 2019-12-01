@@ -40,6 +40,7 @@ self.addEventListener("install", e => {
 				"/ms-icon-150.png",
 				"/ms-icon-310.png",
 				"/safari-pinned-tab.svg",
+				"/sitemap.xml",
 				"/css/button.css",
 				"/css/card.css",
 				"/css/color.css",
