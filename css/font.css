@@ -12,8 +12,8 @@
 	font-display: swap;
 	src: local('Roboto'),
 		 local('Roboto-Regular'),
-		 url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2'),
-		 url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
+		 url(../fonts/roboto.woff2) format('woff2'),
+		 url(../fonts/roboto.woff) format('woff');
 	unicode-range: U+0000-00FF,
 				   U+0131,
 				   U+0152-0153,
@@ -40,8 +40,8 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url(https://fonts.gstatic.com/s/materialicons/v43/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2'),
-		 url(https://fonts.gstatic.com/s/materialicons/v43/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.woff) format('woff');
+	src: url(../fonts/material-icons.woff2) format('woff2'),
+		 url(../fonts/material-icons.woff) format('woff');
 }
 
 .material-icons {
