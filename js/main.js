@@ -110,9 +110,7 @@ function pageScroll(id) {
 	var desiredScrollPosition = vEl.offsetTop - vHeader.offsetHeight;
 
 	var isIE = !!document.documentMode;
-	console.log("IE: " + isIE);
 	var isEdge = !!/Edge\//.test(navigator.userAgent);
-	console.log("Edge: " + isEdge);
 
 	// Scroll.
 	if (isIE || isEdge) {

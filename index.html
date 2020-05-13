@@ -75,6 +75,11 @@
 			</div>
 			<nav id="headerNavigation" class="navigation">
 				<ul>
+					<li class="nav-item" onclick="pageScroll('projects')">
+						<span class="material-icons">&#xe838;</span>
+						<span class="nav-label h6">Projects</span>
+						<div class="nav-indicator"></div>
+					</li><!-- nav-item -->
 					<li class="nav-item" onclick="pageScroll('education')">
 						<span class="material-icons">&#xe80c;</span>
 						<span class="nav-label h6">Education</span>
@@ -87,7 +92,7 @@
 					</li><!-- nav-item -->
 					<li class="nav-item" onclick="pageScroll('hobbies')">
 						<span class="material-icons">&#xe7f2;</span>
-						<span class="nav-label h6">HOBBIES</span>
+						<span class="nav-label h6">Hobbies</span>
 						<div class="nav-indicator"></div>
 					</li><!-- nav-item -->
 				</ul>
@@ -156,6 +161,65 @@
 					</div><!-- card -->
 				</div><!-- card-list -->
 
+			</section><!-- sheet -->
+
+			<section id="projects" class="sheet">
+
+				<picture class="sheet-background">
+					<source srcset="images/projects/background-600.webp" type="image/webp" media="(max-width: 600px)">
+					<source srcset="images/projects/background-800.webp" type="image/webp" media="(max-width: 800px)">
+					<source srcset="images/projects/background-1000.webp" type="image/webp" media="(max-width: 1000px)">
+					<source srcset="images/projects/background-1200.webp" type="image/webp" media="(max-width: 1200px)">
+					<source srcset="images/projects/background-1400.webp" type="image/webp" media="(max-width: 1400px)">
+					<source srcset="images/projects/background-1600.webp" type="image/webp" media="(max-width: 1600px)">
+					<source srcset="images/projects/background-1800.webp" type="image/webp" media="(max-width: 1800px)">
+					<source srcset="images/projects/background-2000.webp" type="image/webp" media="(max-width: 2000px)">
+					<source srcset="images/projects/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
+					<source srcset="images/projects/background-2400.webp" type="image/webp">
+					<img src="images/projects/background-2400.jpg" alt="Projects Background" />
+				</picture><!-- sheet-background -->
+
+				<div id="projects-card-list" class="card-list">
+					<div class="card elevation-8dp selected" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
+						<div class="header">
+							<picture class="thumbnail">
+								<source srcset="images/projects/project-euler-thumbnail-512.webp" type="image/webp">
+								<img src="images/projects/project-euler-thumbnail-512.jpg" alt="Project Euler Thumbnail" />
+							</picture><!-- thumbnail -->
+							<div class="header-text">
+								<h2 class="header-title h6">Project Euler</h2>
+								<span class="header-subtitle subtitle2">Collection of Project Euler puzzles</span>
+							</div><!-- header-text -->
+						</div><!-- header -->
+						<a href="https://joshuabee.github.io/ProjectEuler" target="_blank">
+							<picture class="media">
+								<source srcset="images/projects/project-euler-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
+								<source srcset="images/projects/project-euler-media-1500.webp" type="image/webp">
+								<img src="images/projects/project-euler-media-1500.jpg" alt="Project Euler Media" />
+							</picture><!-- media -->
+						</a>
+					</div><!-- card -->
+
+					<div class="card elevation-1dp" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
+						<div class="header">
+							<picture class="thumbnail">
+								<source srcset="images/projects/fake-name-generator-thumbnail-512.webp" type="image/webp">
+								<img src="images/projects/fake-name-generator-thumbnail-512.jpg" alt="Fake Name Generator Thumbnail" />
+							</picture><!-- thumbnail -->
+							<div class="header-text">
+								<h2 class="header-title h6">Fake Name Generator</h2>
+								<span class="header-subtitle subtitle2">Enter a name, returns an altered version</span>
+							</div><!-- header-text -->
+						</div><!-- header -->
+						<a href="https://joshuabee.github.io/FakeNameGenerator" target="_blank">
+							<picture class="media">
+								<source srcset="images/projects/fake-name-generator-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
+								<source srcset="images/projects/fake-name-generator-media-1500.webp" type="image/webp">
+								<img src="images/projects/fake-name-generator-media-1500.jpg" alt="Fake Name Generator Media" />
+							</picture><!-- media -->
+						</a>
+					</div><!-- card -->
+				</div><!-- card-list -->
 			</section><!-- sheet -->
 
 			<section id="education" class="sheet">
