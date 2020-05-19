@@ -1,14 +1,26 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>Joshua Bee</title>
+		<title>Joshua Bee - Senior Software Developer</title>
 		<meta charset="utf-8" />
 		<meta name="author" content="Joshua Bee" />
-		<meta name="description" content="Personal website for Joshua Bee" />
+		<meta name="description" content="Personal website for Joshua Bee, a sneior software developer based in Hull, UK" />
+		<meta name="keywords" content="joshua, bee, joshua bee, senior, software, developer, senior software developer, software developer, hull" />
+		<meta name="robots" content="index, follow" />
 		<!-- Let browser know website is optimized for mobile -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!-- Google Site Verification -->
 		<meta name="google-site-verification" content="yVZ9Z1K6g9XSyM9VJWn1aazhSSsyujbJ9pIHS3oxJpo" />
+
+		<meta property="og:url" content="https://joshuabee.github.io/" />
+		<meta property="og:locale" content="en-GB" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Joshua Bee - Senior Software Developer" />
+		<meta property="og:description" content="Personal website for Joshua Bee, a sneior software developer based in Hull, UK" />
+		<meta property="og:image" content="https://joshuabee.github.io/images/home/media-1500.jpg" />
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta property="og:image:width" content="1500" />
+		<meta property="og:image:height" content="1000" />
 		
 		<!-- Icons -->
 		<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57.png">
@@ -39,8 +51,29 @@
 			{
 				"@context": "http://schema.org/",
 				"@type": "Person",
+				"alumniOf":[
+                	{
+                		"name":"The University of Hull",
+                    	"url":"https://www.hull.ac.uk/"
+					},
+                    {
+                		"name":"The University of Nottingham",
+                    	"url":"https://www.nottingham.ac.uk/"
+					}
+                ],
 				"givenName":"Joshua",
-				"familyName":"Bee"
+				"familyName":"Bee",
+				"jobTitle":"Senior Software Developer",
+                "nationality":{
+                	"name":"United Kingdom"
+                },
+				"sameAs":[
+					"https://www.linkedin.com/in/joshua-bee/"
+				],
+                "worksFor":{
+                	"name":"META",
+                	"url":"https://www.meta.co.uk/"
+                }
 			}
 		</script>
 
@@ -65,7 +98,7 @@
 	</head>
 
 	<body>
-		<header id="header" class="elevation-4dp">
+		<header class="elevation-4dp">
 			<div id="headerLeft" class="left" onclick="pageScroll('home')">
 				<picture id="headerIcon" class="icon">
 					<source srcset="images/icon/icon-192.svg" type="image/svg+xml">
