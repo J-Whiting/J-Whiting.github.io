@@ -3,6 +3,14 @@
 //             Button             //
 //                                //
 //--------------------------------*/
+.buttons {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+}
+
 .button {
 	color: #6200EE;
 	color: var(--color-primary);
@@ -16,18 +24,28 @@
 	outline: 0;
 	border: none;
 	-webkit-tap-highlight-color: transparent;
-	display: inline-block;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
 	white-space: nowrap;
-	text-decoration: none;
 	vertical-align: baseline;
-	text-align: center;
 	margin: 0;
 	min-width: 4em;
-	line-height: 2.25em;
 	padding: 0 1em;
 	margin: .5em;
 	border-radius: 0.25em;
 	overflow: visible;
+
+	font-size: .875rem;
+	line-height: 2.25rem;
+	letter-spacing: 0.078125rem;
+	font-weight: 700;
+	
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .button::before {
@@ -56,20 +74,17 @@
 	opacity: 0.4;
 }
 
-.button > * {
-	display: block;
+.button__text {
+	font-size: 1.25rem;
+	line-height: 2rem;
+	letter-spacing: 0.009375rem;
+	font-weight: 500;
 }
 
-.icon-text-button span {
+.button-icon-text  .button__text {
 	padding-bottom: 0.25rem;
 }
 
-.icon-text-button .material-icons {
+.button-icon-text  .button__icon {
 	padding-top: 0.75rem;
-}
-
-@media only screen and (max-device-width: 480px) {
-	.text-button {
-		margin: 0;
-	}
 }

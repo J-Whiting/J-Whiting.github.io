@@ -1,31 +1,3 @@
-html {
-	height: 100%;
-}
-
-body {
-	min-height: 100%;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	/* Prevent text selection. */
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
-}
-
-main {
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-}
-
 .sheet {
 	position: relative;
 	height: calc(100vh - 4.5em); /* The header bar is 4.5em. */
@@ -37,7 +9,7 @@ main {
 	margin-top: 4.5em; /* The header bar is 4.5em. */
 }
 
-.sheet-background img {
+.sheet__background img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
@@ -48,7 +20,7 @@ main {
 
 /* If filter is supported it applies the filter and removes the opacity. */
 @supports (filter: blur(3px)) {
-	.sheet-background img {
+	.sheet__background img {
 		opacity: 1;
 		filter: blur(3px);
 		transform: scale(1.05);

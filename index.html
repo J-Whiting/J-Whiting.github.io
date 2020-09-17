@@ -102,66 +102,67 @@
 			}
 		</script>
 
-		<!-- CSS Reset -->
-		<link href="css/reset.css" rel="stylesheet" />
-		<!-- Color CSS -->
-		<link href="css/color.css" rel="stylesheet" />
-		<!-- Font CSS -->
-		<link href="css/font.css" rel="stylesheet" />
-		<!-- Elevation CSS -->
-		<link href="css/elevation.css" rel="stylesheet" />
-		<!-- Header CSS -->
-		<link href="css/header.css" rel="stylesheet" />
-		<!-- Main CSS -->
-		<link href="css/main.css" rel="stylesheet" />
-		<!-- Button CSS -->
-		<link href="css/button.css" rel="stylesheet" />
-		<!-- Card CSS -->
-		<link href="css/card.css" rel="stylesheet" />
-		<!-- Snackbar CSS -->
-		<link href="css/snackbar.css" rel="stylesheet" />
+		<!-- Settings -->
+		<link href="css/1-settings/color.css" rel="stylesheet" />
+		<link href="css/1-settings/font.css" rel="stylesheet" />
+
+		<!-- Generic -->
+		<link href="css/3-generic/reset.css" rel="stylesheet" />
+
+		<!-- Elements -->
+		<link href="css/4-elements/body.css" rel="stylesheet" />
+		<link href="css/4-elements/html.css" rel="stylesheet" />
+		<link href="css/4-elements/main.css" rel="stylesheet" />
+		
+		<!-- Components -->
+		<link href="css/6-components/button.css" rel="stylesheet" />
+		<link href="css/6-components/card.css" rel="stylesheet" />
+		<link href="css/6-components/header.css" rel="stylesheet" />
+		<link href="css/6-components/navigation.css" rel="stylesheet" />
+		<link href="css/6-components/snackbar.css" rel="stylesheet" />
+		<link href="css/6-components/sheet.css" rel="stylesheet" />
 	</head>
 
 	<body>
-		<header id="header" class="elevation-4dp">
-			<div id="headerLeft" class="left" onclick="pageScroll('home')">
-				<picture id="headerIcon" class="icon">
-					<source srcset="images/icon/icon-192.svg" type="image/svg+xml">
-					<img src="images/icon/icon-192.png" alt="Icon" />
-				</picture><!-- icon -->
-				<h1 id="headerTitle" class="title h5">Joshua Bee</h1>
-			</div>
-			<nav id="headerNavigation" class="navigation">
-				<ul>
-					<li class="nav-item" onclick="pageScroll('projects')">
-						<span class="material-icons">&#xe838;</span>
-						<span class="nav-label h6">Projects</span>
-						<div class="nav-indicator"></div>
-					</li><!-- nav-item -->
-					<li class="nav-item" onclick="pageScroll('education')">
-						<span class="material-icons">&#xe80c;</span>
-						<span class="nav-label h6">Education</span>
-						<div class="nav-indicator"></div>
-					</li><!-- nav-item -->
-					<li class="nav-item" onclick="pageScroll('experience')">
-						<span class="material-icons">&#xe8f9;</span>
-						<span class="nav-label h6">Experience</span>
-						<div class="nav-indicator"></div>
-					</li><!-- nav-item -->
-					<li class="nav-item" onclick="pageScroll('hobbies')">
-						<span class="material-icons">&#xe7f2;</span>
-						<span class="nav-label h6">Hobbies</span>
-						<div class="nav-indicator"></div>
-					</li><!-- nav-item -->
-				</ul>
+		<header class="header">
+			<div class="header__branding" data-scroll-to="home">
+				<picture class="header__icon">
+					<source srcset="images/icons/icon-192.svg" type="image/svg+xml">
+					<img src="images/icons/icon-192.png" alt="Icon" />
+				</picture><!-- header__icon -->
+				<h1 class="header__title">Joshua Bee</h1>
+			</div><!-- header__branding -->
+			<nav class="navigation">
+				<ul class="navigation__items">
+					<li class="navigation__item" data-scroll-to="projects">
+						<img src="images/icons/star-24.svg" class="navigation__icon" />
+						<span class="navigation__label">Projects</span>
+						<div class="navigation__indicator"></div>
+					</li><!-- navigation__item -->
+					<li class="navigation__item" data-scroll-to="education">
+						<img src="images/icons/school-24.svg" class="navigation__icon" />
+						<span class="navigation__label">Education</span>
+						<div class="navigation__indicator"></div>
+					</li><!-- navigation__item -->
+					<li class="navigation__item" data-scroll-to="experience">
+						<img src="images/icons/work-24.svg" class="navigation__icon" />
+						<span class="navigation__label">Experience</span>
+						<div class="navigation__indicator"></div>
+					</li><!-- navigation__item -->
+					<li class="navigation__item" data-scroll-to="hobbies">
+						<img src="images/icons/mood-24.svg" class="navigation__icon" />
+						<span class="navigation__label">Hobbies</span>
+						<div class="navigation__indicator"></div>
+					</li><!-- navigation__item -->
+				</ul><!-- navigation__items -->
 			</nav><!-- navigation -->
-		</header>
+		</header><!-- header -->
 
 		<main>
 
 			<section id="home" class="sheet">
 
-				<picture class="sheet-background">
+				<picture class="sheet__background">
 					<source srcset="images/home/background-600.webp" type="image/webp" media="(max-width: 600px)">
 					<source srcset="images/home/background-800.webp" type="image/webp" media="(max-width: 800px)">
 					<source srcset="images/home/background-1000.webp" type="image/webp" media="(max-width: 1000px)">
@@ -173,57 +174,55 @@
 					<source srcset="images/home/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/home/background-2400.webp" type="image/webp">
 					<img src="images/home/background-2400.jpg" alt="Home Background" />
-				</picture><!-- sheet-background -->
+				</picture><!-- sheet__background -->
 
-				<div class="card-list">
-					<div class="card elevation-8dp selected">
-						<div class="header">
-							<picture class="thumbnail">
+				<div class="cards">
+					<div class="card card--selected">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/home/thumbnail-512.webp" type="image/webp">
 								<img src="images/home/thumbnail-512.jpg" alt="Joshua Bee Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">Joshua Bee</h2>
-								<span class="header-subtitle subtitle2">Senior Software Developer</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">Joshua Bee</h2>
+								<span class="card__header-subtitle">Senior Software Developer</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
+						</header><!-- header -->
 
-						<picture class="media">
+						<picture class="card__media">
 							<source srcset="images/home/media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/home/media-1500.webp" type="image/webp">
 							<img src="images/home/media-1500.jpg" alt="Joshua Bee" />
 						</picture><!-- media -->
 
-						<div class="footer">
-							<span class="subtitle2"></span>
-
+						<footer class="card__footer">
 							<div class="buttons">
-								<a href="Joshua-Bee-CV.pdf" target="_blank" class="button icon-text-button">
-									<span class="material-icons">&#xe89e;</span>
-									<span class="h6">CV</span>
+								<a href="Joshua-Bee-CV.pdf" target="_blank" class="button button-icon-text">
+									<img src="images/icons/open_in_new-24.svg" class="button__icon" />
+									<span class="button__text">CV</span>
 								</a><!-- button -->
-								<a href="tel:+44-7915-107162" class="button icon-text-button">
-									<span class="material-icons">&#xe0cd;</span>
-									<span class="h6">Call</span>
+								<a href="tel:+44-7915-107162" class="button button-icon-text">
+									<img src="images/icons/call-24.svg" class="button__icon" />
+									<span class="button__text">Call</span>
 								</a><!-- button -->
-								<a href="mailto:joshuaregular@gmail.com" class="button icon-text-button">
-									<span class="material-icons">&#xe0be;</span>
-									<span class="h6">Email</span>
+								<a href="mailto:joshuaregular@gmail.com" class="button button-icon-text">
+									<img src="images/icons/email-24.svg" class="button__icon" />
+									<span class="button__text">Email</span>
 								</a><!-- button -->
-								<a href="https://www.linkedin.com/in/joshua-bee/" target="_blank" rel="noopener noreferrer" class="button icon-text-button">
-									<span class="material-icons">&#xe7fe;</span>
-									<span class="h6">LinkedIn</span>
+								<a href="https://www.linkedin.com/in/joshua-bee/" target="_blank" rel="noopener noreferrer" class="button button-icon-text">
+									<img src="images/icons/person_add-24.svg" class="button__icon" />
+									<span class="button__text">LinkedIn</span>
 								</a><!-- button -->
 							</div><!-- buttons -->
-						</div><!-- footer -->
+						</footer><!-- footer -->
 					</div><!-- card -->
-				</div><!-- card-list -->
+				</div><!-- cards -->
 
 			</section><!-- sheet -->
 
 			<section id="projects" class="sheet">
 
-				<picture class="sheet-background">
+				<picture class="sheet__background">
 					<source srcset="images/projects/background-600.webp" type="image/webp" media="(max-width: 600px)">
 					<source srcset="images/projects/background-800.webp" type="image/webp" media="(max-width: 800px)">
 					<source srcset="images/projects/background-1000.webp" type="image/webp" media="(max-width: 1000px)">
@@ -235,22 +234,22 @@
 					<source srcset="images/projects/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/projects/background-2400.webp" type="image/webp">
 					<img src="images/projects/background-2400.jpg" alt="Projects Background" />
-				</picture><!-- sheet-background -->
+				</picture><!-- sheet__background -->
 
-				<div id="projects-card-list" class="card-list">
-					<div class="card elevation-8dp selected" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
-						<div class="header">
-							<picture class="thumbnail">
+				<div class="cards">
+					<div class="card card--selected" data-cards="projects">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/projects/project-euler-thumbnail-512.webp" type="image/webp">
 								<img src="images/projects/project-euler-thumbnail-512.jpg" alt="Project Euler Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">Project Euler</h2>
-								<span class="header-subtitle subtitle2">Collection of Project Euler puzzles</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">Project Euler</h2>
+								<span class="card__header-subtitle">Collection of Project Euler puzzles</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
+						</header><!-- header -->
 						<a href="https://joshuabee.github.io/ProjectEuler" target="_blank">
-							<picture class="media">
+							<picture class="card__media">
 								<source srcset="images/projects/project-euler-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 								<source srcset="images/projects/project-euler-media-1500.webp" type="image/webp">
 								<img src="images/projects/project-euler-media-1500.jpg" alt="Project Euler Media" />
@@ -258,31 +257,31 @@
 						</a>
 					</div><!-- card -->
 
-					<div class="card elevation-1dp" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
-						<div class="header">
-							<picture class="thumbnail">
+					<div class="card" data-cards="projects">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/projects/fake-name-generator-thumbnail-512.webp" type="image/webp">
 								<img src="images/projects/fake-name-generator-thumbnail-512.jpg" alt="Fake Name Generator Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">Fake Name Generator</h2>
-								<span class="header-subtitle subtitle2">Enter a name, returns an altered version</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">Fake Name Generator</h2>
+								<span class="card__header-subtitle">Enter a name, returns an altered version</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
+						</header><!-- header -->
 						<a href="https://joshuabee.github.io/FakeNameGenerator" target="_blank">
-							<picture class="media">
+							<picture class="card__media">
 								<source srcset="images/projects/fake-name-generator-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 								<source srcset="images/projects/fake-name-generator-media-1500.webp" type="image/webp">
 								<img src="images/projects/fake-name-generator-media-1500.jpg" alt="Fake Name Generator Media" />
 							</picture><!-- media -->
 						</a>
 					</div><!-- card -->
-				</div><!-- card-list -->
+				</div><!-- cards -->
 			</section><!-- sheet -->
 
 			<section id="education" class="sheet">
 
-				<picture class="sheet-background">
+				<picture class="sheet__background">
 					<source srcset="images/education/background-600.webp" type="image/webp" media="(max-width: 600px)">
 					<source srcset="images/education/background-800.webp" type="image/webp" media="(max-width: 800px)">
 					<source srcset="images/education/background-1000.webp" type="image/webp" media="(max-width: 1000px)">
@@ -294,50 +293,50 @@
 					<source srcset="images/education/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/education/background-2400.webp" type="image/webp">
 					<img src="images/education/background-2400.jpg" alt="Education Background" />
-				</picture><!-- sheet-background -->
+				</picture><!-- sheet__background -->
 
-				<div id="education-card-list" class="card-list">
-					<div class="card elevation-8dp selected" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
-						<div class="header">
-							<picture class="thumbnail">
+				<div class="cards">
+					<div class="card card--selected" data-cards="education">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/education/hull-thumbnail-512.webp" type="image/webp">
 								<img src="images/education/hull-thumbnail-512.jpg" alt="Hull Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">University of Hull</h2>
-								<span class="header-subtitle subtitle2">Master of Research in Computer Science</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">University of Hull</h2>
+								<span class="card__header-subtitle">Master of Research in Computer Science</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
-						<picture class="media">
+						</header><!-- header -->
+						<picture class="card__media">
 							<source srcset="images/education/hull-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/education/hull-media-1500.webp" type="image/webp">
 							<img src="images/education/hull-media-1500.jpg" alt="Hull Media" />
 						</picture><!-- media -->
 					</div><!-- card -->
 
-					<div class="card elevation-1dp" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
-						<div class="header">
-							<picture class="thumbnail">
+					<div class="card" data-cards="education">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/education/nottingham-thumbnail-512.webp" type="image/webp">
 								<img src="images/education/nottingham-thumbnail-512.jpg" alt="Nottingham Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">University of Nottingham</h2>
-								<span class="header-subtitle subtitle2">First Class Bachelor of Science with Honours in Mathematics</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">University of Nottingham</h2>
+								<span class="card__header-subtitle">First Class Bachelor of Science with Honours in Mathematics</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
-						<picture class="media">
+						</header><!-- header -->
+						<picture class="card__media">
 							<source srcset="images/education/nottingham-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/education/nottingham-media-1500.webp" type="image/webp">
 							<img src="images/education/nottingham-media-1500.jpg" alt="Nottingham Media" />
 						</picture><!-- media -->
 					</div><!-- card -->
-				</div><!-- card-list -->
+				</div><!-- cards -->
 			</section><!-- sheet -->
 
 			<section id="experience" class="sheet">
 
-				<picture class="sheet-background">
+				<picture class="sheet__background">
 					<source srcset="images/experience/background-600.webp" type="image/webp" media="(max-width: 600px)">
 					<source srcset="images/experience/background-800.webp" type="image/webp" media="(max-width: 800px)">
 					<source srcset="images/experience/background-1000.webp" type="image/webp" media="(max-width: 1000px)">
@@ -349,50 +348,50 @@
 					<source srcset="images/experience/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/experience/background-2400.webp" type="image/webp">
 					<img src="images/experience/background-2400.jpg" alt="Experience Background" />
-				</picture><!-- sheet-background -->
+				</picture><!-- sheet__background -->
 				
-				<div id="experience-card-list" class="card-list">
-					<div class="card elevation-8dp selected" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
-						<div class="header">
-							<picture class="thumbnail">
+				<div class="cards">
+					<div class="card card--selected" data-cards="experience">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/experience/meta-thumbnail-512.webp" type="image/webp">
 								<img src="images/experience/meta-thumbnail-512.png" alt="Hull Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">Meta</h2>
-								<span class="header-subtitle subtitle2">Senior Software Developer</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">Meta</h2>
+								<span class="card__header-subtitle">Senior Software Developer</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
-						<picture class="media">
+						</header><!-- header -->
+						<picture class="card__media">
 							<source srcset="images/experience/meta-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/experience/meta-media-1500.webp" type="image/webp">
 							<img src="images/experience/meta-media-1500.jpg" alt="Hull Media" />
 						</picture><!-- media -->
 					</div><!-- card -->
 
-					<div class="card elevation-1dp" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
-						<div class="header">
-							<picture class="thumbnail">
+					<div class="card" data-cards="experience">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/experience/symphony-thumbnail-512.webp" type="image/webp">
 								<img src="images/experience/symphony-thumbnail-512.png" alt="Symphony Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">Symphony RetailAI</h2>
-								<span class="header-subtitle subtitle2">Software Developer</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">Symphony RetailAI</h2>
+								<span class="card__header-subtitle">Software Developer</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
-						<picture class="media">
+						</header><!-- header -->
+						<picture class="card__media">
 							<source srcset="images/experience/symphony-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/experience/symphony-media-1500.webp" type="image/webp">
 							<img src="images/experience/symphony-media-1500.jpg" alt="Symphony Media" />
 						</picture><!-- media -->
 					</div><!-- card -->
-				</div><!-- card-list -->
+				</div><!-- cards -->
 			</section><!-- sheet -->
 
 			<section id="hobbies" class="sheet">
 
-				<picture class="sheet-background">
+				<picture class="sheet__background">
 					<source srcset="images/hobbies/background-600.webp" type="image/webp" media="(max-width: 600px)">
 					<source srcset="images/hobbies/background-800.webp" type="image/webp" media="(max-width: 800px)">
 					<source srcset="images/hobbies/background-1000.webp" type="image/webp" media="(max-width: 1000px)">
@@ -404,75 +403,75 @@
 					<source srcset="images/hobbies/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/hobbies/background-2400.webp" type="image/webp">
 					<img src="images/hobbies/background-2400.jpg" alt="Hobbies Background" />
-				</picture><!-- sheet-background -->
+				</picture><!-- sheet__background -->
 
-				<div id="hobby-card-list" class="card-list">
-					<div class="card elevation-8dp selected" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
-						<div class="header">
-							<picture class="thumbnail">
+				<div class="cards">
+					<div class="card card--selected" data-cards="hobbies">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/hobbies/sport-thumbnail-512.webp" type="image/webp">
 								<img src="images/hobbies/sport-thumbnail-512.jpg" alt="Sport Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">Sports</h2>
-								<span class="header-subtitle subtitle2">Regularly play football, squash, badminton and table tennis.</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">Sports</h2>
+								<span class="card__header-subtitle">Regularly play football, squash, badminton and table tennis.</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
-						<picture class="media">
+						</header><!-- header -->
+						<picture class="card__media">
 							<source srcset="images/hobbies/sport-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/hobbies/sport-media-1500.webp" type="image/webp">
 							<img src="images/hobbies/sport-media-1500.jpg" alt="Sport Media" />
 						</picture><!-- media -->
 					</div><!-- card -->
 
-					<div class="card elevation-1dp" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
-						<div class="header">
-							<picture class="thumbnail">
+					<div class="card" data-cards="hobbies">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/hobbies/language-thumbnail-512.webp" type="image/webp">
 								<img src="images/hobbies/language-thumbnail-512.jpg" alt="Language Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">Languages</h2>
-								<span class="header-subtitle subtitle2">Currently learning Korean.</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">Languages</h2>
+								<span class="card__header-subtitle">Currently learning Korean.</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
-						<picture class="media">
+						</header><!-- header -->
+						<picture class="card__media">
 							<source srcset="images/hobbies/language-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/hobbies/language-media-1500.webp" type="image/webp">
 							<img src="images/hobbies/language-media-1500.jpg" alt="Language Media" />
 						</picture><!-- media -->
 					</div><!-- card -->
 
-					<div class="card elevation-1dp" onclick="selectCard(this);" onmouseover="cardMouseOver(this);" onmouseout="cardMouseOut(this);">
-						<div class="header">
-							<picture class="thumbnail">
+					<div class="card" data-cards="hobbies">
+						<header class="card__header">
+							<picture class="card__thumbnail">
 								<source srcset="images/hobbies/music-thumbnail-512.webp" type="image/webp">
 								<img src="images/hobbies/music-thumbnail-512.jpg" alt="Music Thumbnail" />
 							</picture><!-- thumbnail -->
-							<div class="header-text">
-								<h2 class="header-title h6">Music</h2>
-								<span class="header-subtitle subtitle2">Play the guitar, bass guitar and drums.</span>
+							<div class="card__header-text">
+								<h2 class="card__header-title">Music</h2>
+								<span class="card__header-subtitle">Play the guitar, bass guitar and drums.</span>
 							</div><!-- header-text -->
-						</div><!-- header -->
-						<picture class="media">
+						</header><!-- header -->
+						<picture class="card__media">
 							<source srcset="images/hobbies/music-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/hobbies/music-media-1500.webp" type="image/webp">
 							<img src="images/hobbies/music-media-1500.jpg" alt="Music Media"/>
 						</picture><!-- media -->
 					</div><!-- card -->
-				</div><!-- card-list -->
+				</div><!-- cards -->
 			</section><!-- sheet -->
 			
-			<div id="install-snackbar" class="snackbar elevation-6dp">
-				<span class="snackbar-text">Install Progressive Web App</span>
-				<div class="snackbar-actions">
-					<div id="install-action" class="snackbar-action button text-button">
-						<span class="h6">Install</span>
+			<div id="snackbar" class="snackbar">
+				<span class="snackbar__text">Install Progressive Web App</span>
+				<div class="snackbar__actions">
+					<div id="snackbar-action" class="snackbar__action button">
+						<span class="button__text">Install</span>
 					</div><!-- button -->
-					<div id="install-close" class="snackbar-close button text-button">
-						<span class="material-icons h6">&#xe5cd;</span>
+					<div id="snackbar-close" class="snackbar__close button">
+						<img src="images/icons/close-24.svg" class="button__icon" />
 					</div><!-- button -->
-				</div>
+				</div><!-- snackbar__actions -->
 			</div><!-- snackbar -->
 
 		</main><!-- main -->

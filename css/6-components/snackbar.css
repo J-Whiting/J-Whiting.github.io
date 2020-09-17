@@ -22,34 +22,48 @@
 	border-radius: 0.25em;
 	
 	transition: bottom 1s ease;
+
+	z-index: 6;
+	box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 
-.snackbar-text {
+.snackbar__text {
 	padding: 0 1em;
 	margin-right: auto;
 }
 
-.snackbar-actions {
+.snackbar__actions {
 	display: flex;
 	margin-right: 0.5em;
 }
 
-.snackbar-actions .button {
+.snackbar__actions .button {
 	color: #03DAC6;
 	color: var(--color-secondary);
 }
 
-.snackbar-actions .button::before {
+.snackbar__actions .button::before {
 	background-color: #03DAC6;
 	background-color: var(--color-secondary);
 }
 
-.snackbar-close {
+.snackbar__close {
 	padding: 0;
 	border-radius: 25em;
 	min-width: 2.25em;
 }
 
-.snackbar-close::before {
+.snackbar__close img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.snackbar__close::before {
 	border-radius: 25em;
+}
+
+.snackbar.snackbar--active {
+	bottom: 1em;
 }
