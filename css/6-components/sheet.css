@@ -1,12 +1,12 @@
 .sheet {
 	position: relative;
-	height: calc(100vh - 4.5em); /* The header bar is 4.5em. */
+	height: calc(100vh - 9em); /* The header bar is 9em. */
 	overflow: hidden;
 	z-index: 0;
 }
 
 .sheet:first-child {
-	margin-top: 4.5em; /* The header bar is 4.5em. */
+	margin-top: 9em; /* The header bar is 9em. */
 }
 
 .sheet__background img {
@@ -27,12 +27,12 @@
 	}
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (min-device-width: 480px) {
 	.sheet {
-		height: calc(100vh - 9em); /* The header bar is 9em. */
+		height: calc(100vh - 4.5em); /* The header bar is 4.5em. */
 	}
 
 	.sheet:first-child {
-		margin-top: 9em; /* The header bar is 9em. */
+		margin-top: 4.5em; /* The header bar is 4.5em. */
 	}
 }

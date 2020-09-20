@@ -13,6 +13,8 @@
 	color: var(--color-primary-text);
 	justify-content: space-between;
 	display: flex;
+	flex-flow: column;
+	-webkit-flex-flow: column;
 	display: -ms-flexbox;
 	z-index: 4;
 	box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
@@ -41,9 +43,9 @@
 	text-transform: uppercase;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (min-device-width: 480px) {
 	.header {
-		flex-flow: column wrap;
-		-webkit-flex-flow: column wrap;
+		flex-flow: row;
+		-webkit-flex-flow: row;
 	}
 }
