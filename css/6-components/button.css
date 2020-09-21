@@ -81,6 +81,11 @@
 	font-weight: 500;
 }
 
+.button-text {
+	display: inline-flex;
+	margin: 0;
+}
+
 .button-icon-text  .button__text {
 	padding-bottom: 0.25rem;
 }
