@@ -28,7 +28,7 @@
 	cursor: pointer;
 }
 
-.header__icon img {
+.header__logo img {
 	height: 3em;
 	margin-right: 1em;
 }
@@ -41,9 +41,13 @@
 	text-transform: uppercase;
 }
 
-@media only screen and (max-device-width: 480px) {
-	.header {
-		flex-flow: column wrap;
-		-webkit-flex-flow: column wrap;
+.header__icon {
+	margin-left: auto;
+	padding-right: 2em;
+}
+
+@media only screen and (min-device-width: 1000px) {
+	.header__icon {
+		display: none;
 	}
 }

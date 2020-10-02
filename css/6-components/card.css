@@ -67,7 +67,7 @@
 
 .card__media img {
 	height: 0.0001vh;
-	width: 50vw;
+	width: 90vw;
 	display: block;
 	object-fit: cover;
 
@@ -94,7 +94,7 @@
 }
 
 .card--selected .card__media img {
-	height: 50vh;
+	height: 40vh;
 }
 
 .card__footer {
@@ -104,18 +104,18 @@
 	border-bottom-right-radius: 0.25em;
 }
 
-@media only screen and (max-device-width: 1000px) {
+@media only screen and (min-device-width: 480px) {
 	.card__media img {
 		width: 70vw;
 	}
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (min-device-width: 1000px) {
 	.card__media img {
-		width: 90vw;
+		width: 50vw;
 	}
 
 	.card--selected .card__media img {
-		height: 40vh;
+		height: 50vh;
 	}
 }

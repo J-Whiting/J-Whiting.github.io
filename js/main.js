@@ -3,7 +3,15 @@ let vSnackbarOpen = true;
 let vInstalled = true;
 let vStandalone = false;
 
-document.addEventListener('DOMContentLoaded', (event) => {	
+this.navigation;
+
+document.addEventListener('DOMContentLoaded', (event) => {
+
+
+	this.navigation = document.querySelector('#navigation');
+
+
+
 	document.getElementById('snackbar-close').addEventListener('click', (event) => {
 		vSnackbarOpen = false;
 		document.getElementById('snackbar').classList.remove('snackbar--active');
@@ -19,6 +27,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	scrollElements.forEach((element) => {
 		element.addEventListener('click', (event) => {
 			event.preventDefault();
+
+			this.navigation.setAttribute('data-visible', false);
 
 			let scrollElement = document.getElementById(event.currentTarget.dataset.scrollTo);
 			let header = document.querySelector('header');
@@ -44,6 +54,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			});
 			card.classList.add('card--selected');
 		});
+	});
+
+	let hamburger = document.querySelector('#hamburger');
+	hamburger.addEventListener('click', (event) => {
+		if (this.navigation.getAttribute('data-visible') === 'true') {
+			this.navigation.setAttribute('data-visible', false);
+		} else {
+			this.navigation.setAttribute('data-visible', true);
+		}
 	});
 
 	//
