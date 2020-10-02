@@ -6,12 +6,12 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://joshuabee.github.io/</loc>
+  <loc>https://joshuabee.dev/</loc>
   <lastmod>2019-11-29T17:31:17+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://joshuabee.github.io/Joshua-Bee-CV.pdf</loc>
+  <loc>https://joshuabee.dev/Joshua-Bee-CV.pdf</loc>
   <lastmod>2019-11-29T17:31:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
