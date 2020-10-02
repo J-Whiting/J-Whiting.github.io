@@ -126,36 +126,47 @@
 	<body>
 		<header class="header">
 			<div class="header__branding" data-scroll-to="home">
-				<picture class="header__icon">
-					<source srcset="images/icons/icon-192.svg" type="image/svg+xml">
-					<img src="images/icons/icon-192.png" alt="Icon" />
-				</picture><!-- header__icon -->
+				<picture class="header__logo">
+					<source srcset="images/logos/logo-192.svg" type="image/svg+xml">
+					<img src="images/logos/logo-192.png" alt="Logo" />
+				</picture><!-- header__logo -->
 				<h1 class="header__title">Joshua Bee</h1>
 			</div><!-- header__branding -->
-			<nav class="navigation">
+			
+			<nav id="navigation" class="navigation" data-visible="false">
 				<ul class="navigation__items">
 					<li class="navigation__item" data-scroll-to="projects">
-						<img src="images/icons/star-24.svg" class="navigation__icon" />
-						<span class="navigation__label">Projects</span>
-						<div class="navigation__indicator"></div>
+						<div class="navigation__item-wrapper">
+							<img src="images/icons/star-24.svg" class="navigation__icon" />
+							<span class="navigation__label">Projects</span>
+							<div class="navigation__indicator"></div>
+						</div>
 					</li><!-- navigation__item -->
 					<li class="navigation__item" data-scroll-to="education">
-						<img src="images/icons/school-24.svg" class="navigation__icon" />
-						<span class="navigation__label">Education</span>
-						<div class="navigation__indicator"></div>
+						<div class="navigation__item-wrapper">
+							<img src="images/icons/school-24.svg" class="navigation__icon" />
+							<span class="navigation__label">Education</span>
+							<div class="navigation__indicator"></div>
+						</div>
 					</li><!-- navigation__item -->
 					<li class="navigation__item" data-scroll-to="experience">
-						<img src="images/icons/work-24.svg" class="navigation__icon" />
-						<span class="navigation__label">Experience</span>
-						<div class="navigation__indicator"></div>
+						<div class="navigation__item-wrapper">
+							<img src="images/icons/work-24.svg" class="navigation__icon" />
+							<span class="navigation__label">Experience</span>
+							<div class="navigation__indicator"></div>
+						</div>
 					</li><!-- navigation__item -->
 					<li class="navigation__item" data-scroll-to="hobbies">
-						<img src="images/icons/mood-24.svg" class="navigation__icon" />
-						<span class="navigation__label">Hobbies</span>
-						<div class="navigation__indicator"></div>
+						<div class="navigation__item-wrapper">
+							<img src="images/icons/mood-24.svg" class="navigation__icon" />
+							<span class="navigation__label">Hobbies</span>
+							<div class="navigation__indicator"></div>
+						</div>
 					</li><!-- navigation__item -->
 				</ul><!-- navigation__items -->
 			</nav><!-- navigation -->
+
+			<img id="hamburger" src="images/icons/menu-24.svg" class="header__icon" />
 		</header><!-- header -->
 
 		<main>
