@@ -1,4 +1,4 @@
-const version = "1.14";
+const version = "1.15";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -174,6 +174,11 @@ self.addEventListener("install", e => {
 				"/images/projects/fake-name-generator-media-1500.webp",
 				"/images/projects/fake-name-generator-thumbnail-512.png",
 				"/images/projects/fake-name-generator-thumbnail-512.webp",
+				"/images/projects/pong-media-1000.webp",
+				"/images/projects/pong-media-1500.jpg",
+				"/images/projects/pong-media-1500.webp",
+				"/images/projects/pong-thumbnail-512.png",
+				"/images/projects/pong-thumbnail-512.webp",
 				"/images/projects/project-euler-media-1000.webp",
 				"/images/projects/project-euler-media-1500.jpg",
 				"/images/projects/project-euler-media-1500.webp",
