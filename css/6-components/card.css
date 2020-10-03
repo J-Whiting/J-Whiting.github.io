@@ -54,7 +54,8 @@
 	font-size: 1.25rem;
 	line-height: 2.125rem;
 	letter-spacing: 0.009375rem;
-	font-weight: bold;
+	font-weight: 700;
+	font-family: 'Roboto Mono', monospace;
 }
 
 .card__header-subtitle {
@@ -62,7 +63,7 @@
 	font-size: .875rem;
 	line-height: 1.375rem;
 	letter-spacing: 0.00625rem;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 .card__media img {

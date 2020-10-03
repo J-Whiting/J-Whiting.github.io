@@ -75,7 +75,7 @@ mark {
 	color:#FFF;
 	color:var(--color-primary-text);
 	font-style:italic;
-	font-weight:bold;
+	font-weight:700;
 }
 
 del {
