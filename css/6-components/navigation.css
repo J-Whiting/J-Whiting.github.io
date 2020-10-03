@@ -11,6 +11,10 @@
 	height: calc(100vh - 4.5em);
 	left: 0;
 	width: 100%;
+	color: #FFF;
+	color: var(--color-primary-text);
+	background-color: #6200EE;
+    background-color: var(--color-primary);
 	transform: translateX(100vw);
 	transition: transform 0.25s ease-in-out;
 	z-index: 3;
@@ -21,7 +25,8 @@
 }
 
 .navigation__items {
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	height: 100%;
 	width: 100%;
 }
@@ -30,14 +35,11 @@
 	text-align: center;
 	cursor: pointer;
 
-	color: #FFF;
-	color: var(--color-primary-text);
-	background-color: #6200EE;
-    background-color: var(--color-primary);
 	transition: color .25s ease;
 	text-transform: uppercase;
 	display: flex;
 	flex-direction: column;
+	flex-grow: 1;
 }
 
 .navigation__item-wrapper {
@@ -76,14 +78,6 @@
 	transition: transform .25s ease;
 }
 
-.navigation__item--selected {
-	opacity: 1;
-}
-
-.navigation__item--selected .navigation__indicator {
-	transform: scaleY(1);
-}
-
 @media only screen and (min-device-width: 1000px) {
 	.navigation {
 		position: unset;
@@ -96,54 +90,16 @@
 	}
 
 	.navigation__items {
-		display: flex;
+		flex-direction: row;
 	}
 
 	.navigation__item {
-		text-align: center;
-		cursor: pointer;
-
 		padding: 0 1em;
-		color: #FFF;
-		color: var(--color-primary-text);
 		opacity: 0.75;
 		position: relative;
-		transition: color .25s ease;
-		text-transform: uppercase;
-		min-width: 5.5em;
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
-	}
-
-	.navigation__item:hover {
-		opacity: 1;
-	}
-
-	.navigation__icon {
-		padding-top: 0.75rem;
-		margin: 0 auto;
-	}
-
-	.navigation__label {
-		font-size: 1.25rem;
-		line-height: 2rem;
-		letter-spacing: 0.009375rem;
-		font-weight: 500;
-		padding-bottom: 0.25rem;
-	}
-
-	.navigation__indicator {
-		left: 0;
-		right: 0;
-		background: #03DAC6;
-		background: var(--color-secondary);
-		bottom: 0;
-		height: 0.25em;
-		position: absolute;
-		transform: scaleY(0);
-		transform-origin: bottom;
-		transition: transform .25s ease;
 	}
 
 	.navigation__item--selected {
