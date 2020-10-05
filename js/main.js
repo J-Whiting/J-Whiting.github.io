@@ -44,8 +44,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	let cards = document.querySelectorAll('[data-cards]');
 	cards.forEach((card) => {
 		card.addEventListener('click', (event) => {
-			event.preventDefault();
-
 			let card = event.currentTarget;
 			let cards = document.querySelectorAll(`[data-cards="${ card.dataset.cards }"`);
 
