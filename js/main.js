@@ -48,18 +48,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			let cards = document.querySelectorAll(`[data-cards="${ card.dataset.cards }"`);
 
 			cards.forEach((card) => {
-				card.classList.remove('card--selected');
+				card.setAttribute('aria-expanded', false);
 			});
-			card.classList.add('card--selected');
+			card.setAttribute('aria-expanded', true);
 		});
 	});
 
-	let hamburger = document.querySelector('#hamburger');
-	hamburger.addEventListener('click', (event) => {
-		if (this.navigation.getAttribute('data-visible') === 'true') {
-			this.navigation.setAttribute('data-visible', false);
+	let drawerToggle = document.querySelector('[data-drawer-toggle]');
+	drawerToggle.addEventListener('click', (event) => {
+		let key = drawerToggle.dataset.drawerToggle;
+		let element = document.querySelector(`[data-drawer="${ key }"]`);
+		if (element.getAttribute('data-visible') === 'true') {
+			element.setAttribute('data-visible', false);
 		} else {
-			this.navigation.setAttribute('data-visible', true);
+			element.setAttribute('data-visible', true);
 		}
 	});
 

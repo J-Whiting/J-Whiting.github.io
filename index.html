@@ -127,48 +127,50 @@
 
 	<body>
 		<header class="header">
-			<div class="header__branding" data-scroll-to="home">
+			<a href="#home" class="header__branding" data-scroll-to="home">
 				<picture class="header__logo">
 					<source srcset="images/logos/logo-192.svg" type="image/svg+xml">
 					<img src="images/logos/logo-192.png" alt="Home" />
 				</picture><!-- header__logo -->
 				<h1 class="header__title">Joshua Bee</h1>
-			</div><!-- header__branding -->
+			</a><!-- header__branding -->
+
+			<button data-drawer-toggle="navigation" class="header__navigation-button">
+				<img src="images/icons/menu-24.svg" alt="Menu" />
+			</button>
 			
-			<nav id="navigation" class="navigation" data-visible="false">
+			<nav id="navigation" class="navigation" data-drawer="navigation" data-visible="false">
 				<ul class="navigation__items">
-					<li class="navigation__item" data-scroll-to="projects">
-						<div class="navigation__item-wrapper">
+					<li class="navigation__item">
+						<a href="#projects" class="navigation__link" data-scroll-to="projects">
 							<img src="images/icons/star-24.svg" alt="" class="navigation__icon" />
 							<span class="navigation__label">Projects</span>
 							<div class="navigation__indicator"></div>
-						</div>
+						</a>
 					</li><!-- navigation__item -->
-					<li class="navigation__item" data-scroll-to="education">
-						<div class="navigation__item-wrapper">
+					<li class="navigation__item">
+						<a href="#education" class="navigation__link" data-scroll-to="education">
 							<img src="images/icons/school-24.svg" alt=""  class="navigation__icon" />
 							<span class="navigation__label">Education</span>
 							<div class="navigation__indicator"></div>
-						</div>
+						</a>
 					</li><!-- navigation__item -->
-					<li class="navigation__item" data-scroll-to="experience">
-						<div class="navigation__item-wrapper">
+					<li class="navigation__item">
+						<a href="#experience" class="navigation__link" data-scroll-to="experience">
 							<img src="images/icons/work-24.svg" alt=""  class="navigation__icon" />
 							<span class="navigation__label">Experience</span>
 							<div class="navigation__indicator"></div>
-						</div>
+						</a>
 					</li><!-- navigation__item -->
-					<li class="navigation__item" data-scroll-to="hobbies">
-						<div class="navigation__item-wrapper">
+					<li class="navigation__item">
+						<a href="#hobbies" class="navigation__link" data-scroll-to="hobbies">
 							<img src="images/icons/mood-24.svg" alt=""  class="navigation__icon" />
 							<span class="navigation__label">Hobbies</span>
 							<div class="navigation__indicator"></div>
-						</div>
+						</a>
 					</li><!-- navigation__item -->
 				</ul><!-- navigation__items -->
 			</nav><!-- navigation -->
-
-			<img id="hamburger" src="images/icons/menu-24.svg" alt="Menu"  class="header__icon" />
 		</header><!-- header -->
 
 		<main>
@@ -190,7 +192,7 @@
 				</picture><!-- sheet__background -->
 
 				<div class="cards">
-					<div class="card card--selected">
+					<div class="card" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/home/thumbnail-64.webp" type="image/webp">
@@ -251,7 +253,7 @@
 				</picture><!-- sheet__background -->
 
 				<div class="cards">
-					<div class="card card--selected" data-cards="projects">
+					<div class="card" data-cards="projects" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/projects/pong-thumbnail-64.webp" type="image/webp">
@@ -272,7 +274,7 @@
 						</a>
 					</div><!-- card -->
 
-					<div class="card" data-cards="projects">
+					<div class="card" data-cards="projects" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/projects/project-euler-thumbnail-64.webp" type="image/webp">
@@ -293,7 +295,7 @@
 						</a>
 					</div><!-- card -->
 
-					<div class="card" data-cards="projects">
+					<div class="card" data-cards="projects" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/projects/fake-name-generator-thumbnail-64.webp" type="image/webp">
@@ -333,7 +335,7 @@
 				</picture><!-- sheet__background -->
 
 				<div class="cards">
-					<div class="card card--selected" data-cards="education">
+					<div class="card" data-cards="education" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/education/hull-thumbnail-64.webp" type="image/webp">
@@ -352,7 +354,7 @@
 						</picture><!-- media -->
 					</div><!-- card -->
 
-					<div class="card" data-cards="education">
+					<div class="card" data-cards="education" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/education/nottingham-thumbnail-64.webp" type="image/webp">
@@ -390,7 +392,7 @@
 				</picture><!-- sheet__background -->
 				
 				<div class="cards">
-					<div class="card card--selected" data-cards="experience">
+					<div class="card" data-cards="experience" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/experience/strawberry-thumbnail-64.webp" type="image/webp">
@@ -409,7 +411,7 @@
 						</picture><!-- media -->
 					</div><!-- card -->
 
-					<div class="card" data-cards="experience">
+					<div class="card" data-cards="experience" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/experience/meta-thumbnail-64.webp" type="image/webp">
@@ -428,7 +430,7 @@
 						</picture><!-- media -->
 					</div><!-- card -->
 
-					<div class="card" data-cards="experience">
+					<div class="card" data-cards="experience" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/experience/symphony-thumbnail-64.webp" type="image/webp">
@@ -466,7 +468,7 @@
 				</picture><!-- sheet__background -->
 
 				<div class="cards">
-					<div class="card card--selected" data-cards="hobbies">
+					<div class="card" data-cards="hobbies" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/hobbies/sport-thumbnail-64.webp" type="image/webp">
@@ -485,7 +487,7 @@
 						</picture><!-- media -->
 					</div><!-- card -->
 
-					<div class="card" data-cards="hobbies">
+					<div class="card" data-cards="hobbies" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/hobbies/language-thumbnail-64.webp" type="image/webp">
@@ -504,7 +506,7 @@
 						</picture><!-- media -->
 					</div><!-- card -->
 
-					<div class="card" data-cards="hobbies">
+					<div class="card" data-cards="hobbies" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
 								<source srcset="images/hobbies/music-thumbnail-64.webp" type="image/webp">
