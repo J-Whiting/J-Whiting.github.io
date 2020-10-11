@@ -16,12 +16,17 @@
 	background-color: #6200EE;
     background-color: var(--color-primary);
 	transform: translateX(100vw);
-	transition: transform 0.25s ease-in-out;
+	transition: transform 0.25s ease-in-out,
+		visibility 1ms linear 0.25s;
+	visibility: hidden;
 	z-index: 3;
 }
 
 .navigation[data-visible="true"] {
 	transform: translateX(0);
+	transition: transform 0.25s ease-in-out,
+		visibility 1ms linear;
+	visibility: visible;
 }
 
 .navigation__items {
@@ -42,13 +47,14 @@
 	flex-grow: 1;
 }
 
-.navigation__item-wrapper {
+.navigation__link {
 	display: flex;
 	flex-direction: column;
-	margin: auto;
+	margin: auto 0;
 }
 
-.navigation__item:hover {
+.navigation__item:hover,
+.navigation__item:focus {
 	opacity: 1;
 }
 
@@ -87,6 +93,7 @@
 		transform: unset;
 		width: 60%;
 		right: 0;
+		visibility: unset;
 	}
 
 	.navigation__items {
@@ -94,7 +101,6 @@
 	}
 
 	.navigation__item {
-		padding: 0 1em;
 		opacity: 0.75;
 		position: relative;
 		display: flex;
