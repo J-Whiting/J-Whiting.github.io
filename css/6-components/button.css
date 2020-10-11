@@ -91,7 +91,9 @@
 	padding-bottom: 0.25rem;
 }
 
-.button-icon-text  .button__icon {
+.button-icon-text  svg {
 	height: 1.5rem;
 	padding-top: 0.75rem;
+	fill: #6200EE;
+	fill: var(--color-primary);
 }

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 	document.getElementById('snackbar-close').addEventListener('click', (event) => {
 		vSnackbarOpen = false;
-		document.getElementById('snackbar').classList.remove('snackbar--active');
+		document.getElementById('snackbar').setAttribute('aria-hidden', 'true');
 	});
 	
 	if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	window.addEventListener('scroll', (event) => {
 		// Open snackbar upon scroll
 		if (!vInstalled && !vStandalone && vSnackbarOpen) {
-			document.getElementById('snackbar').classList.add('snackbar--active');
+			document.getElementById('snackbar').setAttribute('aria-hidden', 'false');
 		}
 		
 		let doc = document.documentElement;
@@ -148,5 +148,5 @@ window.addEventListener('appinstalled', (event) => {
 	console.log('a2hs installed');
 	vInstalled = true;
 	vStandalone = true;
-	document.getElementById('snackbar').classList.remove('snackbar--active');
+	document.getElementById('snackbar').setAttribute('aria-hidden', 'true');
 });
