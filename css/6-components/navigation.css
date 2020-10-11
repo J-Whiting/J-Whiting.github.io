@@ -58,9 +58,11 @@
 	opacity: 1;
 }
 
-.navigation__icon {
+.navigation__item svg {
 	padding-top: 0.75rem;
 	margin: 0 auto;
+	fill: #FFF;
+	fill: var(--color-primary-text);
 }
 
 .navigation__label {
