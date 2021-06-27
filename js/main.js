@@ -1,79 +1,100 @@
-let vDeferredPrompt;
-let vSnackbarOpen = true;
-let vInstalled = true;
-let vStandalone = false;
+// Elements
+let $cards;
+let $header;
+let $drawerToggle;
+let $updateSnackbar;
+let $updateSnackbarAction;
+let $updateSnackbarClose;
+let $installSnackbar;
+let $installSnackbarAction;
+let $installSnackbarClose;
+let $navigation;
+let $navItems;
+let $scrollElements;
 
-this.navigation;
+// Variables
+let vActiveID = -1;
+let vDeferredPrompt;
+let appInstalled = true;
+let appStandalone = false;
+let userScrolled = false;
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
+	// Elements
+	$cards = document.querySelectorAll('[data-cards]');
+	$drawerToggle = document.querySelector('[data-drawer-toggle]');
+	$header = document.querySelector('header.header');
+	$updateSnackbar = document.querySelector('#update-snackbar');
+	$updateSnackbarAction = $updateSnackbar.querySelector('.snackbar__action');
+	$updateSnackbarClose = $updateSnackbar.querySelector('.snackbar__close');
+	$installSnackbar = document.querySelector('#install-snackbar');
+	$installSnackbarAction = $installSnackbar.querySelector('.snackbar__action');
+	$installSnackbarClose = $installSnackbar.querySelector('.snackbar__close');
+	$navigation = document.querySelector('#navigation');
+	$navItems = document.querySelectorAll('.navigation__item');
+	$scrollElements = document.querySelectorAll('[data-scroll-to]');
 
-	this.navigation = document.querySelector('#navigation');
-
-
-
-	document.getElementById('snackbar-close').addEventListener('click', (event) => {
-		vSnackbarOpen = false;
-		document.getElementById('snackbar').setAttribute('aria-hidden', 'true');
-	});
-	
 	if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
 		console.log('display-mode is standalone');
-		vStandalone = true;
+		appStandalone = true;
 	}
 
+	// Add event listeners
+	$updateSnackbarAction.addEventListener('click', (event) => {
+		window.location.reload();
+	});
+
+	$updateSnackbarClose.addEventListener('click', (event) => {
+		$updateSnackbar.ariaHidden = true;
+	});
+
+	$installSnackbarClose.addEventListener('click', (event) => {
+		$installSnackbar.ariaHidden = true;
+	});
+
 	// Add scroll link events
-	let scrollElements = document.querySelectorAll('[data-scroll-to]');
-	scrollElements.forEach((element) => {
-		element.addEventListener('click', (event) => {
+	$scrollElements.forEach(($element) => {
+		$element.addEventListener('click', (event) => {
 			event.preventDefault();
 
-			this.navigation.setAttribute('data-visible', false);
+			$navigation.dataset.visible = false;
 
-			let scrollElement = document.getElementById(event.currentTarget.dataset.scrollTo);
-			let header = document.querySelector('header');
+			const $scrollElement = document.getElementById(event.currentTarget.dataset.scrollTo);
 
 			window.scrollTo({
-				top: scrollElement.offsetTop - header.offsetHeight,
+				top: $scrollElement.offsetTop - $header.offsetHeight,
 				behavior: 'smooth'
 			});
 		});
 	});
 
 	// Add Card events
-	let cards = document.querySelectorAll('[data-cards]');
-	cards.forEach((card) => {
-		card.addEventListener('click', (event) => {
-			let card = event.currentTarget;
-			let cards = document.querySelectorAll(`[data-cards="${ card.dataset.cards }"`);
+	$cards.forEach(($card) => {
+		$card.addEventListener('click', (event) => {
+			let $cards = document.querySelectorAll(`[data-cards="${ $card.dataset.cards }"`);
 
-			cards.forEach((card) => {
-				card.setAttribute('aria-expanded', false);
+			$cards.forEach(($card) => {
+				$card.ariaExpanded = false;
 			});
-			card.setAttribute('aria-expanded', true);
+			$card.ariaExpanded = true;
 		});
 	});
 
-	let drawerToggle = document.querySelector('[data-drawer-toggle]');
-	drawerToggle.addEventListener('click', (event) => {
-		let key = drawerToggle.dataset.drawerToggle;
-		let element = document.querySelector(`[data-drawer="${ key }"]`);
-		if (element.getAttribute('data-visible') === 'true') {
-			element.setAttribute('data-visible', false);
-		} else {
-			element.setAttribute('data-visible', true);
-		}
+	$drawerToggle.addEventListener('click', (event) => {
+		let key = $drawerToggle.dataset.drawerToggle;
+		let $element = document.querySelector(`[data-drawer="${ key }"]`);
+		$element.dataset.visible = $element.dataset.visible !== 'true';
 	});
 
 	//
 	// Updating selected nav tab based on scroll position.
 	//
-	vNavItems = document.querySelectorAll('.navigation__item');
-	vActiveID = -1;
 	window.addEventListener('scroll', (event) => {
 		// Open snackbar upon scroll
-		if (!vInstalled && !vStandalone && vSnackbarOpen) {
-			document.getElementById('snackbar').setAttribute('aria-hidden', 'false');
+		if (!appInstalled && !appStandalone && !userScrolled) {
+			userScrolled = true;
+			$installSnackbar.ariaHidden = false;
 		}
 		
 		let doc = document.documentElement;
@@ -83,26 +104,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		let g = document.getElementsByTagName('body')[0];
 		let vBrowserHeight = window.innerHeight || doc.clientHeight || g.clientHeight;
 
-		// Get the height of the header.
-		let vHeader = document.getElementsByTagName('header')[0];
-		let vHeaderHeight = vHeader.clientHeight;
-
 		// Get the sheet height.
-		let vSheetHeight = vBrowserHeight - vHeaderHeight;
+		let vSheetHeight = vBrowserHeight - $header.clientHeight;
 		let vNavID = Math.floor(vScroll / vSheetHeight);
 		vNavID--;
 	
 		// Only update the classes if they change.
 		if (vNavID != vActiveID) {
-			let vNavItem;
-			for (let i = 0; i < vNavItems.length; i++) {
+			let $navItem;
+			for (let i = 0; i < $navItems.length; i++) {
 
-				vNavItem = vNavItems[i];
+				$navItem = $navItems[i];
 				if (i == vNavID) {
-					vNavItem.classList.add('navigation__item--selected');
+					$navItem.classList.add('navigation__item--selected');
 				}
 				else {
-					vNavItem.classList.remove('navigation__item--selected');
+					$navItem.classList.remove('navigation__item--selected');
 				}
 			}
 
@@ -116,7 +133,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 window.addEventListener('beforeinstallprompt', (event) => {
 	
 	// The application is not installed
-	vInstalled = false;
+	appInstalled = false;
 
 	// Prevent Chrome 67 and earlier from automatically showing the prompt
 	event.preventDefault();
@@ -125,7 +142,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 	vDeferredPrompt = event;
 
 	// Attach the install prompt to a user gesture
-	document.getElementById('snackbar-action').addEventListener('click', (event) => {
+	$installSnackbarAction.addEventListener('click', (event) => {
 
 		// Show the prompt
 		vDeferredPrompt.prompt();
@@ -146,7 +163,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 // When the app is installed it should remove the install snackbar
 window.addEventListener('appinstalled', (event) => {
 	console.log('a2hs installed');
-	vInstalled = true;
-	vStandalone = true;
-	document.getElementById('snackbar').setAttribute('aria-hidden', 'true');
+	appInstalled = true;
+	appStandalone = true;
+	$installSnackbar.ariaHidden = true;
 });
