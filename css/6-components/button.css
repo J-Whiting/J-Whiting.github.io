@@ -9,6 +9,7 @@
 	display: -ms-flexbox;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .button {
@@ -46,6 +47,10 @@
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+
+.buttons .button {
+	width: calc(50% - 1em);
 }
 
 .button::before {
@@ -96,4 +101,10 @@
 	padding-top: 0.75rem;
 	fill: #6200EE;
 	fill: var(--color-primary);
+}
+
+@media only screen and (min-device-width: 600px) {
+	.buttons .button {
+		width: calc(25% - 1em);
+	}
 }
