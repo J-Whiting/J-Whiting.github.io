@@ -1,4 +1,4 @@
-const version = "1.22";
+const version = "1.23";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -42,6 +42,7 @@ self.addEventListener("install", e => {
 				"/safari-pinned-tab.svg",
 				"/sitemap.xml",
 				"/css/1-settings/color.css",
+				"/css/1-settings/font.css",
 				"/css/3-generic/reset.css",
 				"/css/4-elements/body.css",
 				"/css/4-elements/html.css",

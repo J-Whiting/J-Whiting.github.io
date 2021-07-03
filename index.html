@@ -106,7 +106,7 @@
 
 		<!-- Settings -->
 		<link href="css/1-settings/color.css" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="css/1-settings/font.css" rel="stylesheet" />
 
 		<!-- Generic -->
 		<link href="css/3-generic/reset.css" rel="stylesheet" />
@@ -130,7 +130,7 @@
 			<a href="#home" class="header__branding" data-scroll-to="home">
 				<picture class="header__logo">
 					<source srcset="images/logos/logo-192.svg" type="image/svg+xml">
-					<img src="images/logos/logo-192.png" alt="Home" />
+					<img src="images/logos/logo-192.png" height="512" width="512" alt="Home" loading="lazy" />
 				</picture><!-- header__logo -->
 				<h1 class="header__title">Joshua Bee</h1>
 			</a><!-- header__branding -->
@@ -188,16 +188,16 @@
 					<source srcset="images/home/background-2000.webp" type="image/webp" media="(max-width: 2000px)">
 					<source srcset="images/home/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/home/background-2400.webp" type="image/webp">
-					<img src="images/home/background-2400.jpg" alt="Home Background" />
+					<img src="images/home/background-2400.jpg" height="1600" width="2400" alt="Home Background" loading="lazy" />
 				</picture><!-- sheet__background -->
 
 				<div class="cards">
 					<div class="card" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/home/thumbnail-64.webp" type="image/webp">
+								<source srcset="images/home/thumbnail-80.webp" type="image/webp">
 								<source srcset="images/home/thumbnail-512.webp" type="image/webp">
-								<img src="images/home/thumbnail-512.jpg" alt="Joshua Bee Thumbnail" />
+								<img src="images/home/thumbnail-512.jpg" height="512" width="512" alt="Joshua Bee Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Joshua Bee</h2>
@@ -208,7 +208,7 @@
 						<picture class="card__media">
 							<source srcset="images/home/media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/home/media-1500.webp" type="image/webp">
-							<img src="images/home/media-1500.jpg" alt="Joshua Bee" />
+							<img src="images/home/media-1500.jpg" height="855" width="1500" alt="Joshua Bee" loading="lazy" />
 						</picture><!-- media -->
 
 						<footer class="card__footer">
@@ -249,16 +249,16 @@
 					<source srcset="images/projects/background-2000.webp" type="image/webp" media="(max-width: 2000px)">
 					<source srcset="images/projects/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/projects/background-2400.webp" type="image/webp">
-					<img src="images/projects/background-2400.jpg" alt="Projects Background" />
+					<img src="images/projects/background-2400.jpg" height="1600" width="2400" alt="Projects Background" loading="lazy" />
 				</picture><!-- sheet__background -->
 
 				<div class="cards">
 					<div class="card" data-cards="projects" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/projects/pong-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/projects/pong-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/projects/pong-thumbnail-512.webp" type="image/webp">
-								<img src="images/projects/pong-thumbnail-512.png" alt="Pong Thumbnail" />
+								<img src="images/projects/pong-thumbnail-512.png" height="512" width="512" alt="Pong Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Pong</h2>
@@ -269,7 +269,7 @@
 							<picture class="card__media">
 								<source srcset="images/projects/pong-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 								<source srcset="images/projects/pong-media-1500.webp" type="image/webp">
-								<img src="images/projects/pong-media-1500.jpg" alt="Pong Media" />
+								<img src="images/projects/pong-media-1500.jpg" height="855" width="1500" alt="Pong Media" loading="lazy" />
 							</picture><!-- media -->
 						</a>
 					</div><!-- card -->
@@ -277,9 +277,9 @@
 					<div class="card" data-cards="projects" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/projects/project-euler-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/projects/project-euler-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/projects/project-euler-thumbnail-512.webp" type="image/webp">
-								<img src="images/projects/project-euler-thumbnail-512.png" alt="Project Euler Thumbnail" />
+								<img src="images/projects/project-euler-thumbnail-512.png" height="512" width="512" alt="Project Euler Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Project Euler</h2>
@@ -290,7 +290,7 @@
 							<picture class="card__media">
 								<source srcset="images/projects/project-euler-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 								<source srcset="images/projects/project-euler-media-1500.webp" type="image/webp">
-								<img src="images/projects/project-euler-media-1500.jpg" alt="Project Euler Media" />
+								<img src="images/projects/project-euler-media-1500.jpg" height="855" width="1500" alt="Project Euler Media" loading="lazy" />
 							</picture><!-- media -->
 						</a>
 					</div><!-- card -->
@@ -298,9 +298,9 @@
 					<div class="card" data-cards="projects" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/projects/fake-name-generator-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/projects/fake-name-generator-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/projects/fake-name-generator-thumbnail-512.webp" type="image/webp">
-								<img src="images/projects/fake-name-generator-thumbnail-512.png" alt="Fake Name Generator Thumbnail" />
+								<img src="images/projects/fake-name-generator-thumbnail-512.png" height="512" width="512" alt="Fake Name Generator Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Fake Name Generator</h2>
@@ -311,7 +311,7 @@
 							<picture class="card__media">
 								<source srcset="images/projects/fake-name-generator-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 								<source srcset="images/projects/fake-name-generator-media-1500.webp" type="image/webp">
-								<img src="images/projects/fake-name-generator-media-1500.jpg" alt="Fake Name Generator Media" />
+								<img src="images/projects/fake-name-generator-media-1500.jpg" height="855" width="1500" alt="Fake Name Generator Media" loading="lazy" />
 							</picture><!-- media -->
 						</a>
 					</div><!-- card -->
@@ -331,16 +331,16 @@
 					<source srcset="images/education/background-2000.webp" type="image/webp" media="(max-width: 2000px)">
 					<source srcset="images/education/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/education/background-2400.webp" type="image/webp">
-					<img src="images/education/background-2400.jpg" alt="Education Background" />
+					<img src="images/education/background-2400.jpg" height="1600" width="2400" alt="Education Background" loading="lazy" />
 				</picture><!-- sheet__background -->
 
 				<div class="cards">
 					<div class="card" data-cards="education" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/education/hull-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/education/hull-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/education/hull-thumbnail-512.webp" type="image/webp">
-								<img src="images/education/hull-thumbnail-512.jpg" alt="Hull Thumbnail" />
+								<img src="images/education/hull-thumbnail-512.jpg" height="512" width="512" alt="Hull Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">University of Hull</h2>
@@ -350,16 +350,16 @@
 						<picture class="card__media">
 							<source srcset="images/education/hull-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/education/hull-media-1500.webp" type="image/webp">
-							<img src="images/education/hull-media-1500.jpg" alt="Hull Media" />
+							<img src="images/education/hull-media-1500.jpg" height="855" width="1500" alt="Hull Media" loading="lazy" />
 						</picture><!-- media -->
 					</div><!-- card -->
 
 					<div class="card" data-cards="education" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/education/nottingham-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/education/nottingham-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/education/nottingham-thumbnail-512.webp" type="image/webp">
-								<img src="images/education/nottingham-thumbnail-512.jpg" alt="Nottingham Thumbnail" />
+								<img src="images/education/nottingham-thumbnail-512.jpg" height="512" width="512" alt="Nottingham Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">University of Nottingham</h2>
@@ -369,7 +369,7 @@
 						<picture class="card__media">
 							<source srcset="images/education/nottingham-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/education/nottingham-media-1500.webp" type="image/webp">
-							<img src="images/education/nottingham-media-1500.jpg" alt="Nottingham Media" />
+							<img src="images/education/nottingham-media-1500.jpg" height="855" width="1500" alt="Nottingham Media" loading="lazy" />
 						</picture><!-- media -->
 					</div><!-- card -->
 				</div><!-- cards -->
@@ -388,16 +388,16 @@
 					<source srcset="images/experience/background-2000.webp" type="image/webp" media="(max-width: 2000px)">
 					<source srcset="images/experience/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/experience/background-2400.webp" type="image/webp">
-					<img src="images/experience/background-2400.jpg" alt="Experience Background" />
+					<img src="images/experience/background-2400.jpg" height="1600" width="2400" alt="Experience Background" loading="lazy" />
 				</picture><!-- sheet__background -->
 				
 				<div class="cards">
 					<div class="card" data-cards="experience" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/experience/strawberry-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/experience/strawberry-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/experience/strawberry-thumbnail-512.webp" type="image/webp">
-								<img src="images/experience/strawberry-thumbnail-512.png" alt="Strawberry Thumbnail" />
+								<img src="images/experience/strawberry-thumbnail-512.png" height="512" width="512" alt="Strawberry Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Strawberry</h2>
@@ -407,16 +407,16 @@
 						<picture class="card__media">
 							<source srcset="images/experience/strawberry-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/experience/strawberry-media-1500.webp" type="image/webp">
-							<img src="images/experience/strawberry-media-1500.jpg" alt="Strawberry Media" />
+							<img src="images/experience/strawberry-media-1500.jpg" height="855" width="1500" alt="Strawberry Media" loading="lazy" />
 						</picture><!-- media -->
 					</div><!-- card -->
 
 					<div class="card" data-cards="experience" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/experience/meta-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/experience/meta-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/experience/meta-thumbnail-512.webp" type="image/webp">
-								<img src="images/experience/meta-thumbnail-512.png" alt="Meta Thumbnail" />
+								<img src="images/experience/meta-thumbnail-512.png" height="512" width="512" alt="Meta Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Meta</h2>
@@ -426,16 +426,16 @@
 						<picture class="card__media">
 							<source srcset="images/experience/meta-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/experience/meta-media-1500.webp" type="image/webp">
-							<img src="images/experience/meta-media-1500.jpg" alt="Meta Media" />
+							<img src="images/experience/meta-media-1500.jpg" height="855" width="1500" alt="Meta Media" loading="lazy" />
 						</picture><!-- media -->
 					</div><!-- card -->
 
 					<div class="card" data-cards="experience" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/experience/symphony-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/experience/symphony-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/experience/symphony-thumbnail-512.webp" type="image/webp">
-								<img src="images/experience/symphony-thumbnail-512.png" alt="Symphony Thumbnail" />
+								<img src="images/experience/symphony-thumbnail-512.png" height="512" width="512" alt="Symphony Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Symphony RetailAI</h2>
@@ -445,7 +445,7 @@
 						<picture class="card__media">
 							<source srcset="images/experience/symphony-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/experience/symphony-media-1500.webp" type="image/webp">
-							<img src="images/experience/symphony-media-1500.jpg" alt="Symphony Media" />
+							<img src="images/experience/symphony-media-1500.jpg" height="855" width="1500" alt="Symphony Media" loading="lazy" />
 						</picture><!-- media -->
 					</div><!-- card -->
 				</div><!-- cards -->
@@ -464,16 +464,16 @@
 					<source srcset="images/hobbies/background-2000.webp" type="image/webp" media="(max-width: 2000px)">
 					<source srcset="images/hobbies/background-2200.webp" type="image/webp" media="(max-width: 2200px)">
 					<source srcset="images/hobbies/background-2400.webp" type="image/webp">
-					<img src="images/hobbies/background-2400.jpg" alt="Hobbies Background" />
+					<img src="images/hobbies/background-2400.jpg" height="1600" width="2400" alt="Hobbies Background" loading="lazy" />
 				</picture><!-- sheet__background -->
 
 				<div class="cards">
 					<div class="card" data-cards="hobbies" aria-expanded="true">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/hobbies/sport-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/hobbies/sport-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/hobbies/sport-thumbnail-512.webp" type="image/webp">
-								<img src="images/hobbies/sport-thumbnail-512.jpg" alt="Sport Thumbnail" />
+								<img src="images/hobbies/sport-thumbnail-512.jpg" height="512" width="512" alt="Sport Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Sports</h2>
@@ -483,16 +483,16 @@
 						<picture class="card__media">
 							<source srcset="images/hobbies/sport-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/hobbies/sport-media-1500.webp" type="image/webp">
-							<img src="images/hobbies/sport-media-1500.jpg" alt="Sport Media" />
+							<img src="images/hobbies/sport-media-1500.jpg" height="855" width="1500" alt="Sport Media" loading="lazy" />
 						</picture><!-- media -->
 					</div><!-- card -->
 
 					<div class="card" data-cards="hobbies" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/hobbies/language-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/hobbies/language-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/hobbies/language-thumbnail-512.webp" type="image/webp">
-								<img src="images/hobbies/language-thumbnail-512.jpg" alt="Language Thumbnail" />
+								<img src="images/hobbies/language-thumbnail-512.jpg" height="512" width="512" alt="Language Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Languages</h2>
@@ -502,16 +502,16 @@
 						<picture class="card__media">
 							<source srcset="images/hobbies/language-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/hobbies/language-media-1500.webp" type="image/webp">
-							<img src="images/hobbies/language-media-1500.jpg" alt="Language Media" />
+							<img src="images/hobbies/language-media-1500.jpg" height="855" width="1500" alt="Language Media" loading="lazy" />
 						</picture><!-- media -->
 					</div><!-- card -->
 
 					<div class="card" data-cards="hobbies" aria-expanded="false">
 						<header class="card__header">
 							<picture class="card__thumbnail">
-								<source srcset="images/hobbies/music-thumbnail-64.webp" type="image/webp">
+								<source srcset="images/hobbies/music-thumbnail-80.webp" type="image/webp">
 								<source srcset="images/hobbies/music-thumbnail-512.webp" type="image/webp">
-								<img src="images/hobbies/music-thumbnail-512.jpg" alt="Music Thumbnail" />
+								<img src="images/hobbies/music-thumbnail-512.jpg" height="512" width="512" alt="Music Thumbnail" loading="lazy" />
 							</picture><!-- thumbnail -->
 							<div class="card__header-text">
 								<h2 class="card__header-title">Music</h2>
@@ -521,7 +521,7 @@
 						<picture class="card__media">
 							<source srcset="images/hobbies/music-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
 							<source srcset="images/hobbies/music-media-1500.webp" type="image/webp">
-							<img src="images/hobbies/music-media-1500.jpg" alt="Music Media"/>
+							<img src="images/hobbies/music-media-1500.jpg" height="855" width="1500" alt="Music Media" loading="lazy" />
 						</picture><!-- media -->
 					</div><!-- card -->
 				</div><!-- cards -->

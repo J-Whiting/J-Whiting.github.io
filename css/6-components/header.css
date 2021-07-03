@@ -31,6 +31,7 @@
 .header__logo img {
 	height: 3em;
 	margin-right: 1em;
+	width: 3em;
 }
 
 .header__title {
@@ -38,7 +39,7 @@
 	line-height: 2rem;
 	letter-spacing: 0rem;
 	font-weight: 400;
-	font-family: 'Roboto Mono', monospace;
+	font-family: var(--font-monospace);
 	text-transform: uppercase;
 }
 
