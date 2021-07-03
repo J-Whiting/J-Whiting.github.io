@@ -1,0 +1,9 @@
+/*--------------------------------//
+//                                //
+//             Font              //
+//                                //
+//--------------------------------*/
+:root {
+	--font-sans-serif: 'Roboto', sans-serif;
+	--font-monospace: 'Roboto Mono', monospace;
+}

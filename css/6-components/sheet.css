@@ -1,12 +1,8 @@
 .sheet {
 	position: relative;
-	height: calc(100vh - 4.5em); /* The header bar is 4.5em. */
+	height: 100vh; /* The header bar is 4.5em. */
 	overflow: hidden;
 	z-index: 0;
-}
-
-.sheet:first-child {
-	margin-top: 4.5em; /* The header bar is 4.5em. */
 }
 
 .sheet__background img {

@@ -13,8 +13,8 @@
 	width: 100%;
 	color: #FFF;
 	color: var(--color-primary-text);
-	background-color: #6200EE;
-    background-color: var(--color-primary);
+	/*background-color: #6200EE;
+    background-color: var(--color-primary);*/
 	transform: translateX(100vw);
 	transition: transform 0.25s ease-in-out,
 		visibility 1ms linear 0.25s;
@@ -45,6 +45,7 @@
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
+	transition: opacity .25s ease;
 }
 
 .navigation__link {
@@ -73,19 +74,6 @@
 	padding-bottom: 0.25rem;
 }
 
-.navigation__indicator {
-	left: 0;
-	right: 0;
-	background: #03DAC6;
-	background: var(--color-secondary);
-	bottom: 0;
-	height: 0.25em;
-	position: absolute;
-	transform: scaleY(0);
-	transform-origin: bottom;
-	transition: transform .25s ease;
-}
-
 @media only screen and (min-device-width: 1000px) {
 	.navigation {
 		position: unset;
@@ -112,9 +100,5 @@
 
 	.navigation__item--selected {
 		opacity: 1;
-	}
-
-	.navigation__item--selected .navigation__indicator {
-		transform: scaleY(1);
 	}
 }

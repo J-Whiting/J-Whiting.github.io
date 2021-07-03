@@ -57,6 +57,7 @@
 	letter-spacing: 0.009375rem;
 	font-weight: 700;
 	font-family: 'Roboto Mono', monospace;
+	font-family: var(--font-monospace);
 }
 
 .card__header-subtitle {

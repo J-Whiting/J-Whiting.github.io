@@ -1,0 +1,15 @@
+/*--------------------------------//
+//                                //
+//            Parallax            //
+//                                //
+//--------------------------------*/
+[data-parallax] {
+	display: flex;
+	justify-content: space-between;
+}
+
+[data-parallax-level] {
+	height: 100vh;
+	position: absolute;
+	width: 100vw;
+}
