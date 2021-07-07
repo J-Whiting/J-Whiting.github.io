@@ -105,24 +105,24 @@
 		</script>
 
 		<!-- Settings -->
-		<link href="css/1-settings/color.css" rel="stylesheet" />
-		<link href="css/1-settings/font.css" rel="stylesheet" />
+		<link href="styles/1-settings/color.css" rel="stylesheet" />
+		<link href="styles/1-settings/font.css" rel="stylesheet" />
 
 		<!-- Generic -->
-		<link href="css/3-generic/reset.css" rel="stylesheet" />
+		<link href="styles/3-generic/reset.css" rel="stylesheet" />
 
 		<!-- Elements -->
-		<link href="css/4-elements/body.css" rel="stylesheet" />
-		<link href="css/4-elements/html.css" rel="stylesheet" />
-		<link href="css/4-elements/main.css" rel="stylesheet" />
+		<link href="styles/4-elements/body.css" rel="stylesheet" />
+		<link href="styles/4-elements/html.css" rel="stylesheet" />
+		<link href="styles/4-elements/main.css" rel="stylesheet" />
 		
 		<!-- Components -->
-		<link href="css/6-components/button.css" rel="stylesheet" />
-		<link href="css/6-components/card.css" rel="stylesheet" />
-		<link href="css/6-components/header.css" rel="stylesheet" />
-		<link href="css/6-components/navigation.css" rel="stylesheet" />
-		<link href="css/6-components/snackbar.css" rel="stylesheet" />
-		<link href="css/6-components/sheet.css" rel="stylesheet" />
+		<link href="styles/6-components/button.css" rel="stylesheet" />
+		<link href="styles/6-components/card.css" rel="stylesheet" />
+		<link href="styles/6-components/header.css" rel="stylesheet" />
+		<link href="styles/6-components/navigation.css" rel="stylesheet" />
+		<link href="styles/6-components/snackbar.css" rel="stylesheet" />
+		<link href="styles/6-components/sheet.css" rel="stylesheet" />
 	</head>
 
 	<body>
@@ -404,11 +404,13 @@
 								<span class="card__header-subtitle">Web Developer</span>
 							</div><!-- header-text -->
 						</header><!-- header -->
-						<picture class="card__media">
-							<source srcset="images/experience/strawberry-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
-							<source srcset="images/experience/strawberry-media-1500.webp" type="image/webp">
-							<img src="images/experience/strawberry-media-1500.jpg" height="855" width="1500" alt="Strawberry Media" loading="lazy" />
-						</picture><!-- media -->
+						<a href="https://strawberry.co.uk/" target="_blank" rel="noopener noreferrer">
+							<picture class="card__media">
+								<source srcset="images/experience/strawberry-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
+								<source srcset="images/experience/strawberry-media-1500.webp" type="image/webp">
+								<img src="images/experience/strawberry-media-1500.jpg" height="855" width="1500" alt="Strawberry Media" loading="lazy" />
+							</picture><!-- media -->
+						</a>
 					</div><!-- card -->
 
 					<div class="card" data-cards="experience" aria-expanded="false">
@@ -423,11 +425,13 @@
 								<span class="card__header-subtitle">Senior Software Developer</span>
 							</div><!-- header-text -->
 						</header><!-- header -->
-						<picture class="card__media">
-							<source srcset="images/experience/meta-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
-							<source srcset="images/experience/meta-media-1500.webp" type="image/webp">
-							<img src="images/experience/meta-media-1500.jpg" height="855" width="1500" alt="Meta Media" loading="lazy" />
-						</picture><!-- media -->
+						<a href="https://meta.co.uk/" target="_blank" rel="noopener noreferrer">
+							<picture class="card__media">
+								<source srcset="images/experience/meta-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
+								<source srcset="images/experience/meta-media-1500.webp" type="image/webp">
+								<img src="images/experience/meta-media-1500.jpg" height="855" width="1500" alt="Meta Media" loading="lazy" />
+							</picture><!-- media -->
+						</a>
 					</div><!-- card -->
 
 					<div class="card" data-cards="experience" aria-expanded="false">
@@ -442,11 +446,13 @@
 								<span class="card__header-subtitle">Software Developer</span>
 							</div><!-- header-text -->
 						</header><!-- header -->
-						<picture class="card__media">
-							<source srcset="images/experience/symphony-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
-							<source srcset="images/experience/symphony-media-1500.webp" type="image/webp">
-							<img src="images/experience/symphony-media-1500.jpg" height="855" width="1500" alt="Symphony Media" loading="lazy" />
-						</picture><!-- media -->
+						<a href="https://www.symphonyretailai.com/" target="_blank" rel="noopener noreferrer">
+							<picture class="card__media">
+								<source srcset="images/experience/symphony-media-1000.webp" type="image/webp" media="(max-width: 2000px)">
+								<source srcset="images/experience/symphony-media-1500.webp" type="image/webp">
+								<img src="images/experience/symphony-media-1500.jpg" height="855" width="1500" alt="Symphony Media" loading="lazy" />
+							</picture><!-- media -->
+						</a>
 					</div><!-- card -->
 				</div><!-- cards -->
 			</section><!-- sheet -->
@@ -554,7 +560,7 @@
 		</main><!-- main -->
 
 		<!-- Main Javascript -->
-		<script src="js/main.js"></script>
+		<script src="scripts/main.js"></script>
 		<script>
 			if ('serviceWorker' in navigator) {
 				navigator.serviceWorker

@@ -1,4 +1,4 @@
-const version = "1.26";
+const version = "1.27";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -41,18 +41,18 @@ self.addEventListener("install", e => {
 				"/ms-icon-310.png",
 				"/safari-pinned-tab.svg",
 				"/sitemap.xml",
-				"/css/1-settings/color.css",
-				"/css/1-settings/font.css",
-				"/css/3-generic/reset.css",
-				"/css/4-elements/body.css",
-				"/css/4-elements/html.css",
-				"/css/4-elements/main.css",
-				"/css/6-components/button.css",
-				"/css/6-components/card.css",
-				"/css/6-components/header.css",
-				"/css/6-components/navigation.css",
-				"/css/6-components/sheet.css",
-				"/css/6-components/snackbar.css",
+				"/styles/1-settings/color.css",
+				"/styles/1-settings/font.css",
+				"/styles/3-generic/reset.css",
+				"/styles/4-elements/body.css",
+				"/styles/4-elements/html.css",
+				"/styles/4-elements/main.css",
+				"/styles/6-components/button.css",
+				"/styles/6-components/card.css",
+				"/styles/6-components/header.css",
+				"/styles/6-components/navigation.css",
+				"/styles/6-components/sheet.css",
+				"/styles/6-components/snackbar.css",
 				"/images/education/background-600.webp",
 				"/images/education/background-800.webp",
 				"/images/education/background-1000.webp",
@@ -190,7 +190,7 @@ self.addEventListener("install", e => {
 				"/images/projects/project-euler-thumbnail-80.webp",
 				"/images/projects/project-euler-thumbnail-512.png",
 				"/images/projects/project-euler-thumbnail-512.webp",
-				"/js/main.js"
+				"/scripts/main.js"
 			])
 			.then(() => self.skipWaiting());
 		})
