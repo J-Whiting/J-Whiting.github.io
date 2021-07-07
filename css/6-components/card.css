@@ -30,6 +30,7 @@
 }
 
 .card__header {
+	align-items: center;
 	display: flex;
 	background-color: #FFF;
 	background-color: var(--color-background);
@@ -48,13 +49,12 @@
 }
 
 .card__header-text {
-	padding-top: 0.5em;
+	padding: 0.5em 0;
 }
 
 .card__header-title {
 	font-size: 1.25rem;
-	line-height: 2.125rem;
-	letter-spacing: 0.009375rem;
+	line-height: 1.25;
 	font-weight: 700;
 	font-family: var(--font-monospace);
 }
@@ -62,8 +62,7 @@
 .card__header-subtitle {
 	opacity: 0.65;
 	font-size: .875rem;
-	line-height: 1.375rem;
-	letter-spacing: 0.00625rem;
+	line-height: 1.25;
 	font-weight: 500;
 }
 
