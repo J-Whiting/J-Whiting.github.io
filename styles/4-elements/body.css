@@ -1,6 +1,8 @@
 body {
 	font-family: var(--font-sans-serif);
 	font-weight: 400;
+	background-color: #FFF;
+	background-color: var(--color-background);
 	color: #000;
 	color: var(--color-background-text);
 	-moz-osx-font-smoothing: grayscale;

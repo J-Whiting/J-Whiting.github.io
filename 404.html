@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<link rel="preconnect" href="https://www.google-analytics.com/" crossorigin>
+		<link rel="preconnect" href="https://font.gstatic.com/" crossorigin>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167099010-1"></script>
 		<script>
@@ -11,11 +13,11 @@
 			gtag('config', 'UA-167099010-1');
 		</script>
 
-		<title>Joshua Bee - Senior Software Developer</title>
+		<title>Joshua Bee - Web Developer</title>
 		<meta charset="utf-8" />
 		<meta name="author" content="Joshua Bee" />
-		<meta name="description" content="Personal website for Joshua Bee, a senior software developer based in Hull, UK" />
-		<meta name="keywords" content="joshua, bee, joshua bee, senior, software, developer, senior software developer, software developer, hull" />
+		<meta name="description" content="Personal website for Joshua Bee, a web developer based in Hull, UK" />
+		<meta name="keywords" content="joshua, bee, joshua bee, web, developer, web developer, software developer, hull" />
 		<meta name="robots" content="index, follow" />
 		<!-- Let browser know website is optimized for mobile -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -27,8 +29,8 @@
 		<meta property="og:url" content="https://joshuabee.dev/" />
 		<meta property="og:locale" content="en-GB" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Joshua Bee - Senior Software Developer" />
-		<meta property="og:description" content="Personal website for Joshua Bee, a senior software developer based in Hull, UK" />
+		<meta property="og:title" content="Joshua Bee - Web Developer" />
+		<meta property="og:description" content="Personal website for Joshua Bee, a web developer based in Hull, UK" />
 		<meta property="og:image" content="images/home/media-1500.jpg" />
 		<meta property="og:image:type" content="image/jpeg" />
 		<meta property="og:image:width" content="1500" />
@@ -36,8 +38,8 @@
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Joshua Bee - Senior Software Developer" />
-		<meta name="twitter:description" content="Personal website for Joshua Bee, a senior software developer based in Hull, UK" />
+		<meta name="twitter:title" content="Joshua Bee - Web Developer" />
+		<meta name="twitter:description" content="Personal website for Joshua Bee, a web developer based in Hull, UK" />
 		<meta name="twitter:image" content="images/home/media-1500.jpg" />
 		<meta name="twitter:image:alt" content="Joshua Bee" />
 		
@@ -84,7 +86,7 @@
                 ],
 				"givenName":"Joshua",
 				"familyName":"Bee",
-				"jobTitle":"Senior Software Developer",
+				"jobTitle":"Web Developer",
                 "name":"Joshua Bee",
                 "nationality":{
                 	"@type":"Country",
@@ -95,10 +97,10 @@
 				],
                 "worksFor":{
                 	"@type":"Organization",
-                	"name":"META",
-                	"url":"https://www.meta.co.uk/"
+                	"name":"Strawberry",
+                	"url":"https://strawberry.co.uk/"
                 },
-                "url":"https://joshuabee.dev/"
+				"url":"https://joshuabee.dev/"
 			}
 		</script>
 
@@ -116,34 +118,65 @@
 		
 		<!-- Components -->
 		<link href="styles/6-components/button.css" rel="stylesheet" />
+		<link href="styles/6-components/card.css" rel="stylesheet" />
 		<link href="styles/6-components/header.css" rel="stylesheet" />
+		<link href="styles/6-components/navigation.css" rel="stylesheet" />
+		<link href="styles/6-components/snackbar.css" rel="stylesheet" />
 		<link href="styles/6-components/sheet.css" rel="stylesheet" />
 	</head>
 
 	<body>
 		<header class="header">
-			<div class="header__branding" data-scroll-to="home">
-				<picture class="header__icon">
-					<source srcset="images/icons/icon-192.svg" type="image/svg+xml">
-					<img src="images/icons/icon-192.png" alt="Icon" />
-				</picture><!-- header__icon -->
+			<a href="/" class="header__branding" data-scroll-to="home">
+				<picture class="header__logo">
+					<source srcset="images/logos/logo-192.svg" type="image/svg+xml">
+					<img src="images/logos/logo-192.png" height="512" width="512" alt="Home" loading="lazy" />
+				</picture><!-- header__logo -->
 				<h1 class="header__title">Joshua Bee</h1>
-			</div><!-- header__branding -->
+			</a><!-- header__branding -->
 		</header><!-- header -->
 
 		<main>
 			
-			<section id="home" class="sheet">
+			<section
+				id="home"
+				class="sheet"
+				style="
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					text-align: center;
+				"
+			>
 
-				<h1>Whoops!</h1>
+				<h1
+					style="
+						font-size: 2.5rem;
+						transform: rotate(-3deg);
+					"
+				>
+					Whoops!
+				</h1>
 
-				<p>
-					Your attempts to hack my server have failed, click
-						<button class="button button-text">
-							<a href="/" class="button__text" aria-label="Home">here</a>
-						</button>
-					to try again.
+				<p
+					style="
+						margin-top: 1.5rem;
+					"
+				>
+					Your attempts to hack my server have failed 😞
 				</p>
+
+				<a
+					href="/"
+					class="button button-text"
+					aria-label="Home"
+					style="
+						margin: 1rem auto 0;
+						width: fit-content;
+					"
+				>
+					<span class="button__text">Want to try again?</span>
+				</a>
 
 			</section>
 

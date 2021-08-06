@@ -1,4 +1,4 @@
-const version = "1.28";
+const version = "1.29";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -7,6 +7,7 @@ self.addEventListener("install", e => {
 		caches.open(cacheName).then(cache => {
 			return cache.addAll([
 				"/",
+				"/404.html",
 				"/android-icon-36.png",
 				"/android-icon-48.png",
 				"/android-icon-72.png",
