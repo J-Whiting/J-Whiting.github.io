@@ -23,6 +23,7 @@ let vDeferredPrompt;
 let appInstalled = true;
 let appStandalone = false;
 let userScrolled = false;
+let drawerKeyHandler;
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
@@ -71,6 +72,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 				top: $scrollElement.offsetTop - $header.offsetHeight,
 				behavior: 'smooth'
 			});
+
+			setTimeout(() => {
+				$scrollElement.focus();
+			}, 1000);
 		});
 	});
 
@@ -94,9 +99,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	});
 
 	$drawerToggle.addEventListener('click', (event) => {
-		let key = $drawerToggle.dataset.drawerToggle;
-		let $element = document.querySelector(`[data-drawer="${ key }"]`);
-		$element.dataset.visible = $element.dataset.visible !== 'true';
+		const key = $drawerToggle.dataset.drawerToggle;
+		const $drawer = document.querySelector(`[data-drawer="${ key }"]`);
+
+		if ($drawer.dataset.visible === 'true') {
+			closeDrawer($drawer);
+		}
+		else {
+			openDrawer($drawer);
+		}
 	});
 
 	//
@@ -159,6 +170,41 @@ function hideCard($card) {
 	$focusableElements.forEach($focusableElement => {
 		$focusableElement.tabIndex = '-1';
 	});
+}
+
+function openDrawer($drawer) {
+	const $focusableElements = $drawer.querySelectorAll(SELECTORS.FOCUSABLE);
+	const $firstFocusableElement = document.querySelector('.header__branding');
+	const $lastFocusableElement = $focusableElements[$focusableElements.length - 1];
+
+	$drawer.dataset.visible = 'true';
+
+	// Events
+	drawerKeyHandler = (event) => {
+		if (event.key === 'Escape' || event.keyCode === 27) {
+			closeDrawer($drawer);
+		}
+	
+		// Add tab trapping
+		if (event.key === 'Tab' || event.keyCode === 9) {
+			if (event.shiftKey && document.activeElement === $firstFocusableElement) {
+				$lastFocusableElement.focus();
+			}
+			else if (document.activeElement === $lastFocusableElement) {
+				$firstFocusableElement.focus();
+			}
+		}
+	}
+	document.addEventListener('keydown', drawerKeyHandler);
+}
+
+function closeDrawer($drawer) {
+	$drawer.dataset.visible = 'false';
+
+	// Remove tab trapping
+	if (drawerKeyHandler) {
+		document.removeEventListener('keydown', drawerKeyHandler);
+	}
 }
 
 // https://developers.google.com/web/ilt/pwa/lab-offline-quickstart#52_activating_the_install_prompt

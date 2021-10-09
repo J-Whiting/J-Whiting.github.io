@@ -131,9 +131,9 @@
 				<picture class="header__logo">
 					<source srcset="images/logos/logo-192.svg" type="image/svg+xml">
 					<img src="images/logos/logo-192.png" height="512" width="512" alt="Home" loading="lazy" />
-				</picture><!-- header__logo -->
+				</picture>
 				<h1 class="header__title">Joshua Bee</h1>
-			</a><!-- header__branding -->
+			</a>
 
 			<button aria-label="Navigation" data-drawer-toggle="navigation" class="header__navigation-button">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
@@ -142,40 +142,40 @@
 			<nav id="navigation" class="navigation" data-drawer="navigation" data-visible="false">
 				<ul class="navigation__items">
 					<li class="navigation__item">
-						<a href="#projects" class="navigation__link" data-scroll-to="projects">
+						<button class="navigation__link" data-scroll-to="projects">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
 							<span class="navigation__label">Projects</span>
 							<div class="navigation__indicator"></div>
-						</a>
-					</li><!-- navigation__item -->
+						</button>
+					</li>
 					<li class="navigation__item">
-						<a href="#education" class="navigation__link" data-scroll-to="education">
+						<button class="navigation__link" data-scroll-to="education">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
 							<span class="navigation__label">Education</span>
 							<div class="navigation__indicator"></div>
-						</a>
-					</li><!-- navigation__item -->
+						</button>
+					</li>
 					<li class="navigation__item">
-						<a href="#experience" class="navigation__link" data-scroll-to="experience">
+						<button class="navigation__link" data-scroll-to="experience">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
 							<span class="navigation__label">Experience</span>
 							<div class="navigation__indicator"></div>
-						</a>
-					</li><!-- navigation__item -->
+						</button>
+					</li>
 					<li class="navigation__item">
-						<a href="#hobbies" class="navigation__link" data-scroll-to="hobbies">
+						<button class="navigation__link" data-scroll-to="hobbies">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
 							<span class="navigation__label">Hobbies</span>
 							<div class="navigation__indicator"></div>
-						</a>
-					</li><!-- navigation__item -->
-				</ul><!-- navigation__items -->
-			</nav><!-- navigation -->
+						</button>
+					</li>
+				</ul>
+			</nav>
 		</header>
 
 		<main>
 
-			<section id="home" class="sheet">
+			<section id="home" class="sheet" tabindex="-1">
 
 				<picture class="sheet__background">
 					<source srcset="images/home/background-600.webp" type="image/webp" media="(max-width: 600px)">
@@ -234,7 +234,7 @@
 
 			</section>
 
-			<section id="projects" class="sheet">
+			<section id="projects" class="sheet" tabindex="-1">
 
 				<picture class="sheet__background">
 					<source srcset="images/projects/background-600.webp" type="image/webp" media="(max-width: 600px)">
@@ -328,7 +328,7 @@
 				</div>
 			</section>
 
-			<section id="education" class="sheet">
+			<section id="education" class="sheet" tabindex="-1">
 
 				<picture class="sheet__background">
 					<source srcset="images/education/background-600.webp" type="image/webp" media="(max-width: 600px)">
@@ -393,7 +393,7 @@
 				</div>
 			</section>
 
-			<section id="experience" class="sheet">
+			<section id="experience" class="sheet" tabindex="-1">
 
 				<picture class="sheet__background">
 					<source srcset="images/experience/background-600.webp" type="image/webp" media="(max-width: 600px)">
@@ -487,7 +487,7 @@
 				</div>
 			</section>
 
-			<section id="hobbies" class="sheet">
+			<section id="hobbies" class="sheet" tabindex="-1">
 
 				<picture class="sheet__background">
 					<source srcset="images/hobbies/background-600.webp" type="image/webp" media="(max-width: 600px)">
