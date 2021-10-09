@@ -1,0 +1,26 @@
+/*--------------------------------//
+//                                //
+//           Skip Link            //
+//                                //
+//--------------------------------*/
+.skip-link {
+	background-color: #FFF;
+	background-color: var(--color-background);
+	color: #000;
+	color: var(--color-background-text);
+	left: 50%;
+	padding: 16px;
+	position: absolute;
+	transform: translate(-50%, -100%);
+	z-index: 5;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.skip-link {
+		transition: transform 0.3s;
+	}
+}
+
+.skip-link:focus {
+	transform: translate(-50%, 0%);
+}

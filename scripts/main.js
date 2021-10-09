@@ -78,14 +78,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 			const $scrollElement = document.getElementById(event.currentTarget.dataset.scrollTo);
 			const options = {
-				top: $scrollElement.offsetTop - $header.offsetHeight
+				top: $scrollElement.offsetTop - $header.offsetHeight,
+				behavior: 'smooth'
 			}
 
 			if (prefersReducedMotion) {
 				options.behavior = 'auto';
-			}
-			else {
-				options.behavior = 'smooth';
 			}
 
 			window.scrollTo(options);
