@@ -57,7 +57,6 @@
 	background-color: #6200EE;
 	background-color: var(--color-primary);
 	opacity: 0;
-	transition: opacity .2s ease;
 	border-radius: 0.25em;
 	height: 100%;
 	width: 100%;
@@ -69,6 +68,12 @@
 	/* Added to prevent buttons moving when hovered. */
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.button::before {
+		transition: opacity .2s ease;
+	}
 }
 
 .button:hover::before,

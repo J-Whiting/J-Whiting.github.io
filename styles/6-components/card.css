@@ -76,11 +76,12 @@
 	width: 90vw;
 	display: block;
 	object-fit: cover;
+}
 
-	-webkit-transition: height .5s ease;
-	-o-transition: height .5s ease;
-	-ms-transition: height .5s ease;
-	transition: height .5s ease;
+@media (prefers-reduced-motion: no-preference) {
+	.card__media img {
+		transition: height .5s ease;
+	}
 }
 
 .card picture:last-child img {

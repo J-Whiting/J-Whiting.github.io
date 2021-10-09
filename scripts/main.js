@@ -25,6 +25,9 @@ let appStandalone = false;
 let userScrolled = false;
 let drawerKeyHandler;
 
+// Options
+let prefersReducedMotion;
+
 document.addEventListener('DOMContentLoaded', (event) => {
 
 	// Elements
@@ -46,6 +49,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		appStandalone = true;
 	}
 
+	const prefersReducedMotionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+	prefersReducedMotion = prefersReducedMotionMediaQuery.matches;
+
 	// Add event listeners
 	$updateSnackbarAction.addEventListener('click', (event) => {
 		window.location.reload();
@@ -59,6 +65,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		$installSnackbar.ariaHidden = true;
 	});
 
+	prefersReducedMotionMediaQuery.addEventListener('change', () => {
+		prefersReducedMotion = prefersReducedMotionMediaQuery.matches;
+	});
+
 	// Add scroll link events
 	$scrollElements.forEach(($element) => {
 		$element.addEventListener('click', (event) => {
@@ -67,15 +77,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			$navigation.dataset.visible = false;
 
 			const $scrollElement = document.getElementById(event.currentTarget.dataset.scrollTo);
+			const options = {
+				top: $scrollElement.offsetTop - $header.offsetHeight
+			}
 
-			window.scrollTo({
-				top: $scrollElement.offsetTop - $header.offsetHeight,
-				behavior: 'smooth'
-			});
+			if (prefersReducedMotion) {
+				options.behavior = 'auto';
+			}
+			else {
+				options.behavior = 'smooth';
+			}
 
-			setTimeout(() => {
+			window.scrollTo(options);
+
+			if (prefersReducedMotion) {
 				$scrollElement.focus();
-			}, 1000);
+			}
+			else {
+				setTimeout(() => {
+					$scrollElement.focus();
+				}, 1000);
+			}
 		});
 	});
 
