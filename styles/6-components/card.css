@@ -30,12 +30,16 @@
 }
 
 .card__header {
-	align-items: center;
-	display: flex;
 	background-color: #FFF;
 	background-color: var(--color-background);
+}
+
+.card__header-button {
+	align-items: center;
+	display: flex;
 	padding: 0 1em;
 	border-radius: 0.25em;
+	width: 100%;
 }
 
 .card__thumbnail img {
@@ -50,6 +54,7 @@
 
 .card__header-text {
 	padding: 0.5em 0;
+	text-align: left;
 }
 
 .card__header-title {

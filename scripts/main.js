@@ -1,3 +1,8 @@
+// Constants
+const SELECTORS = {
+	FOCUSABLE: 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, [tabindex="0"], [contenteditable]'
+};
+
 // Elements
 let $cards;
 let $header;
@@ -70,15 +75,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	});
 
 	// Add Card events
-	$cards.forEach(($card) => {
-		$card.addEventListener('click', (event) => {
-			let $cards = document.querySelectorAll(`[data-cards="${ $card.dataset.cards }"`);
-
-			$cards.forEach(($card) => {
-				$card.ariaExpanded = false;
+	$cards.forEach($card => {
+		const $button = $card.querySelector('[data-card-toggle]');
+		if ($button) {
+			$button.addEventListener('click', event => {
+				let $similarCards = document.querySelectorAll(`[data-cards="${ $card.dataset.cards }"`);
+	
+				$similarCards.forEach(($similarCard) => {
+					if ($card === $similarCard) {
+						showCard($card);
+					}
+					else {
+						hideCard($similarCard)
+					}
+				});
 			});
-			$card.ariaExpanded = true;
-		});
+		}
 	});
 
 	$drawerToggle.addEventListener('click', (event) => {
@@ -128,6 +140,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		}
 	});
 });
+
+function showCard($card) {
+	$card.ariaExpanded = true;
+
+	const $content = $card.querySelector('.card__content');
+	const $focusableElements = $content.querySelectorAll(SELECTORS.FOCUSABLE);
+	$focusableElements.forEach($focusableElement => {
+		$focusableElement.tabIndex = '0';
+	});
+}
+
+function hideCard($card) {
+	$card.ariaExpanded = false;
+
+	const $content = $card.querySelector('.card__content');
+	const $focusableElements = $content.querySelectorAll(SELECTORS.FOCUSABLE);
+	$focusableElements.forEach($focusableElement => {
+		$focusableElement.tabIndex = '-1';
+	});
+}
 
 // https://developers.google.com/web/ilt/pwa/lab-offline-quickstart#52_activating_the_install_prompt
 window.addEventListener('beforeinstallprompt', (event) => {
