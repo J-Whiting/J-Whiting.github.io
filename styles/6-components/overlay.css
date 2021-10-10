@@ -1,0 +1,21 @@
+/*--------------------------------//
+//                                //
+//            Overlay             //
+//                                //
+//--------------------------------*/
+.overlay {
+	background-color: #000;
+	height: 100%;
+	left: 0;
+	opacity: 0.7;
+	position: fixed;
+	transform: translateX(100vw);
+	visibility: hidden;
+	width: 100%;
+	z-index: 5;
+}
+
+.overlay[data-state="active"] {
+	transform: translateX(0);
+	visibility: visible;
+}

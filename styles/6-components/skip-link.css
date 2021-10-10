@@ -15,10 +15,8 @@
 	z-index: 5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.skip-link {
-		transition: transform 0.3s;
-	}
+body[data-prefers-reduced-motion="false"] .skip-link {
+	transition: transform 0.3s;
 }
 
 .skip-link:focus {

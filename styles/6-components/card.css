@@ -78,10 +78,8 @@
 	object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.card__media img {
-		transition: height .5s ease;
-	}
+body[data-prefers-reduced-motion="false"] .card__media img {
+	transition: height .5s ease;
 }
 
 .card picture:last-child img {

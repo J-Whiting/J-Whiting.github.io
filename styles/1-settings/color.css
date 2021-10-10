@@ -3,7 +3,7 @@
 //             Color              //
 //                                //
 //--------------------------------*/
-:root {
+body {
 	/*
 		Primary Color
 	*/
@@ -23,24 +23,22 @@
 	--color-background-text: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		/*
-			Primary Color
-		*/
-		--color-primary: #03DAC6;
-		--color-primary-text: #000;
-		
-		/*
-			Secondary Color
-		*/
-		--color-secondary: #6200EE;
-		--color-secondary-text: #FFF;
-		
-		/*
-			Background
-		*/
-		--color-background: #000;
-		--color-background-text: #FFF;
-	}
+body[data-theme="dark"] {
+	/*
+		Primary Color
+	*/
+	--color-primary: #03DAC6;
+	--color-primary-text: #000;
+	
+	/*
+		Secondary Color
+	*/
+	--color-secondary: #6200EE;
+	--color-secondary-text: #FFF;
+	
+	/*
+		Background
+	*/
+	--color-background: #000;
+	--color-background-text: #FFF;
 }

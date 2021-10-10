@@ -70,10 +70,8 @@
 	backface-visibility: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.button::before {
-		transition: opacity .2s ease;
-	}
+body[data-prefers-reduced-motion="false"] .button::before {
+	transition: opacity .2s ease;
 }
 
 .button:hover::before,

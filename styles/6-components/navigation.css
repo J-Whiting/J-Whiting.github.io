@@ -20,11 +20,9 @@
 	z-index: 3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.navigation {
-		transition: transform 0.25s ease-in-out,
-			visibility 1ms linear 0.25s;
-	}
+body[data-prefers-reduced-motion="false"] .navigation {
+	transition: transform 0.25s ease-in-out,
+		visibility 1ms linear 0.25s;
 }
 
 .navigation[data-visible="true"] {
@@ -32,11 +30,9 @@
 	visibility: visible;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.navigation[data-visible="true"] {
-		transition: transform 0.25s ease-in-out,
-			visibility 1ms linear;
-	}
+body[data-prefers-reduced-motion="false"] .navigation[data-visible="true"] {
+	transition: transform 0.25s ease-in-out,
+		visibility 1ms linear;
 }
 
 .navigation__items {
@@ -56,10 +52,8 @@
 	flex-grow: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.navigation__item {
-		transition: color .25s ease;
-	}
+body[data-prefers-reduced-motion="false"] .navigation__item {
+	transition: color .25s ease;
 }
 
 .navigation__link {
@@ -102,10 +96,8 @@
 	transform-origin: bottom;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.navigation__indicator {
-		transition: transform .25s ease;
-	}
+body[data-prefers-reduced-motion="false"] .navigation__indicator {
+	transition: transform .25s ease;
 }
 
 @media only screen and (min-device-width: 1000px) {
