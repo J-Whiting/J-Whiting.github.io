@@ -1,4 +1,4 @@
-const version = "1.30";
+const version = "1.31";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -87,12 +87,12 @@ self.addEventListener("install", e => {
 				"/images/experience/background-2200.webp",
 				"/images/experience/background-2400.jpg",
 				"/images/experience/background-2400.webp",
-				"/images/experience/meta-media-1000.webp",
-				"/images/experience/meta-media-1500.jpg",
-				"/images/experience/meta-media-1500.webp",
-				"/images/experience/meta-thumbnail-80.webp",
-				"/images/experience/meta-thumbnail-512.png",
-				"/images/experience/meta-thumbnail-512.webp",
+				"/images/experience/herd-media-1000.webp",
+				"/images/experience/herd-media-1500.jpg",
+				"/images/experience/herd-media-1500.webp",
+				"/images/experience/herd-thumbnail-80.webp",
+				"/images/experience/herd-thumbnail-512.png",
+				"/images/experience/herd-thumbnail-512.webp",
 				"/images/experience/strawberry-media-1000.webp",
 				"/images/experience/strawberry-media-1500.jpg",
 				"/images/experience/strawberry-media-1500.webp",
