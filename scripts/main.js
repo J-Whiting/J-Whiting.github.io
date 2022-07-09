@@ -14,6 +14,11 @@ const SELECTORS = {
 	FOCUSABLE: 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, [tabindex="0"], [contenteditable]'
 };
 
+const STATE = {
+	OPEN: 'open',
+	CLOSED: 'closed',
+};
+
 // Elements
 let $cards;
 let $header;
@@ -208,7 +213,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function showCard($card) {
 	requestAnimationFrame(() => {
-		$card.ariaExpanded = true;
+		$card.dataset.state = STATE.OPEN;
 	});
 
 	const $content = $card.querySelector('.card__content');
@@ -220,7 +225,7 @@ function showCard($card) {
 
 function hideCard($card) {
 	requestAnimationFrame(() => {
-		$card.ariaExpanded = false;
+		$card.dataset.state = STATE.CLOSED;
 	});
 
 	const $content = $card.querySelector('.card__content');
