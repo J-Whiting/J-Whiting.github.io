@@ -207,7 +207,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function showCard($card) {
-	$card.ariaExpanded = true;
+	requestAnimationFrame(() => {
+		$card.ariaExpanded = true;
+	});
 
 	const $content = $card.querySelector('.card__content');
 	const $focusableElements = $content.querySelectorAll(SELECTORS.FOCUSABLE);
@@ -217,7 +219,9 @@ function showCard($card) {
 }
 
 function hideCard($card) {
-	$card.ariaExpanded = false;
+	requestAnimationFrame(() => {
+		$card.ariaExpanded = false;
+	});
 
 	const $content = $card.querySelector('.card__content');
 	const $focusableElements = $content.querySelectorAll(SELECTORS.FOCUSABLE);
