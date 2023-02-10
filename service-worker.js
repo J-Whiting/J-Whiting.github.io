@@ -1,4 +1,4 @@
-const version = "1.36";
+const version = "1.37";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -62,7 +62,6 @@ self.addEventListener("install", e => {
 				"/images/education/background-1800.webp",
 				"/images/education/background-2000.webp",
 				"/images/education/background-2200.webp",
-				"/images/education/background-2400.jpg",
 				"/images/education/background-2400.webp",
 				"/images/education/hull-media-1000.webp",
 				"/images/education/hull-media-1500.webp",
@@ -79,7 +78,6 @@ self.addEventListener("install", e => {
 				"/images/experience/background-1800.webp",
 				"/images/experience/background-2000.webp",
 				"/images/experience/background-2200.webp",
-				"/images/experience/background-2400.jpg",
 				"/images/experience/background-2400.webp",
 				"/images/experience/herd-media-1000.webp",
 				"/images/experience/herd-media-1500.webp",
@@ -99,7 +97,6 @@ self.addEventListener("install", e => {
 				"/images/hobbies/background-1800.webp",
 				"/images/hobbies/background-2000.webp",
 				"/images/hobbies/background-2200.webp",
-				"/images/hobbies/background-2400.jpg",
 				"/images/hobbies/background-2400.webp",
 				"/images/hobbies/language-media-1000.webp",
 				"/images/hobbies/language-media-1500.webp",
@@ -119,7 +116,6 @@ self.addEventListener("install", e => {
 				"/images/home/background-1800.webp",
 				"/images/home/background-2000.webp",
 				"/images/home/background-2200.webp",
-				"/images/home/background-2400.jpg",
 				"/images/home/background-2400.webp",
 				"/images/home/media-1000.webp",
 				"/images/home/media-1500.jpg",
@@ -138,7 +134,6 @@ self.addEventListener("install", e => {
 				"/images/projects/background-1800.webp",
 				"/images/projects/background-2000.webp",
 				"/images/projects/background-2200.webp",
-				"/images/projects/background-2400.jpg",
 				"/images/projects/background-2400.webp",
 				"/images/projects/fake-name-generator-media-1000.webp",
 				"/images/projects/fake-name-generator-media-1500.webp",
