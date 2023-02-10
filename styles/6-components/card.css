@@ -42,7 +42,7 @@
 	width: 100%;
 }
 
-.card__thumbnail img {
+.card__thumbnail {
 	background-color: #FFF;
 	width: 2.5em;
 	height: 2.5em;
