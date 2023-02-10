@@ -9,20 +9,42 @@
 	margin-top: 4.5em; /* The header bar is 4.5em. */
 }
 
-.sheet__background img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-
-	/* If filter is not supported this will put a 0.5 opacity layer over the image. */
-	opacity: 0.5;
+.sheet#home {
+	background: linear-gradient(hsl(265deg 100% 85%), hsl(265deg 100% 90%));
 }
 
-/* If filter is supported it applies the filter and removes the opacity. */
-@supports (filter: blur(3px)) {
-	.sheet__background img {
-		opacity: 1;
-		filter: blur(3px);
-		transform: scale(1.05);
-	}
+.sheet#projects {
+	background: linear-gradient(hsl(265deg 100% 90%), hsl(265deg 100% 85%));
+}
+
+.sheet#education {
+	background: linear-gradient(hsl(265deg 100% 85%), hsl(265deg 100% 90%));
+}
+
+.sheet#experience {
+	background: linear-gradient(hsl(265deg 100% 90%), hsl(265deg 100% 85%));
+}
+
+.sheet#hobbies {
+	background: linear-gradient(hsl(265deg 100% 85%), hsl(265deg 100% 90%));
+}
+
+body[data-theme="dark"] .sheet#home {
+	background: linear-gradient(hsl(174deg 97% 10%), hsl(174deg 97% 15%));
+}
+
+body[data-theme="dark"] .sheet#projects {
+	background: linear-gradient(hsl(174deg 97% 15%), hsl(174deg 97% 10%));
+}
+
+body[data-theme="dark"] .sheet#education {
+	background: linear-gradient(hsl(174deg 97% 10%), hsl(174deg 97% 15%));
+}
+
+body[data-theme="dark"] .sheet#experience {
+	background: linear-gradient(hsl(174deg 97% 15%), hsl(174deg 97% 10%));
+}
+
+body[data-theme="dark"] .sheet#hobbies {
+	background: linear-gradient(hsl(174deg 97% 10%), hsl(174deg 97% 15%));
 }
