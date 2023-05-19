@@ -13,8 +13,7 @@
 }
 
 .button {
-	color: #6200EE;
-	color: var(--color-primary);
+	color: var(--color-primary, #6200EE);
 	box-sizing: border-box;
 	position: relative;
 	-webkit-user-select: none;
@@ -54,8 +53,7 @@
 }
 
 .button::before {
-	background-color: #6200EE;
-	background-color: var(--color-primary);
+	background-color: var(--color-primary, #6200EE);
 	opacity: 0;
 	border-radius: 0.25em;
 	height: 100%;
@@ -102,8 +100,7 @@ body[data-prefers-reduced-motion="false"] .button::before {
 .button-icon-text  svg {
 	height: 1.5rem;
 	padding-top: 0.75rem;
-	fill: #6200EE;
-	fill: var(--color-primary);
+	fill: var(--color-primary, #6200EE);
 }
 
 @media only screen and (min-device-width: 768px) {

@@ -7,10 +7,8 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: #6200EE;
-	background-color: var(--color-primary);
-	color: #FFF;
-	color: var(--color-primary-text);
+	background-color: var(--color-primary, #6200EE);
+	color: var(--color-primary-text, #FFF);
 	justify-content: space-between;
 	display: flex;
 	display: -ms-flexbox;
@@ -46,8 +44,7 @@
 .header__navigation-button svg {
 	margin-left: auto;
 	padding: 0 2em;
-	fill: #FFF;
-	fill: var(--color-primary-text);
+	fill: var(--color-primary-text, #FFF);
 }
 
 @media only screen and (min-device-width: 1000px) {

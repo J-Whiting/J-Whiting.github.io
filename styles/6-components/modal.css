@@ -4,10 +4,8 @@
 //                                //
 //--------------------------------*/
 .modal {
-	color: #000;
-	color: var(--color-background-text);
-	background-color: #FFF;
-    background-color: var(--color-background);
+	color: var(--color-background-text, #000);
+    background-color: var(--color-background, #FFF);
 	display: flex;
 	flex-direction: column;
 	height: 80%;
@@ -25,10 +23,8 @@
 }
 
 .modal__header {
-	color: #FFF;
-	color: var(--color-primary-text);
-	background-color: #6200EE;
-    background-color: var(--color-primary);
+	color: var(--color-primary-text, #FFF);
+    background-color: var(--color-primary, #6200EE);
 	display: flex;
 	justify-content: space-between;
 }

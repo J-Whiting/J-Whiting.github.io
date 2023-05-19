@@ -11,8 +11,7 @@
 }
 
 .card {
-	color: #000;
-	color: var(--color-background-text);
+	color: var(--color-background-text, #000);
 	cursor: pointer;
 	margin-bottom: 1em;
 	z-index: 1;
@@ -30,8 +29,7 @@
 }
 
 .card__header {
-	background-color: #FFF;
-	background-color: var(--color-background);
+	background-color: var(--color-background, #FFF);
 }
 
 .card__header-button {
@@ -104,8 +102,7 @@ body[data-prefers-reduced-motion="false"] .card__media img {
 }
 
 .card__footer {
-	background-color: #FFF;
-	background-color: var(--color-background);
+	background-color: var(--color-background, #FFF);
 	border-bottom-left-radius: 0.25em;
 	border-bottom-right-radius: 0.25em;
 }

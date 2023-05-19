@@ -12,10 +12,8 @@
 	width: 50%;
 	min-height: 3em;
 	
-	background-color: #000;
-	background-color: var(--color-background);
-	color: #FFF;
-	color: var(--color-background-text);
+	background-color: var(--color-background, #000);
+	color: var(--color-background-text, #FFF);
 	
 	align-content: center;
 	
@@ -66,8 +64,7 @@ body[data-prefers-reduced-motion="false"] .snackbar {
     transform: translate(-50%, -50%);
     left: 50%;
 	top: 50%;
-	fill: #000;
-	fill: var(--color-primary-text);
+	fill: var(--color-primary-text, #000);
 }
 
 .snackbar__close::before {

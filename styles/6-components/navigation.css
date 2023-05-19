@@ -11,10 +11,8 @@
 	height: calc(100vh - 4.5em);
 	left: 0;
 	width: 100%;
-	color: #FFF;
-	color: var(--color-primary-text);
-	background-color: #6200EE;
-    background-color: var(--color-primary);
+	color: var(--color-primary-text, #FFF);
+    background-color: var(--color-primary, #6200EE);
 	transform: translateX(100vw);
 	visibility: hidden;
 	z-index: 3;
@@ -71,8 +69,7 @@ body[data-prefers-reduced-motion="false"] .navigation__item {
 .navigation__item svg {
 	padding-top: 0.75rem;
 	margin: 0 auto;
-	fill: #FFF;
-	fill: var(--color-primary-text);
+	fill: var(--color-primary-text, #FFF);
 }
 
 .navigation__label {
@@ -87,8 +84,7 @@ body[data-prefers-reduced-motion="false"] .navigation__item {
 .navigation__indicator {
 	left: 0;
 	right: 0;
-	background: #03DAC6;
-	background: var(--color-secondary);
+	background: var(--color-secondary, #03DAC6);
 	bottom: 0;
 	height: 0.25em;
 	position: absolute;
