@@ -61,10 +61,8 @@ a {
 
 /* change colours to suit your needs */
 ins {
-	background-color:#6200EE;
-	background-color:var(--color-primary);
-	color:#FFF;
-	color:var(--color-primary-text);
+	background-color:var(--color-primary, #6200EE);
+	color:var(--color-primary-text, #FFF);
 	text-decoration:none;
 }
 
