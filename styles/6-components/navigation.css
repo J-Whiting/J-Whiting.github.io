@@ -84,7 +84,7 @@ body[data-prefers-reduced-motion="false"] .navigation__item {
 .navigation__indicator {
 	left: 0;
 	right: 0;
-	background: var(--color-secondary, #03DAC6);
+	background: var(--color-primary-text, #FFF);
 	bottom: 0;
 	height: 0.25em;
 	position: absolute;

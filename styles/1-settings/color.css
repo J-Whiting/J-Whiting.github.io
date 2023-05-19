@@ -11,12 +11,6 @@ body {
 	--color-primary-text: #FFF;
 	
 	/*
-		Secondary Color
-	*/
-	--color-secondary: #03DAC6;
-	--color-secondary-text: #000;
-	
-	/*
 		Background
 	*/
 	--color-background: #FFF;
@@ -29,12 +23,6 @@ body[data-theme="dark"] {
 	*/
 	--color-primary: #03DAC6;
 	--color-primary-text: #000;
-	
-	/*
-		Secondary Color
-	*/
-	--color-secondary: #6200EE;
-	--color-secondary-text: #FFF;
 	
 	/*
 		Background
