@@ -4,7 +4,7 @@
 //                                //
 //--------------------------------*/
 .overlay {
-	background-color: #000;
+	background-color: var(--color-primary-9, #000);
 	height: 100%;
 	left: 0;
 	opacity: 0.7;

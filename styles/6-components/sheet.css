@@ -10,41 +10,41 @@
 }
 
 .sheet#home {
-	background: linear-gradient(hsl(265deg 100% 85%), hsl(265deg 100% 90%));
+	background: linear-gradient(var(--color-primary-2), var(--color-primary-3));
 }
 
 .sheet#projects {
-	background: linear-gradient(hsl(265deg 100% 90%), hsl(265deg 100% 85%));
+	background: linear-gradient(var(--color-primary-3), var(--color-primary-2));
 }
 
 .sheet#education {
-	background: linear-gradient(hsl(265deg 100% 85%), hsl(265deg 100% 90%));
+	background: linear-gradient(var(--color-primary-2), var(--color-primary-3));
 }
 
 .sheet#experience {
-	background: linear-gradient(hsl(265deg 100% 90%), hsl(265deg 100% 85%));
+	background: linear-gradient(var(--color-primary-3), var(--color-primary-2));
 }
 
 .sheet#hobbies {
-	background: linear-gradient(hsl(265deg 100% 85%), hsl(265deg 100% 90%));
+	background: linear-gradient(var(--color-primary-2), var(--color-primary-3));
 }
 
 body[data-theme="dark"] .sheet#home {
-	background: linear-gradient(hsl(174deg 97% 10%), hsl(174deg 97% 15%));
+	background: linear-gradient(var(--color-primary-6), var(--color-primary-7));
 }
 
 body[data-theme="dark"] .sheet#projects {
-	background: linear-gradient(hsl(174deg 97% 15%), hsl(174deg 97% 10%));
+	background: linear-gradient(var(--color-primary-7), var(--color-primary-6));
 }
 
 body[data-theme="dark"] .sheet#education {
-	background: linear-gradient(hsl(174deg 97% 10%), hsl(174deg 97% 15%));
+	background: linear-gradient(var(--color-primary-6), var(--color-primary-7));
 }
 
 body[data-theme="dark"] .sheet#experience {
-	background: linear-gradient(hsl(174deg 97% 15%), hsl(174deg 97% 10%));
+	background: linear-gradient(var(--color-primary-7), var(--color-primary-6));
 }
 
 body[data-theme="dark"] .sheet#hobbies {
-	background: linear-gradient(hsl(174deg 97% 10%), hsl(174deg 97% 15%));
+	background: linear-gradient(var(--color-primary-6), var(--color-primary-7));
 }

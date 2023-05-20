@@ -4,29 +4,35 @@
 //                                //
 //--------------------------------*/
 body {
+	--hue: 286;
+
+	--color-primary-1: oklch(90% 0.055 var(--hue));
+	--color-primary-2: oklch(80% 0.115 var(--hue));
+	--color-primary-3: oklch(70% 0.179 var(--hue));
+	--color-primary-4: oklch(60% 0.246 var(--hue));
+	--color-primary-5: oklch(50% 0.296 var(--hue));
+	--color-primary-6: oklch(40% 0.237 var(--hue));
+	--color-primary-7: oklch(30% 0.177 var(--hue));
+	--color-primary-8: oklch(20% 0.118 var(--hue));
+	--color-primary-9: oklch(10% 0.059 var(--hue));
+
 	/*
 		Primary Color
 	*/
-	--color-primary: #6200EE;
-	--color-primary-text: #FFF;
+	--color-primary: var(--color-primary-5);
+	--color-primary-text: var(--color-primary-1);
 	
 	/*
 		Background
 	*/
-	--color-background: #FFF;
-	--color-background-text: #000;
+	--color-background: var(--color-primary-1);
+	--color-background-text: var(--color-primary-9);
 }
 
 body[data-theme="dark"] {
 	/*
-		Primary Color
-	*/
-	--color-primary: #03DAC6;
-	--color-primary-text: #000;
-	
-	/*
 		Background
 	*/
-	--color-background: #000;
-	--color-background-text: #FFF;
+	--color-background: var(--color-primary-9);
+	--color-background-text: var(--color-primary-1);
 }
