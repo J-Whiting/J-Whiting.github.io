@@ -1,16 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
-    <g transform="matrix(1.26082 0 0 1.26259 -24.819 94.81)">
-        <path d="M-1-1h194v194H-1z" style="fill:none"/>
-    </g>
-    <g transform="matrix(1.26082 0 0 1.26259 -24.819 94.81)">
-        <rect width="148.276" height="148.064" x="21.687" y="-73.089" rx="10.019" style="fill:#6200EE;stroke:#000;stroke-width:0"/>
-        <path fill-opacity="null" d="M23.341 1.323H167.96v19.334H23.341z" style="fill:#000;stroke:#000;stroke-width:0"/>
-        <path fill-opacity="null" d="M23.341-18.555H167.96V.849H23.341z" style="fill:#6200EE;stroke:#000;stroke-width:0"/>
-        <path d="M170.343 19.787 95.65 41.022 20.957 19.787h149.386Z" style="fill:#000;stroke:#000;stroke-width:0"/>
-        <path d="M170.343.611 95.65 21.847 20.957.61h149.386Z" style="fill:#6200EE;stroke:#000;stroke-width:0"/>
-        <path d="M170.343-18.643 95.65 2.592 20.957-18.643h149.386Z" style="fill:#000;stroke:#000;stroke-width:0"/>
-        <path fill-opacity="null" d="M21.687-36.685h148.276v19.008H21.687z" style="fill:#000;stroke:#000;stroke-width:0"/>
-        <rect width="148.276" height="50.022" x="21.687" y="-73.089" rx="10.019" style="fill:#000;stroke:#000;stroke-width:0"/>
-        <rect width="148.276" height="148.064" x="21.687" y="-73.089" fill="none" rx="10.019" style="fill:#6200EE;fill-opacity:0;stroke:#000;stroke-width:4.00458813"/>
+    <path fill="none" d="M-26.08 93.547h244.6V338.49h-244.6V93.547z"/>
+    <g transform="matrix(3.36871 0 0 3.38302 -67.439 251.31)">
+        <rect fill="#6200EE" rx="10.019" y="-73.089" x="21.687" height="148.064" width="148.276"/>
+        <path d="M23.341 1.323H167.96v19.334H23.341V1.323z" fill-opacity="null"/>
+        <path fill="#6200EE" d="M23.341-18.555H167.96V.849H23.341v-19.404z" fill-opacity="null"/>
+        <path d="M170.343 19.787 95.65 41.022 20.957 19.787h149.386z"/>
+        <path fill="#6200EE" d="M170.343.611 95.65 21.847 20.957.61h149.386v.001z"/>
+        <path d="M170.343-18.643 95.65 2.592 20.957-18.643h149.386z"/>
+        <path d="M21.687-36.685h148.276v19.008H21.687v-19.008z" fill-opacity="null"/>
+        <rect rx="10.019" y="-73.089" x="21.687" height="50.022" width="148.276"/>
+        <rect stroke-width="4.005" stroke="#000" rx="10.019" fill="none" y="-73.089" x="21.687" height="148.064" width="148.276"/>
     </g>
 </svg>

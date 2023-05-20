@@ -22,3 +22,7 @@ body {
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
+
+body[data-theme="dark"] {
+	background-color: var(--color-primary-6, #FFF);
+}
