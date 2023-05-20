@@ -6,13 +6,13 @@
   "icons": [
     {
       "src": "images/logos/logo-192.svg",
-      "type": "image/png",
+      "type": "image/svg",
       "sizes": "192x192",
       "purpose": "any"
     },
     {
       "src": "images/logos/logo-512.svg",
-      "type": "image/png",
+      "type": "image/svg",
       "sizes": "512x512",
       "purpose": "any"
     }
