@@ -1,4 +1,4 @@
-const version = "1.50";
+const version = "1.51";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -14,7 +14,6 @@ self.addEventListener("install", e => {
 				"/favicon-32.png",
 				"/favicon.ico",
 				"/index.html",
-				"/manifest.json",
 				"/mstile-150.png",
 				"/safari-pinned-tab.svg",
 				"/manifest.webmanifest",
