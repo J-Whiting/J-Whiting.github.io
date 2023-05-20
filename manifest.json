@@ -5,16 +5,22 @@
   "id": "/",
   "icons": [
     {
-      "src": "images/logos/logo-192.svg",
-      "type": "image/svg",
+      "src": "images/logos/logo-192.png",
+      "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
       "src": "images/logos/logo-512.svg",
       "type": "image/svg",
       "sizes": "512x512",
-      "purpose": "any"
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/logos/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "name": "Joshua Bee",
