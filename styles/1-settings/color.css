@@ -6,15 +6,15 @@
 body {
 	--hue: 286;
 
-	--color-primary-1: oklch(90% 0.055 var(--hue));
-	--color-primary-2: oklch(80% 0.115 var(--hue));
-	--color-primary-3: oklch(70% 0.179 var(--hue));
-	--color-primary-4: oklch(60% 0.246 var(--hue));
-	--color-primary-5: oklch(50% 0.296 var(--hue));
-	--color-primary-6: oklch(40% 0.237 var(--hue));
-	--color-primary-7: oklch(30% 0.177 var(--hue));
-	--color-primary-8: oklch(20% 0.118 var(--hue));
-	--color-primary-9: oklch(10% 0.059 var(--hue));
+	--color-primary-1: oklch(90% 0.05 var(--hue));
+	--color-primary-2: oklch(80% 0.105 var(--hue));
+	--color-primary-3: oklch(70% 0.165 var(--hue));
+	--color-primary-4: oklch(60% 0.229 var(--hue));
+	--color-primary-5: oklch(50% 0.29 var(--hue));
+	--color-primary-6: oklch(40% 0.232 var(--hue));
+	--color-primary-7: oklch(30% 0.174 var(--hue));
+	--color-primary-8: oklch(20% 0.116 var(--hue));
+	--color-primary-9: oklch(10% 0.058 var(--hue));
 
 	/*
 		Primary Color
@@ -27,6 +27,34 @@ body {
 	*/
 	--color-background: var(--color-primary-1);
 	--color-background-text: var(--color-primary-9);
+}
+
+@media (color-gamut: p3) {
+	body {
+		--color-primary-1: oklch(90% 0.055 var(--hue));
+		--color-primary-2: oklch(80% 0.115 var(--hue));
+		--color-primary-3: oklch(70% 0.179 var(--hue));
+		--color-primary-4: oklch(60% 0.246 var(--hue));
+		--color-primary-5: oklch(50% 0.296 var(--hue));
+		--color-primary-6: oklch(40% 0.237 var(--hue));
+		--color-primary-7: oklch(30% 0.177 var(--hue));
+		--color-primary-8: oklch(20% 0.118 var(--hue));
+		--color-primary-9: oklch(10% 0.059 var(--hue));
+	}
+}
+
+@media (color-gamut: rec2020) {
+	body {
+		--color-primary-1: oklch(90% 0.056 var(--hue));
+		--color-primary-2: oklch(80% 0.117 var(--hue));
+		--color-primary-3: oklch(70% 0.181 var(--hue));
+		--color-primary-4: oklch(60% 0.25 var(--hue));
+		--color-primary-5: oklch(50% 0.32 var(--hue));
+		--color-primary-6: oklch(40% 0.256 var(--hue));
+		--color-primary-7: oklch(30% 0.192 var(--hue));
+		--color-primary-8: oklch(20% 0.128 var(--hue));
+		--color-primary-9: oklch(10% 0.064 var(--hue));
+	}
 }
 
 body[data-theme="dark"] {
