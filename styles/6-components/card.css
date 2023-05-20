@@ -41,7 +41,7 @@
 }
 
 .card__thumbnail {
-	background-color: #FFF;
+	background-color: var(--color-background, #FFF);
 	width: 2.5em;
 	height: 2.5em;
 	border-radius: 100em !important;
