@@ -1,4 +1,4 @@
-const version = "1.49";
+const version = "1.50";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -8,8 +8,6 @@ self.addEventListener("install", e => {
 			return cache.addAll([
 				"/",
 				"/404.html",
-				"/android-chrome-192.png",
-				"/android-chrome-512.png",
 				"/apple-touch-icon.png",
 				"/browserconfig.xml",
 				"/favicon-16.png",
@@ -19,7 +17,7 @@ self.addEventListener("install", e => {
 				"/manifest.json",
 				"/mstile-150.png",
 				"/safari-pinned-tab.svg",
-				"/site.webmanifest",
+				"/manifest.webmanifest",
 				"/sitemap.xml",
 				"/styles/1-settings/color.css",
 				"/styles/1-settings/font.css",
