@@ -1,4 +1,4 @@
-const version = "1.39";
+const version = "1.40";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -94,6 +94,7 @@ self.addEventListener("install", e => {
 				"/images/projects/pong-media-1000.webp",
 				"/images/projects/pong-media-1500.webp",
 				"/images/projects/pong-thumbnail-80.webp",
+				"/images/screenshots/screenshot1.webp",
 				"/scripts/main.js"
 			])
 			.then(() => self.skipWaiting());
