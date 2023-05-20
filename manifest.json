@@ -1,23 +1,33 @@
 {
-  "short_name": "Joshua Bee",
-  "name": "Joshua Bee",
+	"background_color": "#6200EE",
   "description": "Personal website for Joshua Bee",
-  "icons": [
-	{
-	  "src": "images/logos/logo-192.png",
-	  "type": "image/png",
-	  "sizes": "192x192",
-	  "purpose": "any maskable"
-	},
-	{
-	  "src": "images/logos/logo-512.png",
-	  "type": "image/png",
-	  "sizes": "512x512",
-	  "purpose": "any maskable"
-	}
-  ],
-  "start_url": "/",
   "display": "standalone",
-  "background_color": "#6200EE",
+  "id": "/",
+  "icons": [
+    {
+      "src": "images/logos/logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/logos/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "name": "Joshua Bee",
+  "screenshots" : [
+    {
+      "src": "images/screenshots/screenshot1.webp",
+      "sizes": "3360x1672",
+      "type": "image/webp",
+      "platform": "wide",
+      "label": "Homescreen of Joshua Bee"
+    }
+  ],
+  "short_name": "Joshua Bee",
+  "start_url": "/",
   "theme_color": "#6200EE"
 }
