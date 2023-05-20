@@ -3,14 +3,14 @@
         <path d="M-1-1h194v194H-1z" style="fill:none"/>
     </g>
     <g transform="matrix(1.26082 0 0 1.26259 -24.819 94.81)">
-        <rect width="148.276" height="148.064" x="21.687" y="-73.089" rx="10.019" style="fill:#03dac6;stroke:#000;stroke-width:0"/>
+        <rect width="148.276" height="148.064" x="21.687" y="-73.089" rx="10.019" style="fill:#6200EE;stroke:#000;stroke-width:0"/>
         <path fill-opacity="null" d="M23.341 1.323H167.96v19.334H23.341z" style="fill:#000;stroke:#000;stroke-width:0"/>
-        <path fill-opacity="null" d="M23.341-18.555H167.96V.849H23.341z" style="fill:#03dac6;stroke:#000;stroke-width:0"/>
+        <path fill-opacity="null" d="M23.341-18.555H167.96V.849H23.341z" style="fill:#6200EE;stroke:#000;stroke-width:0"/>
         <path d="M170.343 19.787 95.65 41.022 20.957 19.787h149.386Z" style="fill:#000;stroke:#000;stroke-width:0"/>
-        <path d="M170.343.611 95.65 21.847 20.957.61h149.386Z" style="fill:#03dac6;stroke:#000;stroke-width:0"/>
+        <path d="M170.343.611 95.65 21.847 20.957.61h149.386Z" style="fill:#6200EE;stroke:#000;stroke-width:0"/>
         <path d="M170.343-18.643 95.65 2.592 20.957-18.643h149.386Z" style="fill:#000;stroke:#000;stroke-width:0"/>
         <path fill-opacity="null" d="M21.687-36.685h148.276v19.008H21.687z" style="fill:#000;stroke:#000;stroke-width:0"/>
         <rect width="148.276" height="50.022" x="21.687" y="-73.089" rx="10.019" style="fill:#000;stroke:#000;stroke-width:0"/>
-        <rect width="148.276" height="148.064" x="21.687" y="-73.089" fill="none" rx="10.019" style="fill:#03dac6;fill-opacity:0;stroke:#000;stroke-width:4.00458813"/>
+        <rect width="148.276" height="148.064" x="21.687" y="-73.089" fill="none" rx="10.019" style="fill:#6200EE;fill-opacity:0;stroke:#000;stroke-width:4.00458813"/>
     </g>
 </svg>
