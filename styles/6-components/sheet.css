@@ -9,42 +9,18 @@
 	margin-top: 4.5em; /* The header bar is 4.5em. */
 }
 
-.sheet#home {
+.sheet:nth-child(odd) {
 	background: linear-gradient(var(--color-primary-2), var(--color-primary-3));
 }
 
-.sheet#projects {
+.sheet:nth-child(even) {
 	background: linear-gradient(var(--color-primary-3), var(--color-primary-2));
 }
 
-.sheet#education {
-	background: linear-gradient(var(--color-primary-2), var(--color-primary-3));
-}
-
-.sheet#experience {
-	background: linear-gradient(var(--color-primary-3), var(--color-primary-2));
-}
-
-.sheet#hobbies {
-	background: linear-gradient(var(--color-primary-2), var(--color-primary-3));
-}
-
-body[data-theme="dark"] .sheet#home {
+body[data-theme="dark"] .sheet:nth-child(odd) {
 	background: linear-gradient(var(--color-primary-6), var(--color-primary-7));
 }
 
-body[data-theme="dark"] .sheet#projects {
+body[data-theme="dark"] .sheet:nth-child(even) {
 	background: linear-gradient(var(--color-primary-7), var(--color-primary-6));
-}
-
-body[data-theme="dark"] .sheet#education {
-	background: linear-gradient(var(--color-primary-6), var(--color-primary-7));
-}
-
-body[data-theme="dark"] .sheet#experience {
-	background: linear-gradient(var(--color-primary-7), var(--color-primary-6));
-}
-
-body[data-theme="dark"] .sheet#hobbies {
-	background: linear-gradient(var(--color-primary-6), var(--color-primary-7));
 }
