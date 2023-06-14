@@ -1,28 +1,13 @@
 body {
 	font-family: var(--font-sans-serif);
 	font-weight: 400;
-	background-color: var(--color-primary-2, #FFF);
-	color: var(--color-primary-9, #000);
+	background-color: var(--color-background, #FFF);
+	color: var(--color-background-text, #000);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 
 	min-height: 100%;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
 	flex-direction: column;
-	/* Prevent text selection. */
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
-}
-
-body[data-theme="dark"] {
-	background-color: var(--color-primary-6, #FFF);
+	user-select: none;
 }

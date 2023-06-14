@@ -20,7 +20,6 @@ const STATE = {
 };
 
 // Elements
-let $cards;
 let $header;
 let $drawerToggle;
 let $updateSnackbar;
@@ -30,7 +29,7 @@ let $installSnackbar;
 let $installSnackbarAction;
 let $installSnackbarClose;
 let $navigation;
-let $navItems;
+let $navLinks;
 let $overlay;
 let $scrollElements;
 let $modalElements;
@@ -47,7 +46,6 @@ let modalKeyHandler;
 document.addEventListener('DOMContentLoaded', (event) => {
 
 	// Elements
-	$cards = document.querySelectorAll('[data-cards]');
 	$drawerToggle = document.querySelector('[data-drawer-toggle]');
 	$header = document.querySelector('header.header');
 	$updateSnackbar = document.querySelector('#update-snackbar');
@@ -57,7 +55,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	$installSnackbarAction = $installSnackbar.querySelector('.snackbar__action');
 	$installSnackbarClose = $installSnackbar.querySelector('.snackbar__close');
 	$navigation = document.querySelector('#navigation');
-	$navItems = document.querySelectorAll('.navigation__item');
+	$navLinks = document.querySelectorAll('.navigation__link');
 	$overlay = document.querySelector('#overlay');
 	$scrollElements = document.querySelectorAll('[data-scroll-to]');
 	$modalElements = document.querySelectorAll('[data-modal-open]');
@@ -83,7 +81,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	prefersColorSchemeDarkMediaQuery.addEventListener('change', () => {
 		if (settings.theme === 'system') {
 			const $body = document.querySelector('body');
-			theme = prefersColorSchemeDarkMediaQuery.matches ? 'dark': 'light';
+			const theme = prefersColorSchemeDarkMediaQuery.matches ? 'dark': 'light';
 			$body.dataset.theme = theme;
 		}
 	});
@@ -91,7 +89,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	prefersReducedMotionMediaQuery.addEventListener('change', () => {
 		if (settings.reduceMotion === 'system') {
 			const $body = document.querySelector('body');
-			prefersReducedMotion = prefersReducedMotionMediaQuery.matches;
+			const prefersReducedMotion = prefersReducedMotionMediaQuery.matches;
 			$body.dataset.prefersReducedMotion = prefersReducedMotion;
 		}
 	});
@@ -138,25 +136,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		});
 	});
 
-	// Add Card events
-	$cards.forEach($card => {
-		const $button = $card.querySelector('[data-card-toggle]');
-		if ($button) {
-			$button.addEventListener('click', event => {
-				let $similarCards = document.querySelectorAll(`[data-cards="${ $card.dataset.cards }"`);
-	
-				$similarCards.forEach(($similarCard) => {
-					if ($card === $similarCard) {
-						showCard($card);
-					}
-					else {
-						hideCard($similarCard)
-					}
-				});
-			});
-		}
-	});
-
 	$drawerToggle.addEventListener('click', (event) => {
 		const key = $drawerToggle.dataset.drawerToggle;
 		const $drawer = document.querySelector(`[data-drawer="${ key }"]`);
@@ -178,60 +157,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			userScrolled = true;
 			$installSnackbar.ariaHidden = false;
 		}
-		
-		let doc = document.documentElement;
-		let vScroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-
-		// Get the height of the browser.
-		let g = document.getElementsByTagName('body')[0];
-		let vBrowserHeight = window.innerHeight || doc.clientHeight || g.clientHeight;
-
-		// Get the sheet height.
-		let vSheetHeight = vBrowserHeight - $header.clientHeight;
-		let vNavID = Math.floor(vScroll / vSheetHeight);
-		vNavID--;
-	
-		// Only update the classes if they change.
-		if (vNavID != vActiveID) {
-			let $navItem;
-			for (let i = 0; i < $navItems.length; i++) {
-
-				$navItem = $navItems[i];
-				if (i == vNavID) {
-					$navItem.classList.add('navigation__item--selected');
-				}
-				else {
-					$navItem.classList.remove('navigation__item--selected');
-				}
-			}
-
-			// Update the active tab id.
-			vActiveID = vNavID;
-		}
 	});
+
+	const callback = (entries, observer) => {
+		entries.forEach((entry) => {
+			// Check if it is intersecting...
+			if (entry.isIntersecting) {
+				// If so, set this as the selected nav item.
+				const $navLink = document.querySelector(`.navigation__link[data-scroll-to="${entry.target.id}"]`);
+				$navLink.dataset.selected = 'true';
+			} else {
+				// If not, set the previous nav item as the selected one.
+				const $navLink = document.querySelector(`.navigation__link[data-scroll-to="${entry.target.id}"]`);
+				$navLink.dataset.selected = 'false';
+			}
+		});
+	};
+
+	const options = {
+		rootMargin: '-72px 0px 0px 0px',
+		threshold: 0.01,
+	};
+	
+	const observer = new IntersectionObserver(callback, options);
+
+	observer.observe(document.querySelector('#projects'));
+	observer.observe(document.querySelector('#education'));
+	observer.observe(document.querySelector('#experience'));
+	observer.observe(document.querySelector('#hobbies'));
 });
 
-function showCard($card) {
-	requestAnimationFrame(() => {
-		$card.dataset.state = STATE.OPEN;
-	});
-
-	const $content = $card.querySelector('.card__content');
-	const $focusableElements = $content.querySelectorAll(SELECTORS.FOCUSABLE);
-	$focusableElements.forEach($focusableElement => {
-		$focusableElement.tabIndex = '0';
-	});
-}
-
-function hideCard($card) {
-	requestAnimationFrame(() => {
-		$card.dataset.state = STATE.CLOSED;
-	});
-
-	const $content = $card.querySelector('.card__content');
-	const $focusableElements = $content.querySelectorAll(SELECTORS.FOCUSABLE);
-	$focusableElements.forEach($focusableElement => {
-		$focusableElement.tabIndex = '-1';
+function clearNavItems() {
+	$navLinks.forEach($navLink => {
+		$navLink.dataset.selected = 'false';
 	});
 }
 
@@ -421,8 +379,6 @@ function revertSettings() {
 }
 
 function saveSettings($modal) {
-	console.log($modal);
-
 	const localSettings = getSettingsFromModal();
 	saveSettingsToLocalStorage();
 

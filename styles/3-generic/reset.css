@@ -118,3 +118,7 @@ button {
 	font: inherit;
 	cursor: pointer;
 }
+
+ul {
+	padding-inline-start: 40px;
+}

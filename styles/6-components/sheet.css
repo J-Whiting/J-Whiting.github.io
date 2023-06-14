@@ -1,26 +1,19 @@
 .sheet {
-	position: relative;
-	height: calc(100vh - 4.5em); /* The header bar is 4.5em. */
-	overflow: hidden;
-	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 4.5em); /* The header bar is 4.5em. */
 }
 
 .sheet:first-child {
 	margin-top: 4.5em; /* The header bar is 4.5em. */
 }
 
-.sheet:nth-child(odd) {
-	background: linear-gradient(var(--color-primary-2), var(--color-primary-3));
-}
-
-.sheet:nth-child(even) {
-	background: linear-gradient(var(--color-primary-3), var(--color-primary-2));
-}
-
-body[data-theme="dark"] .sheet:nth-child(odd) {
-	background: linear-gradient(var(--color-primary-6), var(--color-primary-7));
-}
-
-body[data-theme="dark"] .sheet:nth-child(even) {
-	background: linear-gradient(var(--color-primary-7), var(--color-primary-6));
+.sheet__title {
+	font-size: 3.25rem;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.009375rem;
+    line-height: 1.25;
+	padding-top: 4rem;
+    text-align: center;
 }

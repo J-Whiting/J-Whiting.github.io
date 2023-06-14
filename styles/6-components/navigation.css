@@ -113,18 +113,21 @@ body[data-prefers-reduced-motion="false"] .navigation__indicator {
 	}
 
 	.navigation__item {
-		opacity: 0.75;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
 	}
 
-	.navigation__item--selected {
+	.navigation__link {
+		opacity: 0.75;
+	}
+
+	.navigation__link[data-selected="true"] {
 		opacity: 1;
 	}
 
-	.navigation__item--selected .navigation__indicator {
+	.navigation__link[data-selected="true"]  .navigation__indicator {
 		transform: scaleY(1);
 	}
 }
