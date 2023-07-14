@@ -241,15 +241,16 @@ function openModal($modal) {
 	const $firstFocusableElement = $focusableElements[0];
 	const $lastFocusableElement = $focusableElements[$focusableElements.length - 1];
 
-	$overlay.dataset.state = 'active';
+	viewTransition(() => {
+		$overlay.dataset.state = 'active';
+		$modal.dataset.state = 'open';
+	});
+	
 	$overlay.addEventListener('click', () => {
 		closeModal($modal);
 		revertSettings();
 	});
 
-	viewTransition(() => {
-		$modal.dataset.state = 'open';
-	});
 	$firstFocusableElement.focus();
 
 	modalKeyHandler = (event) => {
