@@ -247,7 +247,9 @@ function openModal($modal) {
 		revertSettings();
 	});
 
-	$modal.dataset.state = 'open';
+	viewTransition(() => {
+		$modal.dataset.state = 'open';
+	});
 	$firstFocusableElement.focus();
 
 	modalKeyHandler = (event) => {
@@ -296,8 +298,10 @@ function openModal($modal) {
 function closeModal($modal) {
 	const $focusableElements = $modal.querySelectorAll(SELECTORS.FOCUSABLE);
 
-	$overlay.dataset.state = 'inactive';
-	$modal.dataset.state = 'closed';
+	viewTransition(() => {
+		$overlay.dataset.state = 'inactive';
+		$modal.dataset.state = 'closed';
+	});
 
 	// Remove tab trapping
 	if (modalKeyHandler) {
@@ -307,6 +311,16 @@ function closeModal($modal) {
 	$focusableElements.forEach($focusableElement => {
 		$focusableElement.tabIndex = "-1";
 	});
+}
+
+function viewTransition(callback) {
+	if (!prefersReducedMotion && document.startViewTransition) {
+		document.startViewTransition(() => {
+			callback();
+		});
+	} else {
+		callback();
+	}
 }
 
 function getSettingsFromLocalStorage() {
