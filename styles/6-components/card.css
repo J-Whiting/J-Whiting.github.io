@@ -93,7 +93,6 @@ body[data-prefers-reduced-motion="false"] .card::after {
 }
 
 .card__header-subtitle {
-	opacity: 0.65;
 	font-size: .875rem;
 	line-height: 1.25;
 	font-weight: 500;

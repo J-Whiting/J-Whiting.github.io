@@ -1,4 +1,4 @@
-const version = "1.58";
+const version = "1.59";
 const cacheName = "jb-${version}";
 
 self.addEventListener("install", e => {
@@ -68,9 +68,18 @@ self.addEventListener("install", e => {
 				"/images/projects/pixelizer-media-1000.webp",
 				"/images/projects/pixelizer-media-1500.webp",
 				"/images/projects/pixelizer-thumbnail-80.webp",
+				"/images/projects/pokemon-type-elo-media-1000.webp",
+				"/images/projects/pokemon-type-elo-media-1500.webp",
+				"/images/projects/pokemon-type-elo-thumbnail-80.webp",
 				"/images/projects/pong-media-1000.webp",
 				"/images/projects/pong-media-1500.webp",
 				"/images/projects/pong-thumbnail-80.webp",
+				"/images/projects/project-euler-media-1000.webp",
+				"/images/projects/project-euler-media-1500.webp",
+				"/images/projects/project-euler-thumbnail-80.webp",
+				"/images/projects/translate-media-1000.webp",
+				"/images/projects/translate-media-1500.webp",
+				"/images/projects/translate-thumbnail-80.webp",
 				"/images/screenshots/screenshot1.webp",
 				"/scripts/main.js",
 				"/styles/1-settings/color.css",
